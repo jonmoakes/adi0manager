@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HN9-Dc-E9l">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="W6f-Is-zsr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="Swz-tm-Hpm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fc6-Uy-fwz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1575" y="-1548"/>
+        </scene>
+        <!--How To Use The App-->
+        <scene sceneID="rTS-tO-2Wg">
+            <objects>
+                <viewController id="ZH3-0h-RPA" customClass="HowToUseViewController" customModule="The_ADI_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aAY-Sa-Xt2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MPg-rz-zIj">
+                                <rect key="frame" x="16" y="64" width="343" height="583"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Using The ADI Manager App Is Very Simple.
+
+From The Home Screen, Select Any Of The Tabs At The Bottom.
+From Left To Right They Are:
+
+The Journal List.
+The Lessons List.
+The Expenses List.
+The Pupils List.
+
+Let's Look In Detail At What Each One Does.
+
+THE JOURNAL TAB:
+
+The Journal Tab Presents To You A Table Where You Can Add In Each Individual Day And Have Them Displayed In A List.
+As You Add Dates, They Will Be Entered Into The Table List In Date Order - Newest Date At The Top.
+The Dates Will Always Sort Themselves Into Order - For Example, Adding A Date A Month From Now ( As You May Have Had Someone Book A Test For That Date Or An Eager First Timer Booking a Lesson For Their Birthday )
+Will Store The Entry At The Top Of The List. Any Dates Added Before This Date Will Insert Themselves Into The Table Before This Date Not After, Meaning The Dates Will Always Be In Order. If You Delete An Entry And Then Re Add It, It Will Insert Itself Into The Correct Place In The List.
+
+Having Tapped The Plus Button To Add A New Entry, You Tap In The First Text Box To Choose The Date And Then The Big White Space Below That Is Totally Free For You To Write In Your Days Details.
+It Has Been Deliberately Designed To Be A Blank Box Because I Know People Have Different Methods Of Writing Out What They Need.
+
+An Example Entry Would Be For Example:
+
+David Smith:
+9AM - 11AM
+Roundabouts
+
+Charles Albon:
+12PM - 2PM
+Dual Carriageways
+
+Freya Sutton:
+Pick Up 2:30PM From Work.
+Driving Test - 3PM
+Example DTC
+
+But As Stated, You Can Write Out What You Want In The White Box And You Are Not Limited By The Size Of The Box - It Has Infinite Space.
+
+Tapping On Any Entry In The List Shows You The Detail View Where You Can Also Make Edits And Save The New Data.
+Deleting An Entry Is Simple A Case Of Swiping Left And Then Tapping Delete, Followed By Tapping On 'I'm Sure' To Confirm. All The Other Tabs Follow This Same Principle To Add, View And Delete Entries.
+
+THE LESSONS TAB:
+
+The Lessons Tab Is Where You Can Enter Thorough Details About Each Driving Lesson You Do. Only The Pupil Name And Lesson Date Fields Are Mandatory To Create An Entry, Otherwise You Can Fill In Any Of The Other Fields You Think Is Required.
+
+Add A New Entry For Each New Lesson As Opposed To Updating The Same Entry After Each Lesson ( Although You Could Do That If You Wish Of Course! ).
+
+It Is Not Even Mandatory To Fill In The Lessons Tab After Each Lesson, But If You Do, You Will Have A Nice List Of Each And Every Lesson You've Ever Done Stored On Your Device For Reference ( That Would Be A LOT Of Paper When Done Conventionally! ).
+
+As You Add Lessons In, They Will Be Stored In Date And Time Order, Latest At The Top. The Same Principles Apply In Regards How To Use As For The Journal Tab Above.
+One Nice Feature Of The Lesson Tab Though, Is That When You Select Whether The Pupil Has Paid Or Not ( I Remember The Excuses! ), The Colour Of The Entry In The Table List Will Be Either Green If They Have Paid, Or Red If They Haven't ( Or Orange If You Haven't Selected Whether They've Paid or Not Yet ).
+This Way You Will Easily Be Able To Scan And See Who Owes You Money!
+If You Have Selected That This Entry Is A Driving Test, The Background Of The Entry Will Default To Blue Once You Have Selected The Start Time And Location Of The Test.
+
+If The Pupil Pays For A Block Of Lessons, Enter The Amount You Received And Then Keep Track Of Where They Are In The "Block Bookings" Section Of The Pupils Tab. Tap On The Info Button Next To The "Block Booked?" Label To Learn More. The Next Time You Record A Lesson For A Pupil Who Has Block Booked, Leave The "Payment Amount Taken" Field And The "Payment Method" Picker Blank And After Having Saved The Entry, Go To The "Block Bookings" Section In The Pupils Tab As Mentioned Above And Fill In The Details There.
+
+You Can Also Email The Pupil ( Or Yourself ) A Copy Of What You Have Entered Into This Page For Either A Receipt Or Reference. Simply Enter In The Details As Required And Save It. Then Tap On The Lesson You've Just Saved In The Table List And Scroll To The Bottom. Enter In An Email Address ( Your Pupil's Email Addresses Can Be Stored In The Pupils Tab On The Home Screen For You To Copy And Paste - See Later In This Guide ) And Then Tap The Envelope Button To Automatically Populate An Email With All The Data You've Entered. You Then Only Have To Press Send!
+Note That The App Is Configured To Use Apple's Own Mail App To Send Emails, So Please Make Sure You Have Set Your Email Set Up In The Apple Mail App Before Attempting To Send.
+
+THE EXPENSES TAB:
+
+The Expenses Tab Is A Great Way To Keep Track Of Your Expenses, To Make It Easier When It Comes To Tax Return Time.
+
+Simply Tap On The Plus Button And Enter In All 3 Pieces Of Information - The Date Of The Expense Receipt, A Description Of It And How Much It Was For. Entering These 3 Details Will Make Each Expense Easily Scannable On The Table List.
+Note That Each Day Has A Different Background Colour - This Is Just To Make It A Bit Easier To See If You Have Multiple Expenses Claims On One Day.
+
+It Is Not Mandatory, But You Can Also Use Your Device's Camera To Take A Photo Of Your Receipt, Or Access Your Camera Roll If You've Taken A Picture Of It Already.
+This Doesn't Mean You Should Throw Your Receipts Away Of Course, But It Is A Nice Little Backup If You Misplace One!
+To Access The Camera Or Photo Library, Tap On The Icons In The Top Right Of The Screen And Choose Your Image.
+The Image Will Then Be Zoomable And Rotatable By Using The Pinch Gesture With Your Thumb And Fingertip If Required.
+
+Similarly To The Lesson Tab Above, You Can Email Yourself A Copy Of All the Data Entered Into The Form After You Have Saved It, By Tapping On The Appropriate Entry In The Table List And Then Scrolling To The Bottom Of The Detail View, Entering Your Email And Then Tapping The Envelope Button.
+The Image, If Added, Will Also Be Automatically Attached To The Email.
+When Prompted To Choose a Size For The Image, Please Choose "Actual Size." This Will Be A Large File, So May Take A Minute Or So To Send, But It Will Continue To Send In The Background Once You've Pressed Send, Allowing You To Continue To Use The App Or Even Close The App ( This Doesn't Include If You Force Close The App Though ). 
+
+From The Table List, Tapping On The "Totals" Button Will Allow You To Do The Same Thing, But Add Either A Weekly, Monthly Or Yearly Entry. Again, This Just Makes It Easy To Keep Track Of Your Total Expenses.
+
+THE PUPILS TAB:
+
+The Pupils Tab Is The Most Detailed Tab Of Them All And Is Very Powerful.
+Following The Usual Method Of Adding An Entry, Enter Any Details You Wish And Press The Save Icon. This Will Take You Back To The Table List.
+Now, When You Tap On The Pupil, You Will Have A Choice Of 3 Things To View:
+The Pupil Info ( The Thing You Filled In To Create An Entry ), Their Progress ( Where You Can Enter Detailed Notes About Their Progress In Each Subject And Email It To Them ), And The Block Bookings Section Where You Can Keep Track Of How Many Lessons They Have Remaining On Their Block.
+
+On The "Info" Tab, If You Entered A Phone Number, You Will Now See That The Text And Call Buttons Are Enabled ( Text Only On iPads ). Tap On These To Automatically Open The Apple Message Or Phone App Without Having To Go Through Your Regular Contacts List. 
+If You've Entered Two Phone Numbers, You'll Get A Choice Of Whether To Call Or Text The Primary Or Secondary Number.
+If You Only Enter One Number, Please Make Sure It Is Entered In The "Primary Phone Number" Field In Order To Enable The Buttons.
+Tap The "Info" Button Under The "Primary Phone Number" Label For More Details.
+
+If You Choose The "Progress" Tab, You Will See A List Of Subjects. Tap On Any Of The Labels To Show A Slider Where You Can Give A Star Rating 1 - 5 ( The Standard Introduced, Full Talk Through, Propmpted, Seldom Prompted And Independent Grades ) And A Text Box Where You Can Enter Any Notes You Wish About Their Progress In That Subject.
+Once You Tap Save, You Go Back To The Subjects List And From Their You Can Tap The Email Button And Provided You Entered The Pupil's Email Address In The "Info" Tab Previously, An Email Will Be Generated That You Can Send To The Pupil To Keep Them Up To Date On Their Progress.
+To Update Their Progress, Simply Tap On A Subject And Then Change The Grade Using The Slider If Necessary, Or Add New Data Into The Text Box ( You Don't Have To Delete Previous Data If You Don't Want - Just Add The New Data Above Or Below It Depending On Your Preference ). When The App Detects You've Changed Something, The Save Button Will Be Enabled And You Can Then Save The Updated Data. Then Tap The Email Button To Automatically Generate A New Email With The New Data You've Just Entered.
+
+With Infinite Space In The Text Box, You'll always Be Able To Keep Your Pupils Up To Date With Their Progress In Each Lesson And Also Have A Nice Reminder For Yourself Of What They've Covered And What Standard They Are At In Every Subject.
+
+To Add Multiple Subjects At Once, Just Tap On The Subject Label Again To Hide It And Show All Subjects Again. Then Tap On The Next Subject You'd Like To Enter Data On And Repeat The Process. Basically, You Only Have To Press Save The Once ( Although You Can Save As Often As You Want Of Course ).
+
+Finally, Tapping On The "Block Bookings" Tab Reveals A Short Form To Keep Track Of Where They Are With Regards To Remaining Lessons On Their Block.
+
+You Can Use This In Conjunction With The Lessons Tab If You Wish - After You Enter a Lesson Entry That A Pupil Has Block Booked, Once You've Saved It, Come To This Block Bookings Tab And Fill In The Form. Do This After Each Lesson They Have And Then You'll Know When They Are Due To Pay Again.
+Having Saved, Tap On The Email Button To Send The Pupil The Form For Their Records So They Know Where They Are Too!
+When They Run Out Of Hours Remaining And You've Sent The Email, Press The Clear Data Button To Reset The Form. Then, If They Block Book Again Next Time, You Can Come Back Here And Start A New Form.
+
+CONTACTING ME:
+
+From The Home Screen, Tapping The Email Button In The Top Left Will Open A Form Where You Can Email Me Directly With Any Questions Or Comments - I Love Feedback - Good Or Bad! -  So Please Get In Touch!
+
+I Hope You Enjoy Using The ADI Manager App!</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WQx-9m-cR2" firstAttribute="bottom" secondItem="MPg-rz-zIj" secondAttribute="bottom" constant="20" id="4dJ-MV-4g6"/>
+                            <constraint firstItem="MPg-rz-zIj" firstAttribute="top" secondItem="WQx-9m-cR2" secondAttribute="top" constant="20" id="IgI-pG-Q5c"/>
+                            <constraint firstItem="MPg-rz-zIj" firstAttribute="leading" secondItem="WQx-9m-cR2" secondAttribute="leading" constant="16" id="L0s-ce-fOt"/>
+                            <constraint firstItem="WQx-9m-cR2" firstAttribute="trailing" secondItem="MPg-rz-zIj" secondAttribute="trailing" constant="16" id="iNX-Ki-jil"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WQx-9m-cR2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="How To Use The App" id="FwW-OX-XVm">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="AMA-8t-d6a"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Izq-Vf-sZr">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="ZH3-0h-RPA" id="b9t-Hd-HvC"/>
+                                <segue destination="Swz-tm-Hpm" kind="show" id="ePD-Fx-HaL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="MPg-rz-zIj" id="DNz-l2-tGz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mPY-NQ-MsB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1584.375" y="-1120"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EBZ-DB-3Gf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HN9-Dc-E9l" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jtH-Ck-yaP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZH3-0h-RPA" kind="relationship" relationship="rootViewController" id="OCk-UM-E2J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xcg-Qh-wtJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="586.875" y="-1120"/>
+        </scene>
+    </scenes>
+</document>

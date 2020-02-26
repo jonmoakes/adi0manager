@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x91-J5-XZM">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Expenses Help View Controller-->
+        <scene sceneID="M0C-H2-jHe">
+            <objects>
+                <viewController id="OZm-oV-gAQ" customClass="ExpensesHelpViewController" customModule="The_ADI_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ls5-dn-Mes">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWH-hd-U0C">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <items>
+                                    <navigationItem title="Expenses Help" id="bwg-W4-Gdg">
+                                        <barButtonItem key="leftBarButtonItem" title="Close" id="xoJ-Or-xEQ">
+                                            <connections>
+                                                <action selector="closeButtonTapped:" destination="OZm-oV-gAQ" id="7bB-gX-c2S"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alh-sW-OkZ">
+                                <rect key="frame" x="16" y="72" width="343" height="559"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">ADDING AN ENTRY:
+Tap On The Plus Button In The Top Right To Enter A New Entry.
+
+The Date, Description And Amount Fields Are Mandatory Fields Whilst The Image Is Optional.
+Once Finished, Tap 'SAVE' And The Entry Will Be Stored And Return You To The Table View List.
+
+EDITING AN ENTRY:
+Tap On The Row Of The Entry That You Want To Edit. Make Any Adjustments Necessary And Then Don't Forget To Tap The 'SAVE' Button Again To Update The Entry.
+Tap The 'BACK' Button In The Top Left If You Wish To Return To The Table List WITHOUT Saving Any Data.
+
+DELETING AN ENTRY:
+Swipe Left On Any Entry You Wish To Delete And Then Tap 'I'm Sure'.
+
+ROW BACKGROUND COLOURS:
+You Will Notice That Depending On The Day Of The Entry, The Colour Of The Background Of The Row Is different. This Is Simply To Make It A Bit More Noticeable As To What Day The Expenses Were Added To Your Records.
+
+Tapping On the 'TOTALS' Button Will Take You To Another Screen Where You Can Input A Grand Total For Either A Week, Month Or Year Depending On How You Like To Keep Organised.
+Simply Add Up All Your Entries From This Table For The Week, Month Or Year Then Just Add The Total Into The Next Table.
+
+SEARCHING ENTRIES:
+Tap In The Search Bar, Type In Your Query And Then Press 'Search' At The Bottom Right Of The Keyboard.
+Tap On Any Row As Usual To View And / Or Edit The Entry.
+
+A NOTE ABOUT THE DATE WHEN SEARCHING:
+To Search For A Specific Date ( Ie If You Wanted To Search For Any January 5th Entries Say ), Please Use The Following Format Including The Dash:
+Month And Then Date, So Use:
+01-05
+This Is Due To The Way The Entries Are Stored In The App Memory Initially.
+
+In This Expenses Section, You Can Also Search For An Amount - Search For Just The Amount WITHOUT The £ In This Case - Ie If You Know You Paid £44.50 For Fuel One Day, Search For '44.50' Only.
+You Can Also Search For The Description - Ie 'Service' And This Will Show All Entries That Contain The Word 'Service'.
+To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap On the Small Cross At The Right Hand Side Of The Search Bar To Dismiss The Keyboard And Return To The TableView.
+
+A NOTE ABOUT IMAGES:
+I Have Added Gesture Recognisers For Both Zooming And Rotating, So You Can Use Your Thumb Tip and Index Finger Tip To Pinch To Zoom Or Rotate The Image As Desired.
+
+When Emailing An Entry That Contains An Image, When Prompted To Choose A Size For The Attachment, Choose 'Actual Size' In Order For The Request To Be Successful. Actual Size Is Quite A Large File So Please Be Patient Whilst It Sends - It Will Take A Good Few Minutes Depending On The Speed Of Your Connection But Your Mail App Will Send It In The Background Whilst You Carry On :)
+
+EMAIL:
+Note That This App Is Configured To Use Apple's Email App Only, So Please Make Sure It Is Set Up To Send Email Before Attempting.
+
+You Can Of Course Send Your Entry To Any Email Address You Wish ( for Example A Gmail Address ) And Then View The Entry There. </string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4io-5F-IJF" firstAttribute="bottom" secondItem="Alh-sW-OkZ" secondAttribute="bottom" constant="16" id="AZt-ZB-LY1"/>
+                            <constraint firstItem="4io-5F-IJF" firstAttribute="trailing" secondItem="Alh-sW-OkZ" secondAttribute="trailing" constant="16" id="Eua-cD-j8z"/>
+                            <constraint firstItem="gWH-hd-U0C" firstAttribute="top" secondItem="4io-5F-IJF" secondAttribute="top" id="Qft-UZ-mWa"/>
+                            <constraint firstItem="Alh-sW-OkZ" firstAttribute="top" secondItem="gWH-hd-U0C" secondAttribute="bottom" constant="16" id="e6S-Pq-oLE"/>
+                            <constraint firstItem="gWH-hd-U0C" firstAttribute="leading" secondItem="4io-5F-IJF" secondAttribute="leading" id="faD-uT-iM2"/>
+                            <constraint firstItem="Alh-sW-OkZ" firstAttribute="leading" secondItem="4io-5F-IJF" secondAttribute="leading" constant="16" id="o8q-FD-doS"/>
+                            <constraint firstItem="gWH-hd-U0C" firstAttribute="trailing" secondItem="4io-5F-IJF" secondAttribute="trailing" id="yMG-BW-C2X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4io-5F-IJF"/>
+                    </view>
+                    <connections>
+                        <outlet property="textVieew" destination="Alh-sW-OkZ" id="v9c-u8-KCL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="55G-cg-4a6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4116" y="-1703"/>
+        </scene>
+        <!--IncomeStoryboard-->
+        <scene sceneID="PIo-Te-gjt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="IncomeStoryboard" id="LIJ-Pg-D2o" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aE8-38-j6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3269" y="-1370"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="g1V-N2-2EN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="KFV-YP-oJQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8F1-VB-hwO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3767" y="-1254"/>
+        </scene>
+        <!--TotalExpensesStoryboard-->
+        <scene sceneID="540-iC-hmf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TotalExpensesStoryboard" id="eRj-pP-SsW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TPY-bX-5Eb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4478" y="-1249"/>
+        </scene>
+        <!--Expenses Table View Controller-->
+        <scene sceneID="DJK-mD-lsq">
+            <objects>
+                <tableViewController id="kbw-IU-aW8" customClass="ExpensesTableViewController" customModule="The_ADI_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wPZ-Bj-ed1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="63d-g5-mLA">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="kbw-IU-aW8" id="5Ia-af-Ich"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="expensesCell" id="usS-wM-rAf">
+                                <rect key="frame" x="0.0" y="72" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="usS-wM-rAf" id="Qqf-7E-gUJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kbw-IU-aW8" id="MMc-IY-W0L"/>
+                            <outlet property="delegate" destination="kbw-IU-aW8" id="RAb-vG-4I5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="AFU-FM-wJv">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Rdg-kb-m4a"/>
+                        <leftBarButtonItems>
+                            <barButtonItem image="home@2" id="2Fa-Np-K0l">
+                                <inset key="imageInsets" minX="0.0" minY="1" maxX="0.0" maxY="-3"/>
+                                <connections>
+                                    <segue destination="KFV-YP-oJQ" kind="show" id="1mL-sH-yQf"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem id="vkQ-gQ-dYb"/>
+                            <barButtonItem image="income" id="ZMq-yc-xAR">
+                                <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="-2"/>
+                                <connections>
+                                    <segue destination="LIJ-Pg-D2o" kind="show" id="51J-3W-Blo"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="got-yC-Fha">
+                                <connections>
+                                    <segue destination="jI5-pG-LW1" kind="show" identifier="goFromExpensesTableViewControllerToAddExpensesVC" id="pzR-dX-cXi"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="totals" id="iSt-Yv-fVn">
+                                <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="-3"/>
+                                <connections>
+                                    <segue destination="eRj-pP-SsW" kind="show" id="fAk-SH-hMk"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="expensesTable" destination="wPZ-Bj-ed1" id="IBl-f4-es7"/>
+                        <outlet property="searchBar" destination="63d-g5-mLA" id="y2T-M9-Gwh"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zyO-4K-Z9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4116" y="-839"/>
+        </scene>
+        <!--Expenses View Controller-->
+        <scene sceneID="R53-oV-DFY">
+            <objects>
+                <viewController id="jI5-pG-LW1" customClass="ExpensesViewController" customModule="The_ADI_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZsL-iR-TOF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrH-JW-q04">
+                                <rect key="frame" x="0.0" y="44" width="375" height="1156"/>
+                                <subviews>
+                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ufo-pQ-QyR" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1116"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6An-Y5-kVl">
+                                                <rect key="frame" x="179.5" y="8" width="16.5" height="11"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEC-EU-N7i">
+                                                <rect key="frame" x="171.5" y="1097" width="32" height="11"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="o31-4D-aGq">
+                                                <rect key="frame" x="8" y="26.5" width="359" height="290"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Date Of Receipt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kt5-YH-XgW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="27"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <size key="shadowOffset" width="1" height="1"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap To Enter Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aBw-ib-sHB">
+                                                        <rect key="frame" x="0.0" y="35" width="359" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Description Of Receipt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lp6-lH-C5c">
+                                                        <rect key="frame" x="0.0" y="77" width="359" height="27"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <size key="shadowOffset" width="1" height="1"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ie Fuel / Service Etc" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Znt-hu-mKI">
+                                                        <rect key="frame" x="0.0" y="112" width="359" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Receipt Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="at9-rZ-e3w">
+                                                        <rect key="frame" x="0.0" y="154" width="359" height="27"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <size key="shadowOffset" width="1" height="1"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="£" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XdI-05-wqt">
+                                                        <rect key="frame" x="0.0" y="189" width="359" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Of Receipt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJQ-B2-vj5">
+                                                        <rect key="frame" x="0.0" y="231" width="359" height="27"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <size key="shadowOffset" width="1" height="1"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0S-rc-hOq">
+                                                        <rect key="frame" x="0.0" y="266" width="359" height="24"/>
+                                                        <connections>
+                                                            <action selector="infoButtonTapped:" destination="jI5-pG-LW1" eventType="touchUpInside" id="Ai8-dL-SWM"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7T8-Sx-ek4">
+                                                <rect key="frame" x="8" y="703.5" width="359" height="105"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Entry To Yourself?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0L-NZ-aO5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="27"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <size key="shadowOffset" width="1" height="1"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecn-NK-h4C">
+                                                        <rect key="frame" x="0.0" y="37" width="359" height="24"/>
+                                                        <connections>
+                                                            <action selector="emailInfoTapped:" destination="jI5-pG-LW1" eventType="touchUpInside" id="baz-mr-0Hp"/>
+                                                        </connections>
+                                                    </button>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Email Address" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iuD-Lp-IjH">
+                                                        <rect key="frame" x="0.0" y="71" width="359" height="34"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UN6-qc-WAc">
+                                                <rect key="frame" x="137.5" y="833.5" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="cpD-PU-BPY"/>
+                                                    <constraint firstAttribute="height" constant="100" id="pvJ-5o-YkZ"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Email Image"/>
+                                                <connections>
+                                                    <action selector="emailButtonPressed:" destination="jI5-pG-LW1" eventType="touchUpInside" id="rqt-CZ-L8o"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="expensesCamera" translatesAutoresizingMaskIntoConstraints="NO" id="neU-HC-pR4">
+                                                <rect key="frame" x="8" y="324.5" width="359" height="359"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="359" id="6Qn-85-6SA"/>
+                                                    <constraint firstAttribute="height" constant="359" id="g7Y-tv-lLU"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="neU-HC-pR4" secondAttribute="trailing" constant="8" id="5gx-tT-rbq"/>
+                                            <constraint firstItem="neU-HC-pR4" firstAttribute="top" secondItem="o31-4D-aGq" secondAttribute="bottom" constant="8" id="CcS-ic-Yd5"/>
+                                            <constraint firstItem="6An-Y5-kVl" firstAttribute="top" secondItem="Ufo-pQ-QyR" secondAttribute="top" constant="8" id="Ddr-Ku-uf0"/>
+                                            <constraint firstItem="7T8-Sx-ek4" firstAttribute="top" secondItem="neU-HC-pR4" secondAttribute="bottom" constant="20" id="I44-DM-Scn"/>
+                                            <constraint firstItem="xEC-EU-N7i" firstAttribute="top" secondItem="6An-Y5-kVl" secondAttribute="bottom" constant="1078" id="IfV-5w-7qr"/>
+                                            <constraint firstItem="xEC-EU-N7i" firstAttribute="centerX" secondItem="Ufo-pQ-QyR" secondAttribute="centerX" id="JmV-VA-592"/>
+                                            <constraint firstItem="UN6-qc-WAc" firstAttribute="centerX" secondItem="Ufo-pQ-QyR" secondAttribute="centerX" id="N0C-U1-iNy"/>
+                                            <constraint firstItem="UN6-qc-WAc" firstAttribute="top" secondItem="7T8-Sx-ek4" secondAttribute="bottom" constant="25" id="RHg-Xd-aRX"/>
+                                            <constraint firstItem="6An-Y5-kVl" firstAttribute="centerX" secondItem="Ufo-pQ-QyR" secondAttribute="centerX" id="WDe-dr-YvC"/>
+                                            <constraint firstAttribute="trailing" secondItem="o31-4D-aGq" secondAttribute="trailing" constant="8" id="bIZ-jD-CVm"/>
+                                            <constraint firstItem="o31-4D-aGq" firstAttribute="top" secondItem="6An-Y5-kVl" secondAttribute="bottom" constant="7.5" id="bUE-dg-CBB"/>
+                                            <constraint firstItem="neU-HC-pR4" firstAttribute="leading" secondItem="Ufo-pQ-QyR" secondAttribute="leading" constant="8" id="jld-gG-fTn"/>
+                                            <constraint firstAttribute="bottom" secondItem="xEC-EU-N7i" secondAttribute="bottom" constant="8" id="kYZ-sp-Vrj"/>
+                                            <constraint firstAttribute="trailing" secondItem="7T8-Sx-ek4" secondAttribute="trailing" constant="8" id="t8n-bt-c9e"/>
+                                            <constraint firstItem="7T8-Sx-ek4" firstAttribute="leading" secondItem="Ufo-pQ-QyR" secondAttribute="leading" constant="8" id="vas-pG-N98"/>
+                                            <constraint firstItem="o31-4D-aGq" firstAttribute="leading" secondItem="Ufo-pQ-QyR" secondAttribute="leading" constant="8" id="y1z-1e-k5g"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Ufo-pQ-QyR" firstAttribute="height" secondItem="CrH-JW-q04" secondAttribute="height" priority="250" id="Fy6-a8-X0x"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ufo-pQ-QyR" secondAttribute="bottom" id="HWf-z4-5J2"/>
+                                    <constraint firstItem="Ufo-pQ-QyR" firstAttribute="width" secondItem="CrH-JW-q04" secondAttribute="width" id="Ki6-Hx-9E2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ufo-pQ-QyR" secondAttribute="trailing" id="gnc-lX-eep"/>
+                                    <constraint firstItem="Ufo-pQ-QyR" firstAttribute="leading" secondItem="CrH-JW-q04" secondAttribute="leading" id="hSq-0p-FxJ"/>
+                                    <constraint firstItem="Ufo-pQ-QyR" firstAttribute="top" secondItem="CrH-JW-q04" secondAttribute="top" id="yvY-CC-DBc"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.074509803920000006" green="0.59607843140000005" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CrH-JW-q04" firstAttribute="top" secondItem="C3a-xF-EFc" secondAttribute="top" id="BPe-eV-EVR"/>
+                            <constraint firstItem="C3a-xF-EFc" firstAttribute="trailing" secondItem="CrH-JW-q04" secondAttribute="trailing" id="Ldr-zC-JCR"/>
+                            <constraint firstItem="C3a-xF-EFc" firstAttribute="bottom" secondItem="CrH-JW-q04" secondAttribute="bottom" id="W1T-ig-BTt"/>
+                            <constraint firstItem="CrH-JW-q04" firstAttribute="leading" secondItem="C3a-xF-EFc" secondAttribute="leading" id="o37-9O-i57"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="C3a-xF-EFc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="b2Q-2B-Cd2">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="RFp-Lj-hsc"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="Y4z-iX-AxQ">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="jI5-pG-LW1" id="aBi-VZ-4VF"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="WCy-qP-DNj">
+                                <connections>
+                                    <action selector="photosTapped:" destination="jI5-pG-LW1" id="pba-mN-gHB"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Save" image="saveIcon" id="LmZ-wA-GKd">
+                                <inset key="imageInsets" minX="0.0" minY="-1" maxX="0.0" maxY="-11"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="jI5-pG-LW1" id="166-1K-kwf"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="helpIcon" id="hAz-7H-zZn">
+                                <inset key="imageInsets" minX="0.0" minY="1" maxX="0.0" maxY="-7"/>
+                                <connections>
+                                    <segue destination="OZm-oV-gAQ" kind="presentation" id="YMp-lK-sWU"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <size key="freeformSize" width="375" height="1200"/>
+                    <connections>
+                        <outlet property="bottomLabel" destination="xEC-EU-N7i" id="ET2-WX-31J"/>
+                        <outlet property="dateTextField" destination="aBw-ib-sHB" id="5PF-Sr-FMn"/>
+                        <outlet property="emailTextField" destination="iuD-Lp-IjH" id="OZv-Nh-0wB"/>
+                        <outlet property="receiptAmountTextField" destination="XdI-05-wqt" id="HO2-QX-sfk"/>
+                        <outlet property="receiptDescriptionTextField" destination="Znt-hu-mKI" id="cfa-2d-qkx"/>
+                        <outlet property="receiptImageView" destination="neU-HC-pR4" id="YlM-6X-gbu"/>
+                        <outlet property="topLabel" destination="6An-Y5-kVl" id="EDs-h5-xXq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="szr-ZD-3Bd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5082" y="-601"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0PH-tZ-Aud">
+            <objects>
+                <navigationController id="x91-J5-XZM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2nT-dB-qxx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kbw-IU-aW8" kind="relationship" relationship="rootViewController" id="XXw-BR-92C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GpI-cX-zBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3206" y="-840"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Email Image" width="1920" height="1920"/>
+        <image name="expensesCamera" width="1280" height="1280"/>
+        <image name="helpIcon" width="46" height="46"/>
+        <image name="home@2" width="48" height="48"/>
+        <image name="income" width="46" height="46"/>
+        <image name="saveIcon" width="46" height="46"/>
+        <image name="totals" width="46" height="46"/>
+    </resources>
+</document>

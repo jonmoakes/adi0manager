@@ -1,0 +1,675 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE03B93B22034DB500544A7D /* HelpTotalExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B93A22034DB500544A7D /* HelpTotalExpensesViewController.swift */; };
+		AE03B93D2203570F00544A7D /* HelpPupilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B93C2203570F00544A7D /* HelpPupilViewController.swift */; };
+		AE24F39D20E4361A00B04CA0 /* ExpensesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE24F39C20E4361A00B04CA0 /* ExpensesTableViewController.swift */; };
+		AE24F39F20E4362F00B04CA0 /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE24F39E20E4362F00B04CA0 /* ExpensesViewController.swift */; };
+		AE24F3A120E4364A00B04CA0 /* ListOfExpensesItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE24F3A020E4364A00B04CA0 /* ListOfExpensesItems.swift */; };
+		AE2B5E3A22083D4C0089DBF3 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2B5E3922083D4C0089DBF3 /* ProgressViewController.swift */; };
+		AE2F596F21DFB23C006A0CA3 /* EmailUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2F596E21DFB23C006A0CA3 /* EmailUsViewController.swift */; };
+		AE3A26F1222AD29600F6FF34 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3A26F0222AD29600F6FF34 /* Alert.swift */; };
+		AE3A26F3222B0FA500F6FF34 /* UsefulLinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3A26F2222B0FA500F6FF34 /* UsefulLinksViewController.swift */; };
+		AE3EF7DA21FA933200159CE6 /* DiaryHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3EF7D921FA933200159CE6 /* DiaryHelpViewController.swift */; };
+		AE42ED782202140F00D64854 /* LessonsHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE42ED772202140F00D64854 /* LessonsHelpViewController.swift */; };
+		AE44E260224A5EDC00696D5B /* IncomeHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE44E25F224A5EDC00696D5B /* IncomeHelpViewController.swift */; };
+		AE75934320E37850000E1A77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75934220E37850000E1A77 /* AppDelegate.swift */; };
+		AE75934820E37850000E1A77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE75934620E37850000E1A77 /* Main.storyboard */; };
+		AE75934B20E37850000E1A77 /* ADI_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE75934920E37850000E1A77 /* ADI_App.xcdatamodeld */; };
+		AE75934D20E37850000E1A77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE75934C20E37850000E1A77 /* Assets.xcassets */; };
+		AE75935020E37850000E1A77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE75934E20E37850000E1A77 /* LaunchScreen.storyboard */; };
+		AE75935820E37CD9000E1A77 /* EntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75935720E37CD9000E1A77 /* EntriesTableViewController.swift */; };
+		AE75935A20E37D11000E1A77 /* ComposerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75935920E37D11000E1A77 /* ComposerViewController.swift */; };
+		AE75935C20E381FA000E1A77 /* DiaryItemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75935B20E381FA000E1A77 /* DiaryItemsList.swift */; };
+		AE75937520E38338000E1A77 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75935F20E38338000E1A77 /* IQNSArray+Sort.swift */; };
+		AE75937620E38338000E1A77 /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75936020E38338000E1A77 /* IQUIScrollView+Additions.swift */; };
+		AE75937720E38338000E1A77 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75936120E38338000E1A77 /* IQUITextFieldView+Additions.swift */; };
+		AE75937820E38338000E1A77 /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75936220E38338000E1A77 /* IQUIView+Hierarchy.swift */; };
+		AE75937920E38338000E1A77 /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75936320E38338000E1A77 /* IQUIViewController+Additions.swift */; };
+		AE75937A20E38338000E1A77 /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75936520E38338000E1A77 /* IQKeyboardManagerConstants.swift */; };
+		AE75937B20E38338000E1A77 /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75936620E38338000E1A77 /* IQKeyboardManagerConstantsInternal.swift */; };
+		AE75937C20E38338000E1A77 /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75936720E38338000E1A77 /* IQKeyboardManager.swift */; };
+		AE75937D20E38338000E1A77 /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75936920E38338000E1A77 /* IQKeyboardReturnKeyHandler.swift */; };
+		AE75937E20E38338000E1A77 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75936B20E38338000E1A77 /* IQTextView.swift */; };
+		AE75937F20E38338000E1A77 /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75936D20E38338000E1A77 /* IQBarButtonItem.swift */; };
+		AE75938020E38338000E1A77 /* IQInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75936E20E38338000E1A77 /* IQInvocation.swift */; };
+		AE75938120E38338000E1A77 /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75936F20E38338000E1A77 /* IQPreviousNextView.swift */; };
+		AE75938220E38338000E1A77 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75937020E38338000E1A77 /* IQTitleBarButtonItem.swift */; };
+		AE75938320E38338000E1A77 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75937120E38338000E1A77 /* IQToolbar.swift */; };
+		AE75938420E38338000E1A77 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75937220E38338000E1A77 /* IQUIView+IQKeyboardToolbar.swift */; };
+		AE75938520E38338000E1A77 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AE75937420E38338000E1A77 /* IQKeyboardManager.bundle */; };
+		AE75938920E3873C000E1A77 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75938820E3873C000E1A77 /* HomeScreenViewController.swift */; };
+		AE75938B20E3F5AD000E1A77 /* PupilListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75938A20E3F5AD000E1A77 /* PupilListTableViewController.swift */; };
+		AE75938D20E3F5CE000E1A77 /* AddPupilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75938C20E3F5CE000E1A77 /* AddPupilViewController.swift */; };
+		AE75938F20E4047A000E1A77 /* ListOfItemsForPupils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75938E20E4047A000E1A77 /* ListOfItemsForPupils.swift */; };
+		AE75939120E41583000E1A77 /* LessonAndPaymentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75939020E41583000E1A77 /* LessonAndPaymentsTableViewController.swift */; };
+		AE75939320E4159B000E1A77 /* AddLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75939220E4159B000E1A77 /* AddLessonViewController.swift */; };
+		AE75939520E415C1000E1A77 /* ListOfLessonItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75939420E415C1000E1A77 /* ListOfLessonItems.swift */; };
+		AE7D8857223663C300BF28F5 /* JournalStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7D8856223663C300BF28F5 /* JournalStoryboard.storyboard */; };
+		AE7D8859223663DE00BF28F5 /* LessonStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7D8858223663DE00BF28F5 /* LessonStoryboard.storyboard */; };
+		AE7D885B223663EC00BF28F5 /* ExpensesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7D885A223663EC00BF28F5 /* ExpensesStoryboard.storyboard */; };
+		AE7D885D223663FD00BF28F5 /* PupilsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7D885C223663FD00BF28F5 /* PupilsStoryboard.storyboard */; };
+		AE7D885F2236641400BF28F5 /* ContactStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7D885E2236641400BF28F5 /* ContactStoryboard.storyboard */; };
+		AE7D88612236642400BF28F5 /* UsefulLinksStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7D88602236642400BF28F5 /* UsefulLinksStoryboard.storyboard */; };
+		AE7D88632236645B00BF28F5 /* HelpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7D88622236645B00BF28F5 /* HelpStoryboard.storyboard */; };
+		AE7D8865223682FE00BF28F5 /* TotalExpensesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7D8864223682FE00BF28F5 /* TotalExpensesStoryboard.storyboard */; };
+		AE8DD79B20E6533A0003B0F1 /* TotalExpensesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8DD79A20E6533A0003B0F1 /* TotalExpensesTableViewController.swift */; };
+		AE8DD79D20E653570003B0F1 /* AddTotalExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8DD79C20E653570003B0F1 /* AddTotalExpensesViewController.swift */; };
+		AE8DD79F20E653790003B0F1 /* ListOfTotalExpensesItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8DD79E20E653790003B0F1 /* ListOfTotalExpensesItems.swift */; };
+		AE95B309224A22D800101779 /* IncomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95B308224A22D800101779 /* IncomeTableViewController.swift */; };
+		AE95B30B224A232000101779 /* IncomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE95B30A224A232000101779 /* IncomeStoryboard.storyboard */; };
+		AE95B30D224A284300101779 /* AddIncomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95B30C224A284200101779 /* AddIncomeViewController.swift */; };
+		AEC8BF942202262D0092A6F8 /* ExpensesHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC8BF932202262D0092A6F8 /* ExpensesHelpViewController.swift */; };
+		AEDB8FE0221BF89000AD976C /* HowToUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDB8FDF221BF89000AD976C /* HowToUseViewController.swift */; };
+		AEFE04D02212272000334E85 /* BlockBookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE04CF2212272000334E85 /* BlockBookingsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AE03B93A22034DB500544A7D /* HelpTotalExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTotalExpensesViewController.swift; sourceTree = "<group>"; };
+		AE03B93C2203570F00544A7D /* HelpPupilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpPupilViewController.swift; sourceTree = "<group>"; };
+		AE24F39C20E4361A00B04CA0 /* ExpensesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTableViewController.swift; sourceTree = "<group>"; };
+		AE24F39E20E4362F00B04CA0 /* ExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
+		AE24F3A020E4364A00B04CA0 /* ListOfExpensesItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfExpensesItems.swift; sourceTree = "<group>"; };
+		AE2B5E3922083D4C0089DBF3 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		AE2F596E21DFB23C006A0CA3 /* EmailUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailUsViewController.swift; sourceTree = "<group>"; };
+		AE3A26F0222AD29600F6FF34 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		AE3A26F2222B0FA500F6FF34 /* UsefulLinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulLinksViewController.swift; sourceTree = "<group>"; };
+		AE3EF7D921FA933200159CE6 /* DiaryHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryHelpViewController.swift; sourceTree = "<group>"; };
+		AE42ED772202140F00D64854 /* LessonsHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsHelpViewController.swift; sourceTree = "<group>"; };
+		AE44E25F224A5EDC00696D5B /* IncomeHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeHelpViewController.swift; sourceTree = "<group>"; };
+		AE75933F20E37850000E1A77 /* The ADI App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The ADI App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE75934220E37850000E1A77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE75934720E37850000E1A77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE75934A20E37850000E1A77 /* ADI_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ADI_App.xcdatamodel; sourceTree = "<group>"; };
+		AE75934C20E37850000E1A77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE75934F20E37850000E1A77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE75935120E37850000E1A77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE75935720E37CD9000E1A77 /* EntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesTableViewController.swift; sourceTree = "<group>"; };
+		AE75935920E37D11000E1A77 /* ComposerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerViewController.swift; sourceTree = "<group>"; };
+		AE75935B20E381FA000E1A77 /* DiaryItemsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryItemsList.swift; sourceTree = "<group>"; };
+		AE75935F20E38338000E1A77 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
+		AE75936020E38338000E1A77 /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
+		AE75936120E38338000E1A77 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
+		AE75936220E38338000E1A77 /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
+		AE75936320E38338000E1A77 /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
+		AE75936520E38338000E1A77 /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
+		AE75936620E38338000E1A77 /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
+		AE75936720E38338000E1A77 /* IQKeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManager.swift; sourceTree = "<group>"; };
+		AE75936820E38338000E1A77 /* IQKeyboardManagerSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerSwift.h; sourceTree = "<group>"; };
+		AE75936920E38338000E1A77 /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
+		AE75936B20E38338000E1A77 /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
+		AE75936D20E38338000E1A77 /* IQBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQBarButtonItem.swift; sourceTree = "<group>"; };
+		AE75936E20E38338000E1A77 /* IQInvocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQInvocation.swift; sourceTree = "<group>"; };
+		AE75936F20E38338000E1A77 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPreviousNextView.swift; sourceTree = "<group>"; };
+		AE75937020E38338000E1A77 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
+		AE75937120E38338000E1A77 /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
+		AE75937220E38338000E1A77 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
+		AE75937420E38338000E1A77 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		AE75938820E3873C000E1A77 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		AE75938A20E3F5AD000E1A77 /* PupilListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupilListTableViewController.swift; sourceTree = "<group>"; };
+		AE75938C20E3F5CE000E1A77 /* AddPupilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPupilViewController.swift; sourceTree = "<group>"; };
+		AE75938E20E4047A000E1A77 /* ListOfItemsForPupils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfItemsForPupils.swift; sourceTree = "<group>"; };
+		AE75939020E41583000E1A77 /* LessonAndPaymentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonAndPaymentsTableViewController.swift; sourceTree = "<group>"; };
+		AE75939220E4159B000E1A77 /* AddLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLessonViewController.swift; sourceTree = "<group>"; };
+		AE75939420E415C1000E1A77 /* ListOfLessonItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfLessonItems.swift; sourceTree = "<group>"; };
+		AE7D8856223663C300BF28F5 /* JournalStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JournalStoryboard.storyboard; sourceTree = "<group>"; };
+		AE7D8858223663DE00BF28F5 /* LessonStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LessonStoryboard.storyboard; sourceTree = "<group>"; };
+		AE7D885A223663EC00BF28F5 /* ExpensesStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExpensesStoryboard.storyboard; sourceTree = "<group>"; };
+		AE7D885C223663FD00BF28F5 /* PupilsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PupilsStoryboard.storyboard; sourceTree = "<group>"; };
+		AE7D885E2236641400BF28F5 /* ContactStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactStoryboard.storyboard; sourceTree = "<group>"; };
+		AE7D88602236642400BF28F5 /* UsefulLinksStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UsefulLinksStoryboard.storyboard; sourceTree = "<group>"; };
+		AE7D88622236645B00BF28F5 /* HelpStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HelpStoryboard.storyboard; sourceTree = "<group>"; };
+		AE7D8864223682FE00BF28F5 /* TotalExpensesStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TotalExpensesStoryboard.storyboard; sourceTree = "<group>"; };
+		AE8DD79A20E6533A0003B0F1 /* TotalExpensesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalExpensesTableViewController.swift; sourceTree = "<group>"; };
+		AE8DD79C20E653570003B0F1 /* AddTotalExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTotalExpensesViewController.swift; sourceTree = "<group>"; };
+		AE8DD79E20E653790003B0F1 /* ListOfTotalExpensesItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfTotalExpensesItems.swift; sourceTree = "<group>"; };
+		AE95B308224A22D800101779 /* IncomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeTableViewController.swift; sourceTree = "<group>"; };
+		AE95B30A224A232000101779 /* IncomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IncomeStoryboard.storyboard; sourceTree = "<group>"; };
+		AE95B30C224A284200101779 /* AddIncomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIncomeViewController.swift; sourceTree = "<group>"; };
+		AEC8BF932202262D0092A6F8 /* ExpensesHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesHelpViewController.swift; sourceTree = "<group>"; };
+		AEDB8FDF221BF89000AD976C /* HowToUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToUseViewController.swift; sourceTree = "<group>"; };
+		AEFE04CF2212272000334E85 /* BlockBookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockBookingsViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE75933C20E37850000E1A77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE75933620E37850000E1A77 = {
+			isa = PBXGroup;
+			children = (
+				AE75934120E37850000E1A77 /* ADI App */,
+				AE75934020E37850000E1A77 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE75934020E37850000E1A77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE75933F20E37850000E1A77 /* The ADI App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE75934120E37850000E1A77 /* ADI App */ = {
+			isa = PBXGroup;
+			children = (
+				AE7D88552236637500BF28F5 /* Storyboards */,
+				AEC9B66220EA31910077E637 /* Model */,
+				AEC9B66320EA31BC0077E637 /* Controller */,
+				AEC9B66420EA32320077E637 /* View */,
+				AEC9B66520EA32530077E637 /* Supporting Files */,
+			);
+			path = "ADI App";
+			sourceTree = "<group>";
+		};
+		AE75935D20E38338000E1A77 /* IQKeyboardManagerSwift */ = {
+			isa = PBXGroup;
+			children = (
+				AE75935E20E38338000E1A77 /* Categories */,
+				AE75936420E38338000E1A77 /* Constants */,
+				AE75936720E38338000E1A77 /* IQKeyboardManager.swift */,
+				AE75936820E38338000E1A77 /* IQKeyboardManagerSwift.h */,
+				AE75936920E38338000E1A77 /* IQKeyboardReturnKeyHandler.swift */,
+				AE75936A20E38338000E1A77 /* IQTextView */,
+				AE75936C20E38338000E1A77 /* IQToolbar */,
+				AE75937320E38338000E1A77 /* Resources */,
+			);
+			path = IQKeyboardManagerSwift;
+			sourceTree = "<group>";
+		};
+		AE75935E20E38338000E1A77 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				AE75935F20E38338000E1A77 /* IQNSArray+Sort.swift */,
+				AE75936020E38338000E1A77 /* IQUIScrollView+Additions.swift */,
+				AE75936120E38338000E1A77 /* IQUITextFieldView+Additions.swift */,
+				AE75936220E38338000E1A77 /* IQUIView+Hierarchy.swift */,
+				AE75936320E38338000E1A77 /* IQUIViewController+Additions.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		AE75936420E38338000E1A77 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				AE75936520E38338000E1A77 /* IQKeyboardManagerConstants.swift */,
+				AE75936620E38338000E1A77 /* IQKeyboardManagerConstantsInternal.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		AE75936A20E38338000E1A77 /* IQTextView */ = {
+			isa = PBXGroup;
+			children = (
+				AE75936B20E38338000E1A77 /* IQTextView.swift */,
+			);
+			path = IQTextView;
+			sourceTree = "<group>";
+		};
+		AE75936C20E38338000E1A77 /* IQToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				AE75936D20E38338000E1A77 /* IQBarButtonItem.swift */,
+				AE75936E20E38338000E1A77 /* IQInvocation.swift */,
+				AE75936F20E38338000E1A77 /* IQPreviousNextView.swift */,
+				AE75937020E38338000E1A77 /* IQTitleBarButtonItem.swift */,
+				AE75937120E38338000E1A77 /* IQToolbar.swift */,
+				AE75937220E38338000E1A77 /* IQUIView+IQKeyboardToolbar.swift */,
+			);
+			path = IQToolbar;
+			sourceTree = "<group>";
+		};
+		AE75937320E38338000E1A77 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AE75937420E38338000E1A77 /* IQKeyboardManager.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AE7D88552236637500BF28F5 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AE75934620E37850000E1A77 /* Main.storyboard */,
+				AE7D885E2236641400BF28F5 /* ContactStoryboard.storyboard */,
+				AE7D88602236642400BF28F5 /* UsefulLinksStoryboard.storyboard */,
+				AE7D88622236645B00BF28F5 /* HelpStoryboard.storyboard */,
+				AE7D8856223663C300BF28F5 /* JournalStoryboard.storyboard */,
+				AE7D8858223663DE00BF28F5 /* LessonStoryboard.storyboard */,
+				AE7D885A223663EC00BF28F5 /* ExpensesStoryboard.storyboard */,
+				AE7D8864223682FE00BF28F5 /* TotalExpensesStoryboard.storyboard */,
+				AE7D885C223663FD00BF28F5 /* PupilsStoryboard.storyboard */,
+				AE95B30A224A232000101779 /* IncomeStoryboard.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AEC9B66220EA31910077E637 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE75934220E37850000E1A77 /* AppDelegate.swift */,
+				AE75935B20E381FA000E1A77 /* DiaryItemsList.swift */,
+				AE75938E20E4047A000E1A77 /* ListOfItemsForPupils.swift */,
+				AE75939420E415C1000E1A77 /* ListOfLessonItems.swift */,
+				AE24F3A020E4364A00B04CA0 /* ListOfExpensesItems.swift */,
+				AE8DD79E20E653790003B0F1 /* ListOfTotalExpensesItems.swift */,
+				AE3A26F0222AD29600F6FF34 /* Alert.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AEC9B66320EA31BC0077E637 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AE75938820E3873C000E1A77 /* HomeScreenViewController.swift */,
+				AE2F596E21DFB23C006A0CA3 /* EmailUsViewController.swift */,
+				AEDB8FDF221BF89000AD976C /* HowToUseViewController.swift */,
+				AE75935720E37CD9000E1A77 /* EntriesTableViewController.swift */,
+				AE75935920E37D11000E1A77 /* ComposerViewController.swift */,
+				AE3EF7D921FA933200159CE6 /* DiaryHelpViewController.swift */,
+				AE75939020E41583000E1A77 /* LessonAndPaymentsTableViewController.swift */,
+				AE75939220E4159B000E1A77 /* AddLessonViewController.swift */,
+				AE42ED772202140F00D64854 /* LessonsHelpViewController.swift */,
+				AE24F39C20E4361A00B04CA0 /* ExpensesTableViewController.swift */,
+				AE24F39E20E4362F00B04CA0 /* ExpensesViewController.swift */,
+				AEC8BF932202262D0092A6F8 /* ExpensesHelpViewController.swift */,
+				AE8DD79A20E6533A0003B0F1 /* TotalExpensesTableViewController.swift */,
+				AE8DD79C20E653570003B0F1 /* AddTotalExpensesViewController.swift */,
+				AE03B93A22034DB500544A7D /* HelpTotalExpensesViewController.swift */,
+				AE75938A20E3F5AD000E1A77 /* PupilListTableViewController.swift */,
+				AE75938C20E3F5CE000E1A77 /* AddPupilViewController.swift */,
+				AE2B5E3922083D4C0089DBF3 /* ProgressViewController.swift */,
+				AEFE04CF2212272000334E85 /* BlockBookingsViewController.swift */,
+				AE03B93C2203570F00544A7D /* HelpPupilViewController.swift */,
+				AE3A26F2222B0FA500F6FF34 /* UsefulLinksViewController.swift */,
+				AE95B308224A22D800101779 /* IncomeTableViewController.swift */,
+				AE95B30C224A284200101779 /* AddIncomeViewController.swift */,
+				AE44E25F224A5EDC00696D5B /* IncomeHelpViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AEC9B66420EA32320077E637 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE75934C20E37850000E1A77 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AEC9B66520EA32530077E637 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AE75935120E37850000E1A77 /* Info.plist */,
+				AE75934E20E37850000E1A77 /* LaunchScreen.storyboard */,
+				AE75934920E37850000E1A77 /* ADI_App.xcdatamodeld */,
+				AE75935D20E38338000E1A77 /* IQKeyboardManagerSwift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE75933E20E37850000E1A77 /* ADI App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE75935420E37850000E1A77 /* Build configuration list for PBXNativeTarget "ADI App" */;
+			buildPhases = (
+				AE75933B20E37850000E1A77 /* Sources */,
+				AE75933C20E37850000E1A77 /* Frameworks */,
+				AE75933D20E37850000E1A77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ADI App";
+			productName = "ADI App";
+			productReference = AE75933F20E37850000E1A77 /* The ADI App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE75933720E37850000E1A77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Jonathan Oakes";
+				TargetAttributes = {
+					AE75933E20E37850000E1A77 = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1020;
+					};
+				};
+			};
+			buildConfigurationList = AE75933A20E37850000E1A77 /* Build configuration list for PBXProject "ADI App" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE75933620E37850000E1A77;
+			productRefGroup = AE75934020E37850000E1A77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE75933E20E37850000E1A77 /* ADI App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE75933D20E37850000E1A77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE7D885D223663FD00BF28F5 /* PupilsStoryboard.storyboard in Resources */,
+				AE7D8857223663C300BF28F5 /* JournalStoryboard.storyboard in Resources */,
+				AE75935020E37850000E1A77 /* LaunchScreen.storyboard in Resources */,
+				AE75934D20E37850000E1A77 /* Assets.xcassets in Resources */,
+				AE7D88612236642400BF28F5 /* UsefulLinksStoryboard.storyboard in Resources */,
+				AE7D8865223682FE00BF28F5 /* TotalExpensesStoryboard.storyboard in Resources */,
+				AE7D8859223663DE00BF28F5 /* LessonStoryboard.storyboard in Resources */,
+				AE75938520E38338000E1A77 /* IQKeyboardManager.bundle in Resources */,
+				AE7D885F2236641400BF28F5 /* ContactStoryboard.storyboard in Resources */,
+				AE75934820E37850000E1A77 /* Main.storyboard in Resources */,
+				AE7D88632236645B00BF28F5 /* HelpStoryboard.storyboard in Resources */,
+				AE95B30B224A232000101779 /* IncomeStoryboard.storyboard in Resources */,
+				AE7D885B223663EC00BF28F5 /* ExpensesStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE75933B20E37850000E1A77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE75938420E38338000E1A77 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
+				AE75938D20E3F5CE000E1A77 /* AddPupilViewController.swift in Sources */,
+				AE75935C20E381FA000E1A77 /* DiaryItemsList.swift in Sources */,
+				AE75937A20E38338000E1A77 /* IQKeyboardManagerConstants.swift in Sources */,
+				AE75937D20E38338000E1A77 /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				AE8DD79D20E653570003B0F1 /* AddTotalExpensesViewController.swift in Sources */,
+				AE75939520E415C1000E1A77 /* ListOfLessonItems.swift in Sources */,
+				AE75938320E38338000E1A77 /* IQToolbar.swift in Sources */,
+				AE75938920E3873C000E1A77 /* HomeScreenViewController.swift in Sources */,
+				AE75935820E37CD9000E1A77 /* EntriesTableViewController.swift in Sources */,
+				AE95B30D224A284300101779 /* AddIncomeViewController.swift in Sources */,
+				AE95B309224A22D800101779 /* IncomeTableViewController.swift in Sources */,
+				AEC8BF942202262D0092A6F8 /* ExpensesHelpViewController.swift in Sources */,
+				AE03B93B22034DB500544A7D /* HelpTotalExpensesViewController.swift in Sources */,
+				AE75938220E38338000E1A77 /* IQTitleBarButtonItem.swift in Sources */,
+				AE75938B20E3F5AD000E1A77 /* PupilListTableViewController.swift in Sources */,
+				AE24F3A120E4364A00B04CA0 /* ListOfExpensesItems.swift in Sources */,
+				AE8DD79B20E6533A0003B0F1 /* TotalExpensesTableViewController.swift in Sources */,
+				AEFE04D02212272000334E85 /* BlockBookingsViewController.swift in Sources */,
+				AE75937920E38338000E1A77 /* IQUIViewController+Additions.swift in Sources */,
+				AE75937E20E38338000E1A77 /* IQTextView.swift in Sources */,
+				AE75939120E41583000E1A77 /* LessonAndPaymentsTableViewController.swift in Sources */,
+				AE42ED782202140F00D64854 /* LessonsHelpViewController.swift in Sources */,
+				AE3A26F3222B0FA500F6FF34 /* UsefulLinksViewController.swift in Sources */,
+				AE3EF7DA21FA933200159CE6 /* DiaryHelpViewController.swift in Sources */,
+				AE24F39D20E4361A00B04CA0 /* ExpensesTableViewController.swift in Sources */,
+				AE75938020E38338000E1A77 /* IQInvocation.swift in Sources */,
+				AE75939320E4159B000E1A77 /* AddLessonViewController.swift in Sources */,
+				AE44E260224A5EDC00696D5B /* IncomeHelpViewController.swift in Sources */,
+				AE75937C20E38338000E1A77 /* IQKeyboardManager.swift in Sources */,
+				AE75937520E38338000E1A77 /* IQNSArray+Sort.swift in Sources */,
+				AE03B93D2203570F00544A7D /* HelpPupilViewController.swift in Sources */,
+				AE75938F20E4047A000E1A77 /* ListOfItemsForPupils.swift in Sources */,
+				AE75934B20E37850000E1A77 /* ADI_App.xcdatamodeld in Sources */,
+				AE3A26F1222AD29600F6FF34 /* Alert.swift in Sources */,
+				AE75937820E38338000E1A77 /* IQUIView+Hierarchy.swift in Sources */,
+				AEDB8FE0221BF89000AD976C /* HowToUseViewController.swift in Sources */,
+				AE8DD79F20E653790003B0F1 /* ListOfTotalExpensesItems.swift in Sources */,
+				AE75937F20E38338000E1A77 /* IQBarButtonItem.swift in Sources */,
+				AE24F39F20E4362F00B04CA0 /* ExpensesViewController.swift in Sources */,
+				AE75935A20E37D11000E1A77 /* ComposerViewController.swift in Sources */,
+				AE75937620E38338000E1A77 /* IQUIScrollView+Additions.swift in Sources */,
+				AE2F596F21DFB23C006A0CA3 /* EmailUsViewController.swift in Sources */,
+				AE75938120E38338000E1A77 /* IQPreviousNextView.swift in Sources */,
+				AE75937720E38338000E1A77 /* IQUITextFieldView+Additions.swift in Sources */,
+				AE75934320E37850000E1A77 /* AppDelegate.swift in Sources */,
+				AE2B5E3A22083D4C0089DBF3 /* ProgressViewController.swift in Sources */,
+				AE75937B20E38338000E1A77 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AE75934620E37850000E1A77 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE75934720E37850000E1A77 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE75934E20E37850000E1A77 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE75934F20E37850000E1A77 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE75935220E37850000E1A77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AE75935320E37850000E1A77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE75935520E37850000E1A77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PK84HMGTL3;
+				INFOPLIST_FILE = "$(SRCROOT)/ADI App/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.joakesdev.com.ADIManager;
+				PRODUCT_NAME = "The ADI App";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE75935620E37850000E1A77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PK84HMGTL3;
+				INFOPLIST_FILE = "$(SRCROOT)/ADI App/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.joakesdev.com.ADIManager;
+				PRODUCT_NAME = "The ADI App";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE75933A20E37850000E1A77 /* Build configuration list for PBXProject "ADI App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE75935220E37850000E1A77 /* Debug */,
+				AE75935320E37850000E1A77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE75935420E37850000E1A77 /* Build configuration list for PBXNativeTarget "ADI App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE75935520E37850000E1A77 /* Debug */,
+				AE75935620E37850000E1A77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AE75934920E37850000E1A77 /* ADI_App.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AE75934A20E37850000E1A77 /* ADI_App.xcdatamodel */,
+			);
+			currentVersion = AE75934A20E37850000E1A77 /* ADI_App.xcdatamodel */;
+			path = ADI_App.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AE75933720E37850000E1A77 /* Project object */;
+}

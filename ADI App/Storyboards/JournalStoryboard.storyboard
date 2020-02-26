@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pHe-q5-Wxq">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Diary Help View Controller-->
+        <scene sceneID="deg-08-KsI">
+            <objects>
+                <viewController id="8xc-KC-Ujl" customClass="DiaryHelpViewController" customModule="The_ADI_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HLO-bR-Y0k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uZE-la-Ej1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <items>
+                                    <navigationItem title="Journal Help" id="Cu1-Fn-gXd">
+                                        <barButtonItem key="leftBarButtonItem" title="Close" id="6nz-cn-1ed">
+                                            <connections>
+                                                <action selector="closeButtonTapped:" destination="8xc-KC-Ujl" id="cHk-zS-AAX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWU-Gj-dcn">
+                                <rect key="frame" x="16" y="72" width="343" height="559"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">
+COMPOSING AN ENTRY:
+Tap The 'Compose' Button In The Top Right To Start An Entry.
+When You Have Entered Your Desired Information ( The DATE Is Required At Least ), Tap The 'SAVE' Icon In The Top Right To Save The Data.
+Simply Write Out Your Days Appointments In The White Box - However Your Preferred Style Is!
+
+As You Add Dates In, They Will Automatically Be Added In Date Order, So You Can Add Future And Even Past Dates, Knowing They Will Enter Themselves In The Correct Order In The Table List.
+
+EDITING AN ENTRY:
+To Edit The Data In An Entry, Simply Tap On The Desired Row In The Table That You Wish To Change.
+Once Again, Don't Forget To Tap On The 'SAVE' Icon In Order To Save The Edited Data!
+Or Tap The 'BACK' Button In The Top Left To Go Back To The Table List WITHOUT Saving Any Data.
+
+DELETING AN ENTRY:
+To Delete An Entry, Simply Swipe Left On The Row You Wish To Delete And Then Tap 'I'm Sure.'
+Note That This Is Irreversible.
+
+SEARCHING ENTRIES:
+To Search Your Entries, Tap The Search Bar, Type Your Search Query And Then Tap 'Search' At The Bottom Right Of The Keyboard.
+Tap Any Row As Usual To View And / Or Edit The Entry. 
+
+PLEASE NOTE:
+To Search For A Specific Date ( Ie If You Wanted To Search For Any January 5th Entries Say ), Please Use The Following Format Including The Dash: Month And Then Date, So:
+01-05 Would Be January 5th.
+This Is Due To The Way The Entries Are Stored In The App Memory Initially.
+
+You Can Also Search For Any Words At All That You Have Entered Into The Entries Box. For Example You May Have Entered 'David Smith, 10am - 12pm, Roundabouts' On One Date. You Can Therefore Search For 'Roundabouts' Or '10am' Etc.
+
+ Do Not Include 'th' Or 'st' When Searching For Dates ( As In 25th or 31st ), Just The Month And Then Date - Ie 05-25 For May 25th For Example.
+To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap On the Small Cross At The Right Hand Side Of The Search Bar To Dismiss The Keyboard And Return To The TableView.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LWU-Gj-dcn" firstAttribute="leading" secondItem="DNM-wx-IFs" secondAttribute="leading" constant="16" id="5Yl-ng-eZW"/>
+                            <constraint firstItem="LWU-Gj-dcn" firstAttribute="top" secondItem="uZE-la-Ej1" secondAttribute="bottom" constant="16" id="5p5-Gt-w0J"/>
+                            <constraint firstItem="uZE-la-Ej1" firstAttribute="top" secondItem="DNM-wx-IFs" secondAttribute="top" id="Pqd-yx-ymx"/>
+                            <constraint firstItem="DNM-wx-IFs" firstAttribute="bottom" secondItem="LWU-Gj-dcn" secondAttribute="bottom" constant="16" id="Snz-sR-jDS"/>
+                            <constraint firstItem="DNM-wx-IFs" firstAttribute="trailing" secondItem="LWU-Gj-dcn" secondAttribute="trailing" constant="16" id="YPf-7x-28E"/>
+                            <constraint firstItem="uZE-la-Ej1" firstAttribute="leading" secondItem="DNM-wx-IFs" secondAttribute="leading" id="h0l-P8-PEv"/>
+                            <constraint firstItem="uZE-la-Ej1" firstAttribute="trailing" secondItem="DNM-wx-IFs" secondAttribute="trailing" id="pQY-es-YFy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DNM-wx-IFs"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="LWU-Gj-dcn" id="V5k-2t-JBe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Neg-s5-cXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="262" y="-726"/>
+        </scene>
+        <!--Journal-->
+        <scene sceneID="8kf-Vf-Iq4">
+            <objects>
+                <tableViewController id="6MM-Ae-6zv" customClass="EntriesTableViewController" customModule="The_ADI_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pov-s9-k8R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="9Sj-Oe-yWv">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="6MM-Ae-6zv" id="UYf-w2-gJI"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EntryCell" id="bPy-Ze-K4m">
+                                <rect key="frame" x="0.0" y="72" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bPy-Ze-K4m" id="LUW-VC-ofd">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6MM-Ae-6zv" id="UZe-NA-jto"/>
+                            <outlet property="delegate" destination="6MM-Ae-6zv" id="pMY-FP-qnS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Journal" id="ZgH-ug-Vud">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="BTJ-ue-nSV"/>
+                        <barButtonItem key="leftBarButtonItem" image="home@2" id="FPl-c7-0Zg">
+                            <inset key="imageInsets" minX="0.0" minY="1" maxX="0.0" maxY="-5"/>
+                            <connections>
+                                <segue destination="wLq-FC-qQY" kind="show" id="YUj-aa-jG6"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="compose" id="AKq-mj-BxS">
+                                <connections>
+                                    <action selector="composeButtonTapped:" destination="6MM-Ae-6zv" id="S9g-vB-Z2Z"/>
+                                    <segue destination="JhL-mD-FUy" kind="show" identifier="goFromDiaryTableViewToComposerVC" id="YcU-bg-cMa"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Help" image="helpIcon" id="klX-76-LCv">
+                                <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="-8"/>
+                                <connections>
+                                    <action selector="helpButtonTapped:" destination="6MM-Ae-6zv" id="9KD-UM-gVE"/>
+                                    <segue destination="8xc-KC-Ujl" kind="presentation" id="7T8-Qb-gAU"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="diaryTable" destination="pov-s9-k8R" id="Yct-Pj-HML"/>
+                        <outlet property="searchBar" destination="9Sj-Oe-yWv" id="Z5t-a9-spj"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePp-gV-kE7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="263" y="112"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="RGf-kC-AyF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="wLq-FC-qQY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KlV-Wj-93r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="262" y="631"/>
+        </scene>
+        <!--Composer View Controller-->
+        <scene sceneID="qSV-jo-MHB">
+            <objects>
+                <viewController id="JhL-mD-FUy" customClass="ComposerViewController" customModule="The_ADI_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gtn-Zv-svE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nef-me-0Ku">
+                                <rect key="frame" x="8" y="54" width="359" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Pgi-Y9-2Mu">
+                                <rect key="frame" x="8" y="181" width="359" height="466"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JK9-TT-oQE">
+                                <rect key="frame" x="8" y="64" width="359" height="105"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgd-7m-UKz">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="24"/>
+                                        <connections>
+                                            <action selector="infoButtonPressed:" destination="JhL-mD-FUy" eventType="touchUpInside" id="GOP-d7-fG9"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="su8-U7-JG4">
+                                        <rect key="frame" x="0.0" y="34" width="359" height="27"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap To Enter Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="63A-IE-3ip">
+                                        <rect key="frame" x="0.0" y="71" width="359" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lmx-aC-9il" firstAttribute="trailing" secondItem="Nef-me-0Ku" secondAttribute="trailing" constant="8" id="HBH-5o-WM1"/>
+                            <constraint firstItem="JK9-TT-oQE" firstAttribute="top" secondItem="Nef-me-0Ku" secondAttribute="bottom" constant="10" id="N22-ZL-Nd0"/>
+                            <constraint firstItem="Pgi-Y9-2Mu" firstAttribute="top" secondItem="JK9-TT-oQE" secondAttribute="bottom" constant="12" id="Pzu-t1-AtK"/>
+                            <constraint firstItem="Pgi-Y9-2Mu" firstAttribute="leading" secondItem="Lmx-aC-9il" secondAttribute="leading" constant="8" id="UCI-PB-TwE"/>
+                            <constraint firstItem="Lmx-aC-9il" firstAttribute="trailing" secondItem="Pgi-Y9-2Mu" secondAttribute="trailing" constant="8" id="WcO-bm-WaM"/>
+                            <constraint firstItem="Nef-me-0Ku" firstAttribute="top" secondItem="Lmx-aC-9il" secondAttribute="top" constant="10" id="bat-Ra-lR6"/>
+                            <constraint firstItem="JK9-TT-oQE" firstAttribute="leading" secondItem="Lmx-aC-9il" secondAttribute="leading" constant="8" id="mfT-pk-Aks"/>
+                            <constraint firstItem="Nef-me-0Ku" firstAttribute="leading" secondItem="Lmx-aC-9il" secondAttribute="leading" constant="8" id="mu1-X0-4wU"/>
+                            <constraint firstItem="Lmx-aC-9il" firstAttribute="trailing" secondItem="JK9-TT-oQE" secondAttribute="trailing" constant="8" id="nCI-eL-aha"/>
+                            <constraint firstItem="Lmx-aC-9il" firstAttribute="bottom" secondItem="Pgi-Y9-2Mu" secondAttribute="bottom" constant="20" id="xaO-fA-niG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lmx-aC-9il"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rQY-w5-5ar">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="vSs-eJ-xd8"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" image="saveIcon" id="P45-Z3-0Ac">
+                            <inset key="imageInsets" minX="0.0" minY="1" maxX="0.0" maxY="-6"/>
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="JhL-mD-FUy" id="mQO-e8-g4B"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dateTextField" destination="63A-IE-3ip" id="vDW-dD-NeB"/>
+                        <outlet property="textViewField" destination="Pgi-Y9-2Mu" id="o8P-xi-eou"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sdm-Zo-Aig" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1183" y="112"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="U49-Na-QLF">
+            <objects>
+                <navigationController id="pHe-q5-Wxq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CCH-8x-bY6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6MM-Ae-6zv" kind="relationship" relationship="rootViewController" id="zBm-6Z-0eh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OYW-J2-REJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-694" y="112"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="helpIcon" width="46" height="46"/>
+        <image name="home@2" width="48" height="48"/>
+        <image name="saveIcon" width="46" height="46"/>
+    </resources>
+</document>

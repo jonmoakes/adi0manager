@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LZI-zF-Qj3">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HelpStoryboard-->
+        <scene sceneID="xZK-iY-xhz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HelpStoryboard" id="UZM-kC-0Wa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kal-Jf-IEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2119" y="49"/>
+        </scene>
+        <!--UsefulLinksStoryboard-->
+        <scene sceneID="Y5W-vx-x1H">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UsefulLinksStoryboard" id="YNF-NF-4K2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oPX-DE-IZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2119" y="143"/>
+        </scene>
+        <!--Home Screen View Controller-->
+        <scene sceneID="8a7-Ka-yi9">
+            <objects>
+                <viewController id="oaN-db-rti" customClass="HomeScreenViewController" customModule="The_ADI_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5rR-Zg-QVW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bc-bg-jXt">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" image="diary@2" id="fdu-RV-THp">
+                                        <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="-2"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="oyH-bp-AUG" kind="show" id="HpV-P8-2gq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="yKd-Z8-UdU"/>
+                                    <barButtonItem image="lessons@2" id="XEb-Lq-uM5">
+                                        <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="-2"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="I7E-1n-P9j" kind="show" id="60P-Vw-SfH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="tAB-Xd-Lt5"/>
+                                    <barButtonItem image="expenses@2" id="I8a-6s-Wep">
+                                        <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="-2"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="Se9-OD-unA" kind="show" id="f7H-LM-fwU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="hBe-5a-DVR"/>
+                                    <barButtonItem image="pupils@2" id="uVY-y4-c46">
+                                        <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="-2"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="Mpp-bB-UKT" kind="show" id="kho-OA-zGw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="ADI-4" translatesAutoresizingMaskIntoConstraints="NO" id="Ja1-0l-Sik">
+                                <rect key="frame" x="0.0" y="44" width="414" height="648"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.1.3" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcZ-yg-cW8">
+                                <rect key="frame" x="20" y="64" width="374" height="23"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58823529411764708" green="0.51372549019607838" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7bc-bg-jXt" firstAttribute="top" secondItem="Ja1-0l-Sik" secondAttribute="bottom" id="4Xq-qg-Zur"/>
+                            <constraint firstItem="Ja1-0l-Sik" firstAttribute="trailing" secondItem="v0I-Yb-TFN" secondAttribute="trailing" id="Esp-4D-CCS"/>
+                            <constraint firstItem="Ja1-0l-Sik" firstAttribute="leading" secondItem="v0I-Yb-TFN" secondAttribute="leading" id="Fh9-7C-ENv"/>
+                            <constraint firstItem="7bc-bg-jXt" firstAttribute="bottom" secondItem="v0I-Yb-TFN" secondAttribute="bottom" id="Fkg-tH-0dw"/>
+                            <constraint firstItem="7bc-bg-jXt" firstAttribute="leading" secondItem="v0I-Yb-TFN" secondAttribute="leading" id="HCw-ua-44u"/>
+                            <constraint firstItem="v0I-Yb-TFN" firstAttribute="trailing" secondItem="YcZ-yg-cW8" secondAttribute="trailing" constant="20" id="Q25-94-DGA"/>
+                            <constraint firstItem="Ja1-0l-Sik" firstAttribute="top" secondItem="v0I-Yb-TFN" secondAttribute="top" id="gtu-3B-nox"/>
+                            <constraint firstItem="YcZ-yg-cW8" firstAttribute="top" secondItem="v0I-Yb-TFN" secondAttribute="top" constant="20" id="lrq-pv-MEb"/>
+                            <constraint firstItem="YcZ-yg-cW8" firstAttribute="leading" secondItem="v0I-Yb-TFN" secondAttribute="leading" constant="20" id="wYX-eH-S8g"/>
+                            <constraint firstItem="7bc-bg-jXt" firstAttribute="trailing" secondItem="v0I-Yb-TFN" secondAttribute="trailing" id="xho-eW-Ezf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="v0I-Yb-TFN"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="I4A-GZ-fgE">
+                        <barButtonItem key="leftBarButtonItem" image="contact@2" id="kv5-T0-fcU">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="qBy-23-Fz0" kind="show" id="Faf-vJ-jeJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="helpIcon" id="Nqu-Sf-0G3">
+                                <inset key="imageInsets" minX="0.0" minY="1" maxX="0.0" maxY="-2"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="UZM-kC-0Wa" kind="show" id="Olt-jT-otF"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Website" image="link-symbol@2" id="aNh-eh-zRo">
+                                <inset key="imageInsets" minX="0.0" minY="1" maxX="0.0" maxY="-3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="YNF-NF-4K2" kind="show" id="Ini-0M-B0Q"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hr2-iq-oEN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1120.2898550724638" y="99.456521739130437"/>
+        </scene>
+        <!--JournalStoryboard-->
+        <scene sceneID="JsM-Es-TCa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="JournalStoryboard" id="oyH-bp-AUG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4RK-kl-mtk"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gKV-Fy-Nkd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="586" y="559"/>
+        </scene>
+        <!--LessonStoryboard-->
+        <scene sceneID="Qvc-Nd-xS1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LessonStoryboard" id="I7E-1n-P9j" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HRB-3v-yLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="922" y="558"/>
+        </scene>
+        <!--ExpensesStoryboard-->
+        <scene sceneID="EHn-Dh-EQd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ExpensesStoryboard" id="Se9-OD-unA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RNX-SI-LZs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1304" y="558"/>
+        </scene>
+        <!--PupilsStoryboard-->
+        <scene sceneID="2HG-MN-4hM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PupilsStoryboard" id="Mpp-bB-UKT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qJB-Vm-Y7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657" y="558"/>
+        </scene>
+        <!--ContactStoryboard-->
+        <scene sceneID="ckM-AF-ieK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ContactStoryboard" id="qBy-23-Fz0" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="roy-fN-mIT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1120" y="-378"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pdd-ik-uHL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LZI-zF-Qj3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HNZ-Zj-S1V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oaN-db-rti" kind="relationship" relationship="rootViewController" id="hrS-dt-Hja"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wmw-YE-ya1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166.66666666666669" y="99.456521739130437"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ADI-4" width="2048" height="2732"/>
+        <image name="contact@2" width="48" height="48"/>
+        <image name="diary@2" width="46" height="46"/>
+        <image name="expenses@2" width="46" height="46"/>
+        <image name="helpIcon" width="46" height="46"/>
+        <image name="lessons@2" width="46" height="46"/>
+        <image name="link-symbol@2" width="48" height="48"/>
+        <image name="pupils@2" width="46" height="46"/>
+    </resources>
+</document>

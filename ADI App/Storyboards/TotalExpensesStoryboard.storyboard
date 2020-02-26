@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XpE-Ys-dMN">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Help Total Expenses View Controller-->
+        <scene sceneID="d0w-3w-z4M">
+            <objects>
+                <viewController id="gqp-Ib-sN0" customClass="HelpTotalExpensesViewController" customModule="The_ADI_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hjr-8c-bGM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dxh-Tp-rhR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <items>
+                                    <navigationItem title="Total Expenses Help" id="zOG-7S-WPN">
+                                        <barButtonItem key="leftBarButtonItem" title="Close" id="g7B-gF-9MS">
+                                            <connections>
+                                                <action selector="closeButtonTapped:" destination="gqp-Ib-sN0" id="jZ4-Yl-mAL"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxL-9K-dMw">
+                                <rect key="frame" x="16" y="72" width="343" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="ADDING AN ENTRY:">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.027803401136157424" blue="0.023926913865410349" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+On Loading This Page You Will See An Option Where You Can Select To Either Enter An Entry That Is For A Week, Month, Or Year, Depending On How You Like To Record Your Expenses.
+Depending On Which You Choose, Only The Required Text Fields Will Be Available.
+
+Add Up Your Amounts From The Expenses Table And Then Enter Them Here.
+
+Enter In The Information And Then Tap The </string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="'SAVE'">
+                                        <attributes>
+                                            <color key="NSColor" red="0.12855219654849759" green="0.20015216268871561" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> Button.
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="EDITING AN ENTRY:">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.11579009936829898" blue="0.09285769907756436" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Simply Tap On The Row In The Table That You Wish To Edit. Enter The Required Information And Don't Forget To Tap </string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="'SAVE'">
+                                        <attributes>
+                                            <color key="NSColor" red="0.13108347973931156" green="0.23357172894497791" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> To Save The Edited Data.
+If You Change Your Mind, Simply Press The </string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="'BACK' ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.15913209722102806" green="0.20167709306845061" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Button.
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="DELETING AN ENTRY:">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.1331868143453987" blue="0.13300396169789663" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+To Delete An Entry, </string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Swipe Left ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.16422153852448773" green="0.21559242599829498" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="On The Row That You Want To Delete And Then Tap ">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="'I'm Sure'">
+                                        <attributes>
+                                            <color key="NSColor" red="0.17972539326216008" green="0.16378600969106993" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">.
+
+You Will Notice That Entering A Weekly, Monthly, Or Yearly Entry Leaves A Different Colour In The Table Row. This Is Simply To Make It Clear Visually Which Entries Are Weeks, Months Or Years :)
+
+For The Email Button, Make Sure You Have Entered An Entry And Tapped </string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="'SAVE'">
+                                        <attributes>
+                                            <color key="NSColor" red="0.11856383027212136" green="0.10514235826904661" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> First.
+Then, Return To The Entry, Fill In The Required Email Address And Then Tap The Envelope Button.
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="SEARCHING ENTRIES:">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.13970049594382894" blue="0.13878623252543065" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Tap In The Search Bar">
+                                        <attributes>
+                                            <color key="NSColor" red="0.11232467930556223" green="0.077833834081379449" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=", Type In Your Query And Then Press ">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="'Search'">
+                                        <attributes>
+                                            <color key="NSColor" red="0.1444686682325621" green="0.088196315548976445" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> At The Bottom Right Of The Keyboard.
+Tap On Any Row As Usual To View And / Or Edit The Entry.
+In This Total Expenses Section, You Can Search For An Amount ( Type This In WITHOUT The £ Symbol - Ie Search For '55' NOT '£55'.
+
+Do NOT Include 'th' or 'st' In A Date Search ( Ie '25th' or '31st'). Simply Search For '25 July' For Example.
+You Can Search For A Month, Or Year Too.
+
+To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap On the Small Cross At The Right Hand Side Of The Search Bar To Dismiss The Keyboard And Return To The TableView.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="an2-05-Att" firstAttribute="bottom" secondItem="kxL-9K-dMw" secondAttribute="bottom" constant="16" id="1Bh-0l-cXw"/>
+                            <constraint firstItem="Dxh-Tp-rhR" firstAttribute="top" secondItem="an2-05-Att" secondAttribute="top" id="Hmi-M4-JeL"/>
+                            <constraint firstItem="kxL-9K-dMw" firstAttribute="leading" secondItem="an2-05-Att" secondAttribute="leading" constant="16" id="HtK-eG-Vm4"/>
+                            <constraint firstItem="kxL-9K-dMw" firstAttribute="top" secondItem="Dxh-Tp-rhR" secondAttribute="bottom" constant="16" id="g8a-iU-UMf"/>
+                            <constraint firstItem="Dxh-Tp-rhR" firstAttribute="leading" secondItem="an2-05-Att" secondAttribute="leading" id="lwY-Mf-rMP"/>
+                            <constraint firstItem="an2-05-Att" firstAttribute="trailing" secondItem="kxL-9K-dMw" secondAttribute="trailing" constant="16" id="rul-15-DKh"/>
+                            <constraint firstItem="Dxh-Tp-rhR" firstAttribute="trailing" secondItem="an2-05-Att" secondAttribute="trailing" id="s0c-kZ-xua"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="an2-05-Att"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="kxL-9K-dMw" id="QuQ-QG-Wxv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HHW-T0-e0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5273" y="-3153"/>
+        </scene>
+        <!--Total Expenses-->
+        <scene sceneID="z0O-Q6-d6p">
+            <objects>
+                <tableViewController id="cJs-4n-kGk" customClass="TotalExpensesTableViewController" customModule="The_ADI_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DYY-5p-IMe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="gpi-Yt-yr5">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="cJs-4n-kGk" id="8Jc-z0-SLI"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TotalExpensesCell" id="xUh-WD-tRG">
+                                <rect key="frame" x="0.0" y="72" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xUh-WD-tRG" id="Pou-s4-MdV">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cJs-4n-kGk" id="pI0-A4-U5g"/>
+                            <outlet property="delegate" destination="cJs-4n-kGk" id="dcC-qU-Rmi"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Total Expenses" id="20U-HX-thd">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="tyx-ou-3Dt"/>
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="PvH-yR-baO">
+                            <connections>
+                                <segue destination="ndX-hz-E5P" kind="show" id="pa9-RJ-8Dr"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="N7o-kn-ltE">
+                                <connections>
+                                    <segue destination="6uE-Mh-PBq" kind="show" identifier="goFromTotalExpensesTvcToAddNewTotalExpensesVC" id="Wd7-fh-1Oh"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Help" image="helpIcon" id="Qgx-lx-YXu">
+                                <inset key="imageInsets" minX="0.0" minY="1" maxX="0.0" maxY="-7"/>
+                                <connections>
+                                    <action selector="helpButtonTapped:" destination="cJs-4n-kGk" id="aHZ-xw-g3L"/>
+                                    <segue destination="gqp-Ib-sN0" kind="presentation" id="Wmz-3R-07W"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="gpi-Yt-yr5" id="d0b-mg-hSk"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6SF-Mv-2nK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5274" y="-2257"/>
+        </scene>
+        <!--Add Total Expenses View Controller-->
+        <scene sceneID="sEn-jH-LNC">
+            <objects>
+                <viewController id="6uE-Mh-PBq" customClass="AddTotalExpensesViewController" customModule="The_ADI_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GSw-zS-k7K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="950"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yBT-sS-tyJ">
+                                <rect key="frame" x="0.0" y="44" width="375" height="906"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="74C-c3-uov" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="828"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehi-fO-BPH">
+                                                <rect key="frame" x="172" y="793" width="31" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drx-yT-1Dn">
+                                                <rect key="frame" x="174" y="8" width="27" height="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total For Week Ending:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oek-fZ-NWV">
+                                                <rect key="frame" x="8" y="28" width="359" height="27"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap To Enter The Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="37O-Rh-rbw">
+                                                <rect key="frame" x="8" y="63" width="359" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter The Total Amount For The Week" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mtK-fa-rib">
+                                                <rect key="frame" x="8" y="105" width="359" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total For Month Of:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DvR-f7-Dg1">
+                                                <rect key="frame" x="8" y="164" width="359" height="27"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
+                                            </label>
+                                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wG-xW-nEc">
+                                                <rect key="frame" x="8" y="199" width="172" height="127"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="172" id="35c-9B-Oy3"/>
+                                                    <constraint firstAttribute="height" constant="127" id="VrR-gZ-pDu"/>
+                                                </constraints>
+                                            </pickerView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter The Total Amount For The Month" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8pB-0I-v3K">
+                                                <rect key="frame" x="8" y="344" width="359" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Expenses For The Year:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kP-3V-xIc">
+                                                <rect key="frame" x="8" y="403" width="359" height="27"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter The Total Amount For The Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rn9-By-KBT">
+                                                <rect key="frame" x="8" y="581" width="359" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                            </textField>
+                                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FCx-jT-Dee">
+                                                <rect key="frame" x="8" y="438" width="172" height="127"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="127" id="7dN-7h-mPC"/>
+                                                    <constraint firstAttribute="width" constant="172" id="Mv1-kJ-HUr"/>
+                                                </constraints>
+                                            </pickerView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyx-sc-sfO">
+                                                <rect key="frame" x="8" y="334" width="172" height="0.0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="172" id="llt-zA-hk1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <color key="textColor" red="0.33004566410000002" green="0.94033044580000003" blue="0.1420653824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45K-Na-DkL">
+                                                <rect key="frame" x="8" y="573" width="172" height="0.0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="172" id="mZ0-5G-deR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <color key="textColor" red="0.33004566410000002" green="0.94033044580000003" blue="0.1420653824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="1" height="1"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJ8-Up-WIk">
+                                                <rect key="frame" x="149.5" y="667" width="76" height="76"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="76" id="017-kg-YQ5"/>
+                                                    <constraint firstAttribute="width" constant="76" id="Srb-AN-k6Q"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Email Image"/>
+                                                <connections>
+                                                    <action selector="emailButtonTapped:" destination="6uE-Mh-PBq" eventType="touchUpInside" id="kwi-zB-mS2"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Save Entry First, Then Enter Email Here." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5KY-RB-Qrj">
+                                                <rect key="frame" x="8" y="623" width="359" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="oek-fZ-NWV" firstAttribute="top" secondItem="drx-yT-1Dn" secondAttribute="bottom" constant="8" id="20G-yC-t4Y"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rn9-By-KBT" secondAttribute="trailing" constant="8" id="2y4-GB-Dc0"/>
+                                            <constraint firstAttribute="trailing" secondItem="37O-Rh-rbw" secondAttribute="trailing" constant="8" id="3Cq-xr-son"/>
+                                            <constraint firstItem="oek-fZ-NWV" firstAttribute="leading" secondItem="74C-c3-uov" secondAttribute="leading" constant="8" id="42c-WH-U5J"/>
+                                            <constraint firstItem="0wG-xW-nEc" firstAttribute="leading" secondItem="74C-c3-uov" secondAttribute="leading" constant="8" id="5q6-5U-i20"/>
+                                            <constraint firstItem="37O-Rh-rbw" firstAttribute="leading" secondItem="74C-c3-uov" secondAttribute="leading" constant="8" id="6Uf-LU-Je0"/>
+                                            <constraint firstItem="Ehi-fO-BPH" firstAttribute="top" secondItem="drx-yT-1Dn" secondAttribute="bottom" constant="773" id="6ir-Tv-Vpn"/>
+                                            <constraint firstAttribute="trailing" secondItem="4kP-3V-xIc" secondAttribute="trailing" constant="8" id="6ye-jk-OWD"/>
+                                            <constraint firstItem="45K-Na-DkL" firstAttribute="leading" secondItem="74C-c3-uov" secondAttribute="leading" constant="8" id="7fN-Qy-bo0"/>
+                                            <constraint firstItem="Rn9-By-KBT" firstAttribute="leading" secondItem="74C-c3-uov" secondAttribute="leading" constant="8" id="98i-Kf-KSQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="DvR-f7-Dg1" secondAttribute="trailing" constant="8" id="AI0-5q-sqW"/>
+                                            <constraint firstItem="Ehi-fO-BPH" firstAttribute="centerX" secondItem="74C-c3-uov" secondAttribute="centerX" id="Ara-Nv-WeT"/>
+                                            <constraint firstItem="mtK-fa-rib" firstAttribute="leading" secondItem="74C-c3-uov" secondAttribute="leading" constant="8" id="BBx-j0-Iee"/>
+                                            <constraint firstItem="8pB-0I-v3K" firstAttribute="leading" secondItem="74C-c3-uov" secondAttribute="leading" constant="8" id="BYt-gL-5Ri"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rn9-By-KBT" secondAttribute="trailing" constant="8" id="Dz3-rh-Jkg"/>
+                                            <constraint firstItem="fJ8-Up-WIk" firstAttribute="top" secondItem="5KY-RB-Qrj" secondAttribute="bottom" constant="10" id="Kzw-US-Dcp"/>
+                                            <constraint firstItem="0wG-xW-nEc" firstAttribute="top" secondItem="DvR-f7-Dg1" secondAttribute="bottom" constant="8" id="MWa-3S-qYY"/>
+                                            <constraint firstItem="drx-yT-1Dn" firstAttribute="top" secondItem="74C-c3-uov" secondAttribute="top" constant="8" id="O3W-gA-CoZ"/>
+                                            <constraint firstItem="fJ8-Up-WIk" firstAttribute="centerX" secondItem="74C-c3-uov" secondAttribute="centerX" id="R4u-kb-VGS"/>
+                                            <constraint firstItem="45K-Na-DkL" firstAttribute="top" secondItem="FCx-jT-Dee" secondAttribute="bottom" constant="8" id="SSq-HX-43A"/>
+                                            <constraint firstAttribute="trailing" secondItem="8pB-0I-v3K" secondAttribute="trailing" constant="8" id="Svk-ih-yhv"/>
+                                            <constraint firstItem="Cyx-sc-sfO" firstAttribute="top" secondItem="0wG-xW-nEc" secondAttribute="bottom" constant="8" id="UEw-fE-fC0"/>
+                                            <constraint firstItem="Cyx-sc-sfO" firstAttribute="leading" secondItem="74C-c3-uov" secondAttribute="leading" constant="8" id="aPq-2g-qwK"/>
+                                            <constraint firstItem="drx-yT-1Dn" firstAttribute="centerX" secondItem="74C-c3-uov" secondAttribute="centerX" id="bRP-zs-lqy"/>
+                                            <constraint firstItem="37O-Rh-rbw" firstAttribute="top" secondItem="oek-fZ-NWV" secondAttribute="bottom" constant="8" id="e6W-g4-eCn"/>
+                                            <constraint firstItem="Rn9-By-KBT" firstAttribute="top" secondItem="45K-Na-DkL" secondAttribute="bottom" constant="8" id="fER-R8-f9r"/>
+                                            <constraint firstItem="4kP-3V-xIc" firstAttribute="top" secondItem="8pB-0I-v3K" secondAttribute="bottom" constant="25" id="fol-id-vqF"/>
+                                            <constraint firstItem="Rn9-By-KBT" firstAttribute="leading" secondItem="74C-c3-uov" secondAttribute="leading" constant="8" id="gGl-0S-EYU"/>
+                                            <constraint firstItem="4kP-3V-xIc" firstAttribute="leading" secondItem="74C-c3-uov" secondAttribute="leading" constant="8" id="jw2-iC-qod"/>
+                                            <constraint firstItem="5KY-RB-Qrj" firstAttribute="leading" secondItem="74C-c3-uov" secondAttribute="leading" constant="8" id="kHw-7C-XMd"/>
+                                            <constraint firstItem="5KY-RB-Qrj" firstAttribute="top" secondItem="Rn9-By-KBT" secondAttribute="bottom" constant="8" id="lUS-gZ-L7K"/>
+                                            <constraint firstItem="8pB-0I-v3K" firstAttribute="top" secondItem="Cyx-sc-sfO" secondAttribute="bottom" constant="10" id="lyy-ZV-Ako"/>
+                                            <constraint firstAttribute="trailing" secondItem="5KY-RB-Qrj" secondAttribute="trailing" constant="8" id="nZl-9g-fqX"/>
+                                            <constraint firstAttribute="trailing" secondItem="oek-fZ-NWV" secondAttribute="trailing" constant="8" id="nz3-YY-ydq"/>
+                                            <constraint firstItem="DvR-f7-Dg1" firstAttribute="leading" secondItem="74C-c3-uov" secondAttribute="leading" constant="8" id="otW-7t-d3E"/>
+                                            <constraint firstItem="DvR-f7-Dg1" firstAttribute="top" secondItem="mtK-fa-rib" secondAttribute="bottom" constant="25" id="pgZ-88-smV"/>
+                                            <constraint firstAttribute="trailing" secondItem="mtK-fa-rib" secondAttribute="trailing" constant="8" id="q7N-sZ-VHv"/>
+                                            <constraint firstItem="mtK-fa-rib" firstAttribute="top" secondItem="37O-Rh-rbw" secondAttribute="bottom" constant="8" id="qHK-Q5-zPf"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ehi-fO-BPH" secondAttribute="bottom" constant="20.666666666666629" id="rch-Vh-fL0"/>
+                                            <constraint firstItem="FCx-jT-Dee" firstAttribute="leading" secondItem="74C-c3-uov" secondAttribute="leading" constant="8" id="t3L-OS-X6d"/>
+                                            <constraint firstItem="FCx-jT-Dee" firstAttribute="top" secondItem="4kP-3V-xIc" secondAttribute="bottom" constant="8" id="vjY-yM-HLP"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="74C-c3-uov" firstAttribute="height" secondItem="yBT-sS-tyJ" secondAttribute="height" priority="250" id="0g4-C5-mAT"/>
+                                    <constraint firstItem="74C-c3-uov" firstAttribute="top" secondItem="yBT-sS-tyJ" secondAttribute="top" id="3ZU-ar-Mhk"/>
+                                    <constraint firstAttribute="bottom" secondItem="74C-c3-uov" secondAttribute="bottom" id="6JY-2C-188"/>
+                                    <constraint firstItem="74C-c3-uov" firstAttribute="leading" secondItem="yBT-sS-tyJ" secondAttribute="leading" id="ZEV-Yv-MPa"/>
+                                    <constraint firstItem="74C-c3-uov" firstAttribute="width" secondItem="yBT-sS-tyJ" secondAttribute="width" id="hGt-tw-mtm"/>
+                                    <constraint firstAttribute="trailing" secondItem="74C-c3-uov" secondAttribute="trailing" id="trb-o5-rDM"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.74509803919999995" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="yBT-sS-tyJ" firstAttribute="trailing" secondItem="7Qj-1K-9n3" secondAttribute="trailing" id="2Jx-Fc-6dl"/>
+                            <constraint firstItem="yBT-sS-tyJ" firstAttribute="top" secondItem="7Qj-1K-9n3" secondAttribute="top" id="A4k-Xu-FSr"/>
+                            <constraint firstItem="yBT-sS-tyJ" firstAttribute="bottom" secondItem="7Qj-1K-9n3" secondAttribute="bottom" id="RQM-2e-A1I"/>
+                            <constraint firstItem="yBT-sS-tyJ" firstAttribute="leading" secondItem="7Qj-1K-9n3" secondAttribute="leading" id="bbC-uH-X9l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Qj-1K-9n3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bDD-fG-6Gn">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="01H-Cs-Gu6"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" image="saveIcon" id="Efa-Gz-Fnr">
+                            <inset key="imageInsets" minX="0.0" minY="-1" maxX="0.0" maxY="-3"/>
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="6uE-Mh-PBq" id="udH-Yu-aP2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <size key="freeformSize" width="375" height="950"/>
+                    <connections>
+                        <outlet property="bottomLabel" destination="Ehi-fO-BPH" id="8mN-KC-5NQ"/>
+                        <outlet property="emailButton" destination="fJ8-Up-WIk" id="oaJ-a1-Gg3"/>
+                        <outlet property="emailTextField" destination="5KY-RB-Qrj" id="vPw-Rh-Q5e"/>
+                        <outlet property="enterAmountForWeekTextField" destination="mtK-fa-rib" id="jRS-0y-rfE"/>
+                        <outlet property="enterTotalAmountForMonthtextField" destination="8pB-0I-v3K" id="id8-5d-DYn"/>
+                        <outlet property="enterTotalAmountForYearTextField" destination="Rn9-By-KBT" id="38H-h3-pND"/>
+                        <outlet property="monthPickerViewResultLabel" destination="Cyx-sc-sfO" id="bxD-zj-8nc"/>
+                        <outlet property="tapToEnterDateTextField" destination="37O-Rh-rbw" id="lUK-nr-u26"/>
+                        <outlet property="topLabel" destination="drx-yT-1Dn" id="HTv-jH-zbY"/>
+                        <outlet property="totalExpensesForTheYearLabel" destination="4kP-3V-xIc" id="WaG-9g-Cwy"/>
+                        <outlet property="totalForMonthOfLabel" destination="DvR-f7-Dg1" id="Myj-dJ-c3d"/>
+                        <outlet property="totalForMonthPicker" destination="0wG-xW-nEc" id="Nhf-aU-O0D"/>
+                        <outlet property="totalForWeekEndingLabel" destination="oek-fZ-NWV" id="2sQ-Qn-c2f"/>
+                        <outlet property="totalForYearPicker" destination="FCx-jT-Dee" id="gSB-zJ-dnn"/>
+                        <outlet property="yearPickerResultsLabel" destination="45K-Na-DkL" id="AaG-7v-ODF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Lb-fH-nbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6249" y="-2130"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mAL-ZG-xZu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XpE-Ys-dMN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JLJ-Cf-e8m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cJs-4n-kGk" kind="relationship" relationship="rootViewController" id="NeD-DT-rHc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EDc-8j-kPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4391" y="-2257"/>
+        </scene>
+        <!--ExpensesStoryboard-->
+        <scene sceneID="T60-Jt-Cg7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ExpensesStoryboard" id="ndX-hz-E5P" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lSd-c8-Lkz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4729" y="-2696"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Email Image" width="1920" height="1920"/>
+        <image name="helpIcon" width="46" height="46"/>
+        <image name="saveIcon" width="46" height="46"/>
+    </resources>
+</document>
