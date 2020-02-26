@@ -28,193 +28,31 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxL-9K-dMw">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxL-9K-dMw">
                                 <rect key="frame" x="16" y="72" width="343" height="559"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="ADDING AN ENTRY:">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.027803401136157424" blue="0.023926913865410349" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">ADDING AN ENTRY:
 On Loading This Page You Will See An Option Where You Can Select To Either Enter An Entry That Is For A Week, Month, Or Year, Depending On How You Like To Record Your Expenses.
 Depending On Which You Choose, Only The Required Text Fields Will Be Available.
 
 Add Up Your Amounts From The Expenses Table And Then Enter Them Here.
 
-Enter In The Information And Then Tap The </string>
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="'SAVE'">
-                                        <attributes>
-                                            <color key="NSColor" red="0.12855219654849759" green="0.20015216268871561" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content"> Button.
+Enter In The Information And Then Tap The 'SAVE' Button.
 
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="EDITING AN ENTRY:">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.11579009936829898" blue="0.09285769907756436" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
-Simply Tap On The Row In The Table That You Wish To Edit. Enter The Required Information And Don't Forget To Tap </string>
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="'SAVE'">
-                                        <attributes>
-                                            <color key="NSColor" red="0.13108347973931156" green="0.23357172894497791" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content"> To Save The Edited Data.
-If You Change Your Mind, Simply Press The </string>
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="'BACK' ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.15913209722102806" green="0.20167709306845061" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Button.
+EDITING AN ENTRY:
+Simply Tap On The Row In The Table That You Wish To Edit. Enter The Required Information And Don't Forget To Tap 'SAVE' To Save The Edited Data.
+If You Change Your Mind, Simply Press The 'BACK' Button.
 
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="DELETING AN ENTRY:">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.1331868143453987" blue="0.13300396169789663" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
-To Delete An Entry, </string>
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Swipe Left ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.16422153852448773" green="0.21559242599829498" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="On The Row That You Want To Delete And Then Tap ">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="'I'm Sure'">
-                                        <attributes>
-                                            <color key="NSColor" red="0.17972539326216008" green="0.16378600969106993" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">.
+DELETING AN ENTRY:
+To Delete An Entry, Swipe Left On The Row That You Want To Delete And Then Tap 'I'm Sure'.
 
 You Will Notice That Entering A Weekly, Monthly, Or Yearly Entry Leaves A Different Colour In The Table Row. This Is Simply To Make It Clear Visually Which Entries Are Weeks, Months Or Years :)
 
-For The Email Button, Make Sure You Have Entered An Entry And Tapped </string>
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="'SAVE'">
-                                        <attributes>
-                                            <color key="NSColor" red="0.11856383027212136" green="0.10514235826904661" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content"> First.
+For The Email Button, Make Sure You Have Entered An Entry And Tapped 'SAVE' First.
 Then, Return To The Entry, Fill In The Required Email Address And Then Tap The Envelope Button.
 
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="SEARCHING ENTRIES:">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.13970049594382894" blue="0.13878623252543065" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Tap In The Search Bar">
-                                        <attributes>
-                                            <color key="NSColor" red="0.11232467930556223" green="0.077833834081379449" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=", Type In Your Query And Then Press ">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="'Search'">
-                                        <attributes>
-                                            <color key="NSColor" red="0.1444686682325621" green="0.088196315548976445" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content"> At The Bottom Right Of The Keyboard.
+SEARCHING ENTRIES:
+Tap In The Search Bar, Type In Your Query And Then Press 'Search' At The Bottom Right Of The Keyboard.
 Tap On Any Row As Usual To View And / Or Edit The Entry.
 In This Total Expenses Section, You Can Search For An Amount ( Type This In WITHOUT The £ Symbol - Ie Search For '55' NOT '£55'.
 
@@ -222,12 +60,8 @@ Do NOT Include 'th' or 'st' In A Date Search ( Ie '25th' or '31st'). Simply Sear
 You Can Search For A Month, Or Year Too.
 
 To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap On the Small Cross At The Right Hand Side Of The Search Bar To Dismiss The Keyboard And Return To The TableView.</string>
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="Futura-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>

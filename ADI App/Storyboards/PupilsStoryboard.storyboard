@@ -246,6 +246,7 @@ You Can Then Simply Tap The Phone Icon In The Top Right To Call Them Using The N
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uu5-wE-LFs">
                                                         <rect key="frame" x="0.0" y="361" width="359" height="24"/>
+                                                        <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <connections>
                                                             <action selector="callInfoButtonTapped:" destination="c06-vf-Tzr" eventType="touchUpInside" id="QIN-Q7-Vgs"/>
                                                         </connections>
