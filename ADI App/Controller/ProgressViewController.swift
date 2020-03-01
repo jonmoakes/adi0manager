@@ -624,6 +624,85 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         rBayPurpleGrade.text = progressEntry.reverseBayParkPurpleGrade
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if currentGradeLabel.text ==  "⭐️⭐️⭐️⭐️⭐️"  {
+            cockpitDrillLabel.textColor = .systemGreen
+        }
+        if movingOffPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            movingOffRedLabel.textColor = .systemGreen
+        }
+        if turningLeftPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            turningLeftRedLabel.textColor = .systemGreen
+        }
+        if turningRightPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            turningRightRedLabel.textColor = .systemGreen
+        }
+        if emergingPurplegrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            emergingRedLabel.textColor = .systemGreen
+        }
+        if crossroadsPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            crossroadsRedLabel.textColor = .systemGreen
+        }
+        if boxJunctionsPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            boxJunctionsRedLAbel.textColor = .systemGreen
+        }
+        if roundaboutsPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            roundaboutsRedLabel.textColor = .systemGreen
+        }
+        if miniRoundaboutsPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            miniRoundaboutsRedLabel.textColor = .systemGreen
+        }
+        if meetingTrafficPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            meetingTrafficRedLabel.textColor = .systemGreen
+        }
+        if adequateClearancePurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            adequateClearanceRedLabel.textColor = .systemGreen
+        }
+        if trafficLightsPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            trafficLightsRedLabel.textColor = .systemGreen
+        }
+        if pedestrianCrossingsPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            pedestrianCrossingsRedLabel.textColor = .systemGreen
+        }
+        if oneWayStreetsPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            oneWayStreetsRedLabel.textColor = .systemGreen
+        }
+        if countryLanesPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            countryLanesRedLabel.textColor = .systemGreen
+        }
+        if dualCPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            dualCRedLabel.textColor = .systemGreen
+        }
+        if mwaysPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            mwaysRedLabel.textColor = .systemGreen
+        }
+        if indyPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            indyRedLabel.textColor = .systemGreen
+        }
+        if satNavPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            satNavRedLabel.textColor = .systemGreen
+        }
+        if pullUpRightPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            pullUpRightRedLabel.textColor = .systemGreen
+        }
+        if emStopPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            emStopRedLabel.textColor = .systemGreen
+        }
+        if tirPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            tirRedLabel.textColor = .systemGreen
+        }
+        if pParkPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            pParkRedLabel.textColor = .systemGreen
+        }
+        if fBayPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            fBayRedLabel.textColor = .systemGreen
+        }
+        if rBayPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
+            rBayRedLabel.textColor = .systemGreen
+        }
+        
+    }
+    
     @objc func cockpitTapGesture()  {
         if cockpitDrillTextView.isHidden == true {
             cockpitDrillTextView.fadeIn()
@@ -2209,6 +2288,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let sliderValueAsInt = Int(cockpitSlider.value)
         currentGradeLabel.text = String(sliderValueAsInt)
         saveButton.isEnabled = true
+        cockpitDrillLabel.textColor = .systemBlue
         
         if sliderValueAsInt <= 20 {
             currentGradeLabel.text = "⭐️"
@@ -2220,6 +2300,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             currentGradeLabel.text = "⭐️⭐️⭐️⭐️"
         } else if sliderValueAsInt > 80 && sliderValueAsInt <= 100 {
             currentGradeLabel.text = "⭐️⭐️⭐️⭐️⭐️"
+            cockpitDrillLabel.textColor = .systemGreen
         }
     }
     
@@ -2227,6 +2308,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let movingOffSliderAsInt = Int(movingOffSlider.value)
         movingOffPurpleGrade.text = String(movingOffSliderAsInt)
         saveButton.isEnabled = true
+        movingOffRedLabel.textColor = .systemBlue
         
         if movingOffSliderAsInt <= 20 {
             movingOffPurpleGrade.text = "⭐️"
@@ -2238,6 +2320,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             movingOffPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if movingOffSliderAsInt > 80 && movingOffSliderAsInt <= 100 {
             movingOffPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            movingOffRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2245,6 +2328,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let turningLeftSliderAsInt = Int(turningLeftSlider.value)
         turningLeftPurpleGrade.text = String(turningLeftSliderAsInt)
         saveButton.isEnabled = true
+        turningLeftRedLabel.textColor = .systemBlue
         
         if turningLeftSliderAsInt <= 20 {
             turningLeftPurpleGrade.text = "⭐️"
@@ -2256,6 +2340,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             turningLeftPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if turningLeftSliderAsInt > 80 && turningLeftSliderAsInt <= 100 {
             turningLeftPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            turningLeftRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2263,6 +2348,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let turningRightSliderAsInt = Int(turningRightSlider.value)
         turningRightPurpleGrade.text = String(turningRightSliderAsInt)
         saveButton.isEnabled = true
+        turningRightRedLabel.textColor = .systemBlue
         
         if turningRightSliderAsInt <= 20 {
             turningRightPurpleGrade.text = "⭐️"
@@ -2274,6 +2360,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             turningRightPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if turningRightSliderAsInt > 80 && turningRightSliderAsInt <= 100 {
             turningRightPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            turningRightRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2281,6 +2368,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let emergingSliderAsInt = Int(emergingSlider.value)
         emergingPurplegrade.text = String(emergingSliderAsInt)
         saveButton.isEnabled = true
+        emergingRedLabel.textColor = .systemBlue
         
         if emergingSliderAsInt <= 20 {
             emergingPurplegrade.text = "⭐️"
@@ -2292,6 +2380,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             emergingPurplegrade.text = "⭐️⭐️⭐️⭐️"
         } else if emergingSliderAsInt > 80 && emergingSliderAsInt <= 100 {
             emergingPurplegrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            emergingRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2299,6 +2388,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let crossroadsSliderAsInt = Int(crossroadsSlider.value)
         crossroadsPurpleGrade.text = String(crossroadsSliderAsInt)
         saveButton.isEnabled = true
+        crossroadsRedLabel.textColor = .systemBlue
         
         if crossroadsSliderAsInt <= 20 {
             crossroadsPurpleGrade.text = "⭐️"
@@ -2310,6 +2400,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             crossroadsPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if crossroadsSliderAsInt > 80 && crossroadsSliderAsInt <= 100 {
             crossroadsPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            crossroadsRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2317,6 +2408,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let boxJunctionsSliderAsInt = Int(boxJunctionsSlider.value)
         boxJunctionsPurpleGrade.text = String(boxJunctionsSliderAsInt)
         saveButton.isEnabled = true
+        boxJunctionsRedLAbel.textColor = .systemBlue
         
         if boxJunctionsSliderAsInt <= 20 {
             boxJunctionsPurpleGrade.text = "⭐️"
@@ -2328,6 +2420,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             boxJunctionsPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if boxJunctionsSliderAsInt > 80 && boxJunctionsSliderAsInt <= 100 {
             boxJunctionsPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            boxJunctionsRedLAbel.textColor = .systemGreen
         }
     }
     
@@ -2335,6 +2428,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let roundaboutsSliderAsInt = Int(roundaboutsSlider.value)
         roundaboutsPurpleGrade.text = String(roundaboutsSliderAsInt)
         saveButton.isEnabled = true
+        roundaboutsRedLabel.textColor = .systemBlue
         
         if roundaboutsSliderAsInt <= 20 {
             roundaboutsPurpleGrade.text = "⭐️"
@@ -2346,6 +2440,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             roundaboutsPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if roundaboutsSliderAsInt > 80 && roundaboutsSliderAsInt <= 100 {
             roundaboutsPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            roundaboutsRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2353,6 +2448,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let miniRoundaboutsSliderAsInt = Int(miniRoundaboutsSlider.value)
         miniRoundaboutsPurpleGrade.text = String(miniRoundaboutsSliderAsInt)
         saveButton.isEnabled = true
+        miniRoundaboutsRedLabel.textColor = .systemBlue
         
         if miniRoundaboutsSliderAsInt <= 20 {
             miniRoundaboutsPurpleGrade.text = "⭐️"
@@ -2364,6 +2460,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             miniRoundaboutsPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if miniRoundaboutsSliderAsInt > 80 && miniRoundaboutsSliderAsInt <= 100 {
             miniRoundaboutsPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            miniRoundaboutsRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2371,6 +2468,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let meetingTrafficSliderAsInt = Int(meetingTrafficSlider.value)
         meetingTrafficPurpleGrade.text = String(meetingTrafficSliderAsInt)
         saveButton.isEnabled = true
+        meetingTrafficRedLabel.textColor = .systemBlue
         
         if meetingTrafficSliderAsInt <= 20 {
             meetingTrafficPurpleGrade.text = "⭐️"
@@ -2382,6 +2480,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             meetingTrafficPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if meetingTrafficSliderAsInt > 80 && meetingTrafficSliderAsInt <= 100 {
             meetingTrafficPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            meetingTrafficRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2389,6 +2488,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let adequateClearanceSliderAsInt = Int(adequateClearanceSlider.value)
         adequateClearancePurpleGrade.text = String(adequateClearanceSliderAsInt)
         saveButton.isEnabled = true
+        adequateClearanceRedLabel.textColor = .systemBlue
         
         if adequateClearanceSliderAsInt <= 20 {
             adequateClearancePurpleGrade.text = "⭐️"
@@ -2400,6 +2500,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             adequateClearancePurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if adequateClearanceSliderAsInt > 80 && adequateClearanceSliderAsInt <= 100 {
             adequateClearancePurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            adequateClearanceRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2407,6 +2508,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let trafficLightsSliderAsInt = Int(trafficLightsSlider.value)
         trafficLightsPurpleGrade.text = String(trafficLightsSliderAsInt)
         saveButton.isEnabled = true
+        trafficLightsRedLabel.textColor = .systemBlue
         
         if trafficLightsSliderAsInt <= 20 {
             trafficLightsPurpleGrade.text = "⭐️"
@@ -2418,6 +2520,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             trafficLightsPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if trafficLightsSliderAsInt > 80 && trafficLightsSliderAsInt <= 100 {
             trafficLightsPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            trafficLightsRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2425,6 +2528,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let pedestrianCrossingsSliderAsInt = Int(pedestrianCrossingsSlider.value)
         pedestrianCrossingsPurpleGrade.text = String(pedestrianCrossingsSliderAsInt)
         saveButton.isEnabled = true
+        pedestrianCrossingsRedLabel.textColor = .systemBlue
         
         if pedestrianCrossingsSliderAsInt <= 20 {
             pedestrianCrossingsPurpleGrade.text = "⭐️"
@@ -2436,6 +2540,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             pedestrianCrossingsPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if pedestrianCrossingsSliderAsInt > 80 && pedestrianCrossingsSliderAsInt <= 100 {
             pedestrianCrossingsPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            pedestrianCrossingsRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2443,6 +2548,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let oneWayStreetsSliderAsInt = Int(oneWayStreetsSlider.value)
         oneWayStreetsPurpleGrade.text = String(oneWayStreetsSliderAsInt)
         saveButton.isEnabled = true
+        oneWayStreetsRedLabel.textColor = .systemBlue
         
         if oneWayStreetsSliderAsInt <= 20 {
             oneWayStreetsPurpleGrade.text = "⭐️"
@@ -2454,6 +2560,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             oneWayStreetsPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if oneWayStreetsSliderAsInt > 80 && oneWayStreetsSliderAsInt <= 100 {
             oneWayStreetsPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            oneWayStreetsRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2461,6 +2568,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let countryLanesSliderAsInt = Int(countryLanesSlider.value)
         countryLanesPurpleGrade.text = String(countryLanesSliderAsInt)
         saveButton.isEnabled = true
+        countryLanesRedLabel.textColor = .systemBlue
         
         if countryLanesSliderAsInt <= 20 {
             countryLanesPurpleGrade.text = "⭐️"
@@ -2472,6 +2580,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             countryLanesPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if countryLanesSliderAsInt > 80 && countryLanesSliderAsInt <= 100 {
             countryLanesPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            countryLanesRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2479,6 +2588,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let dualCSliderAsInt = Int(dualCSlider.value)
         dualCPurpleGrade.text = String(dualCSliderAsInt)
         saveButton.isEnabled = true
+        dualCRedLabel.textColor = .systemBlue
         
         if dualCSliderAsInt <= 20 {
             dualCPurpleGrade.text = "⭐️"
@@ -2490,6 +2600,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             dualCPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if dualCSliderAsInt > 80 && dualCSliderAsInt <= 100 {
             dualCPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            dualCRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2497,6 +2608,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let mwaysSliderAsInt = Int(mwaysSlider.value)
         mwaysPurpleGrade.text = String(mwaysSliderAsInt)
         saveButton.isEnabled = true
+        mwaysRedLabel.textColor = .systemBlue
         
         if mwaysSliderAsInt <= 20 {
             mwaysPurpleGrade.text = "⭐️"
@@ -2508,6 +2620,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             mwaysPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if mwaysSliderAsInt > 80 && mwaysSliderAsInt <= 100 {
             mwaysPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            mwaysRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2515,6 +2628,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let indySliderAsInt = Int(indySlider.value)
         indyPurpleGrade.text = String(indySliderAsInt)
         saveButton.isEnabled = true
+        indyRedLabel.textColor = .systemBlue
         
         if indySliderAsInt <= 20 {
             indyPurpleGrade.text = "⭐️"
@@ -2526,6 +2640,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             indyPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if indySliderAsInt > 80 && indySliderAsInt <= 100 {
             indyPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            indyRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2533,6 +2648,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let satNavSliderAsInt = Int(satNavSlider.value)
         satNavPurpleGrade.text = String(satNavSliderAsInt)
         saveButton.isEnabled = true
+        satNavRedLabel.textColor = .systemBlue
         
         if satNavSliderAsInt <= 20 {
             satNavPurpleGrade.text = "⭐️"
@@ -2544,6 +2660,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             satNavPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if satNavSliderAsInt > 80 && satNavSliderAsInt <= 100 {
             satNavPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            satNavRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2551,6 +2668,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let pullUpRightSliderAsInt = Int(pullUpRightSlider.value)
         pullUpRightPurpleGrade.text = String(pullUpRightSliderAsInt)
         saveButton.isEnabled = true
+        pullUpRightRedLabel.textColor = .systemBlue
         
         if pullUpRightSliderAsInt <= 20 {
             pullUpRightPurpleGrade.text = "⭐️"
@@ -2562,6 +2680,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             pullUpRightPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if pullUpRightSliderAsInt > 80 && pullUpRightSliderAsInt <= 100 {
             pullUpRightPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            pullUpRightRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2569,6 +2688,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let emStopSliderAsInt = Int(emStopSlider.value)
         emStopPurpleGrade.text = String(emStopSliderAsInt)
         saveButton.isEnabled = true
+        emStopRedLabel.textColor = .systemBlue
         
         if emStopSliderAsInt <= 20 {
             emStopPurpleGrade.text = "⭐️"
@@ -2580,6 +2700,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             emStopPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if emStopSliderAsInt > 80 && emStopSliderAsInt <= 100 {
             emStopPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            emStopRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2587,6 +2708,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let tirSliderAsInt = Int(tirSlider.value)
         tirPurpleGrade.text = String(tirSliderAsInt)
         saveButton.isEnabled = true
+        tirRedLabel.textColor = .systemBlue
         
         if tirSliderAsInt <= 20 {
             tirPurpleGrade.text = "⭐️"
@@ -2598,6 +2720,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             tirPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if tirSliderAsInt > 80 && tirSliderAsInt <= 100 {
             tirPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            tirRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2605,6 +2728,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let pParkSliderAsInt = Int(pParkSlider.value)
         pParkPurpleGrade.text = String(pParkSliderAsInt)
         saveButton.isEnabled = true
+        pParkRedLabel.textColor = .systemBlue
         
         if pParkSliderAsInt <= 20 {
             pParkPurpleGrade.text = "⭐️"
@@ -2616,6 +2740,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             pParkPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if pParkSliderAsInt > 80 && pParkSliderAsInt <= 100 {
             pParkPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            pParkRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2623,6 +2748,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let fBaySliderAsInt = Int(fBaySlider.value)
         fBayPurpleGrade.text = String(fBaySliderAsInt)
         saveButton.isEnabled = true
+        fBayRedLabel.textColor = .systemBlue
         
         if fBaySliderAsInt <= 20 {
             fBayPurpleGrade.text = "⭐️"
@@ -2634,6 +2760,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             fBayPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if fBaySliderAsInt > 80 && fBaySliderAsInt <= 100 {
             fBayPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            fBayRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2641,6 +2768,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let rBaySliderAsInt = Int(rBaySlider.value)
         rBayPurpleGrade.text = String(rBaySliderAsInt)
         saveButton.isEnabled = true
+        rBayRedLabel.textColor = .systemBlue
         
         if rBaySliderAsInt <= 20 {
             rBayPurpleGrade.text = "⭐️"
@@ -2652,6 +2780,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             rBayPurpleGrade.text = "⭐️⭐️⭐️⭐️"
         } else if rBaySliderAsInt > 80 && rBaySliderAsInt <= 100 {
             rBayPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
+            rBayRedLabel.textColor = .systemGreen
         }
     }
     
@@ -2872,6 +3001,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         oneWayStreetsTextView.isHidden = true
         countryLanesBlueLabel.isHidden = true
         countryLanesSlider.isHidden = true
+        countryLanesPurpleGrade.isHidden = true
         countryLanesTextView.isHidden = true
         dualCBlueLabel.isHidden = true
         dualCSlider.isHidden = true
