@@ -103,7 +103,7 @@ class PupilListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if(indexPath.row % 2 == 0)  {
-            cell.backgroundColor = UIColor.init(displayP3Red: 0.933, green: 0.525, blue: 0.200, alpha: 0.9)
+            cell.backgroundColor = .systemOrange
             let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 10, 0)
             cell.layer.transform = rotationTransform
             cell.alpha = 0.3
@@ -113,7 +113,7 @@ class PupilListTableViewController: UITableViewController {
                 cell.alpha = 1.0
             }
         }   else  {
-            cell.backgroundColor = UIColor.init(displayP3Red: 1.000, green: 1.000, blue: 1.000, alpha: 0.9)
+            cell.backgroundColor = .systemBlue
             let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, 500, 10, 0)
             cell.layer.transform = rotationTransform
             cell.alpha = 0.3
