@@ -37,6 +37,9 @@ class LessonAndPaymentsTableViewController: UITableViewController {
         imageView.alpha = 0.6
     }
 
+    @IBAction func homeButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     func fetchEntries()  {
         //let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "LessonEntries") - For Non Sorting
         let fetchRequest = NSFetchRequest<LessonEntries>(entityName: "LessonEntries")

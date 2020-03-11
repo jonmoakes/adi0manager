@@ -39,6 +39,9 @@ class EntriesTableViewController: UITableViewController {
         imageView.alpha = 0.6
     }
     
+    @IBAction func homeButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     func fetchEntries()  {
         let fetchRequest = NSFetchRequest<DiaryEntry>(entityName: "DiaryEntry")
         let dateSort = NSSortDescriptor(key: "date", ascending: false)

@@ -82,14 +82,6 @@ You Can Then Simply Tap The Phone Icon In The Top Right To Call Them Using The N
             </objects>
             <point key="canvasLocation" x="3332" y="-210"/>
         </scene>
-        <!--Main-->
-        <scene sceneID="cY6-27-QZ9">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="iLF-yl-HGf" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HvM-aG-gIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4102" y="219"/>
-        </scene>
         <!--Pupils-->
         <scene sceneID="sek-JU-IoO">
             <objects>
@@ -127,7 +119,7 @@ You Can Then Simply Tap The Phone Icon In The Top Right To Call Them Using The N
                         <barButtonItem key="leftBarButtonItem" image="home@2" id="4e2-mn-gI1">
                             <inset key="imageInsets" minX="0.0" minY="1" maxX="0.0" maxY="-3"/>
                             <connections>
-                                <segue destination="iLF-yl-HGf" kind="show" id="4zW-Nr-D35"/>
+                                <action selector="homePuttonPressed:" destination="ehO-Xe-mic" id="eaT-vF-aLt"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>

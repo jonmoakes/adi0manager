@@ -23,8 +23,7 @@ class HowToUseViewController: UIViewController {
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "HowToToHome", sender: nil)
+        self.dismiss(animated: true)
     }
-    
     
 }

@@ -8,14 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main-->
-        <scene sceneID="W6f-Is-zsr">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="Swz-tm-Hpm" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fc6-Uy-fwz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1575" y="-1548"/>
-        </scene>
         <!--How To Use The App-->
         <scene sceneID="rTS-tO-2Wg">
             <objects>
@@ -154,8 +146,7 @@ I Hope You Enjoy Using The ADI Manager App!</string>
                         <barButtonItem key="backBarButtonItem" title="Back" id="AMA-8t-d6a"/>
                         <barButtonItem key="leftBarButtonItem" title="Back" id="Izq-Vf-sZr">
                             <connections>
-                                <action selector="backButtonTapped:" destination="ZH3-0h-RPA" id="b9t-Hd-HvC"/>
-                                <segue destination="Swz-tm-Hpm" kind="show" id="ePD-Fx-HaL"/>
+                                <action selector="backButtonTapped:" destination="ZH3-0h-RPA" id="r5C-DK-cdI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -8,14 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main-->
-        <scene sceneID="TAW-2K-FhZ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="dDw-dT-tcq" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hkC-PO-WYd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-609" y="-1335"/>
-        </scene>
         <!--Contact-->
         <scene sceneID="v2M-YH-Wso">
             <objects>
@@ -157,7 +149,7 @@ All 3 Fields Are Required.</string>
                             <barButtonItem id="Q4x-eI-MZD"/>
                             <barButtonItem title="Back" id="Qh4-Oo-btB">
                                 <connections>
-                                    <segue destination="dDw-dT-tcq" kind="show" id="Buc-QP-eJO"/>
+                                    <action selector="backButtonPressed:" destination="jaU-fV-nzw" id="NtC-cr-lnF"/>
                                 </connections>
                             </barButtonItem>
                         </leftBarButtonItems>

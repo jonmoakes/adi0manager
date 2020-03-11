@@ -123,7 +123,7 @@ To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap
                         <barButtonItem key="leftBarButtonItem" image="home@2" id="FPl-c7-0Zg">
                             <inset key="imageInsets" minX="0.0" minY="1" maxX="0.0" maxY="-5"/>
                             <connections>
-                                <segue destination="wLq-FC-qQY" kind="show" id="YUj-aa-jG6"/>
+                                <action selector="homeButtonTapped:" destination="6MM-Ae-6zv" id="Uo8-4R-v7U"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
@@ -150,14 +150,6 @@ To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePp-gV-kE7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="263" y="112"/>
-        </scene>
-        <!--Main-->
-        <scene sceneID="RGf-kC-AyF">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="wLq-FC-qQY" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KlV-Wj-93r" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="262" y="631"/>
         </scene>
         <!--Composer View Controller-->
         <scene sceneID="qSV-jo-MHB">

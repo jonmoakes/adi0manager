@@ -38,6 +38,9 @@ class PupilListTableViewController: UITableViewController {
         imageView.alpha = 0.6
     }
     
+    @IBAction func homePuttonPressed(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     func fetchEntries()  {
         //let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PupilEntries")
         let fetchRequest = NSFetchRequest<PupilEntries>(entityName: "PupilEntries")

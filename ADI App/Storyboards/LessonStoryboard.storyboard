@@ -141,7 +141,7 @@ You Can Of Course Send Your Entry To Any Email Address You Wish ( For Example A 
                         <barButtonItem key="leftBarButtonItem" tag="1" image="home@2" id="nFb-cI-MQb">
                             <inset key="imageInsets" minX="0.0" minY="1" maxX="0.0" maxY="-3"/>
                             <connections>
-                                <segue destination="UOc-XO-g9c" kind="show" id="FIe-HL-6BS"/>
+                                <action selector="homeButtonTapped:" destination="ZUW-MW-k2i" id="nLU-Lr-Gtj"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
@@ -165,14 +165,6 @@ You Can Of Course Send Your Entry To Any Email Address You Wish ( For Example A 
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aoh-uN-mMn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-36" y="1118"/>
-        </scene>
-        <!--Main-->
-        <scene sceneID="cTy-XT-2Oc">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="UOc-XO-g9c" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="08u-DO-O8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-44" y="1574"/>
         </scene>
         <!--Add Lesson View Controller-->
         <scene sceneID="kzj-hj-W24">

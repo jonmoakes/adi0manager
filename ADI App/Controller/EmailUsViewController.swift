@@ -27,6 +27,10 @@ class EmailUsViewController: UIViewController, MFMailComposeViewControllerDelega
         view.backgroundColor = .systemOrange
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
     @IBAction func emailButtonPressed(_ sender: Any) {
         if MFMailComposeViewController.canSendMail()  {
             if  emailTextField.text == "" || nameTextField.text == "" || messageTextField.text == "" {
