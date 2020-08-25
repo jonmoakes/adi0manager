@@ -22,15 +22,19 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var phone2TextField: UITextField!
+    @IBOutlet var dateOfBirthTextField: UITextField!
     @IBOutlet weak var licenceNumberTextField: UITextField!
+    @IBOutlet var licenceExpiryTextField: UITextField!
     @IBOutlet weak var eyesightCheckedTextField: UITextField!
     @IBOutlet weak var glassesTextField: UITextField!
     @IBOutlet weak var experienceLevelTextField: UITextField!
     @IBOutlet weak var theoryPassedTextField: UITextField!
     @IBOutlet weak var theoryDateTextField: UITextField!
+    @IBOutlet var theoryCertTextField: UITextField!
     @IBOutlet weak var drivingTestDateTextField: UITextField!
     @IBOutlet weak var drivingTestTimeTextField: UITextField!
     @IBOutlet weak var drivingTestLocationTextField: UITextField!
+    @IBOutlet var theoryCertLabel: UILabel!
     @IBOutlet weak var drivingTestDateLabel: UILabel!
     @IBOutlet weak var drivingTestResultTextView: UITextView!
     @IBOutlet weak var drivingTestTimeLabel: UILabel!
@@ -41,6 +45,8 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var messageIcon: UIBarButtonItem!
     @IBOutlet var callIcon: UIBarButtonItem!
     
+    let dateOfBirthDatePicker = UIDatePicker()
+    let licenceExpiryDatePicker = UIDatePicker()
     let theoryTestDatePicker = UIDatePicker()
     let drivingTestDatePicker = UIDatePicker()
     let drivingTestTimePicker = UIDatePicker()
@@ -49,6 +55,8 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemOrange
+        createDateOfBirthDatePicker()
+        createLicenceExpiryDatePicker()
         createTheoryTestDatePicker()
         createDrivingTestDatePicker()
         createDrivingTestTimePicker()
@@ -60,12 +68,15 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate {
         emailTextField.applyRoundedCorners()
         phoneTextField.applyRoundedCorners()
         phone2TextField.applyRoundedCorners()
+        dateOfBirthTextField.applyRoundedCorners()
         licenceNumberTextField.applyRoundedCorners()
+        licenceExpiryTextField.applyRoundedCorners()
         eyesightCheckedTextField.applyRoundedCorners()
         glassesTextField.applyRoundedCorners()
         experienceLevelTextField.applyRoundedCorners()
         theoryPassedTextField.applyRoundedCorners()
         theoryDateTextField.applyRoundedCorners()
+        theoryCertTextField.applyRoundedCorners()
         drivingTestDateTextField.applyRoundedCorners()
         drivingTestTimeTextField.applyRoundedCorners()
         drivingTestLocationTextField.applyRoundedCorners()
@@ -76,10 +87,12 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate {
         
         theoryTestDateLabel.isHidden = true
         theoryDateTextField.isHidden = true
+        theoryCertTextField.isHidden = true
         drivingTestDateTextField.isHidden = true
         drivingTestTimeTextField.isHidden = true
         drivingTestLocationTextField.isHidden = true
         drivingTestResultTextView.isHidden = true
+        theoryCertLabel.isHidden = true
         drivingTestDateLabel.isHidden = true
         drivingTestTimeLabel.isHidden = true
         drivingTestLocationLabel.isHidden = true
@@ -93,12 +106,15 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate {
         emailTextField.delegate = self
         phoneTextField.delegate = self
         phone2TextField.delegate = self
+        dateOfBirthTextField.delegate = self
         licenceNumberTextField.delegate = self
+        licenceExpiryTextField.delegate = self
         eyesightCheckedTextField.delegate = self
         glassesTextField.delegate = self
         experienceLevelTextField.delegate = self
         theoryPassedTextField.delegate = self
         theoryDateTextField.delegate = self
+        theoryCertTextField.delegate = self
         drivingTestDateTextField.delegate = self
         drivingTestTimeTextField.delegate = self
         drivingTestLocationTextField.delegate = self
@@ -118,12 +134,15 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate {
             emailTextField.text = pupilEntry.email
             phoneTextField.text = pupilEntry.phoneNumber
             phone2TextField.text = pupilEntry.phone2
+            dateOfBirthTextField.text = pupilEntry.dateOfBirth
             licenceNumberTextField.text = pupilEntry.licenceNumber
+            licenceExpiryTextField.text = pupilEntry.licenceExpiry
             eyesightCheckedTextField.text = pupilEntry.eyesight
             glassesTextField.text = pupilEntry.glassesRequired
             experienceLevelTextField.text = pupilEntry.experienceLevel
             theoryPassedTextField.text = pupilEntry.theoryTestPassed
             theoryDateTextField.text = pupilEntry.theoryTestDate
+            theoryCertTextField.text = pupilEntry.theoryCert
             drivingTestDateTextField.text = pupilEntry.drivingTestDate
             drivingTestTimeTextField.text = pupilEntry.drivingTestTime
             drivingTestLocationTextField.text = pupilEntry.drivingTestLocation
@@ -240,8 +259,12 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate {
         } else if textField == phoneTextField {
             phone2TextField.becomeFirstResponder()
         } else if textField == phone2TextField {
+            dateOfBirthTextField.becomeFirstResponder()
+        } else if textField == dateOfBirthTextField {
             licenceNumberTextField.becomeFirstResponder()
         } else if textField == licenceNumberTextField  {
+            licenceExpiryTextField.becomeFirstResponder()
+        } else if textField == licenceExpiryTextField {
             eyesightCheckedTextField.becomeFirstResponder()
         } else if textField == eyesightCheckedTextField {
             glassesTextField.becomeFirstResponder()
@@ -267,6 +290,8 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate {
             theoryDateTextField.placeholder = "Enter 'No' Above To Enable This Field"
             theoryTestDateLabel.isHidden = false
             theoryDateTextField.isHidden = false
+            theoryCertTextField.isHidden = false
+            theoryCertLabel.isHidden = false
             drivingTestDateLabel.isHidden = false
             drivingTestDateTextField.isHidden = false
             drivingTestTimeLabel.isHidden = false
@@ -295,12 +320,15 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate {
         pupilEntry.email = self.emailTextField.text
         pupilEntry.phoneNumber = self.phoneTextField.text
         pupilEntry.phone2 = self.phone2TextField.text
+        pupilEntry.dateOfBirth = self.dateOfBirthTextField.text
         pupilEntry.licenceNumber = self.licenceNumberTextField.text
+        pupilEntry.licenceExpiry = self.licenceExpiryTextField.text
         pupilEntry.eyesight = self.eyesightCheckedTextField.text
         pupilEntry.glassesRequired = self.glassesTextField.text
         pupilEntry.experienceLevel = self.experienceLevelTextField.text
         pupilEntry.theoryTestPassed = self.theoryPassedTextField.text
         pupilEntry.theoryTestDate = self.theoryDateTextField.text
+        pupilEntry.theoryCert = self.theoryCertTextField.text
         pupilEntry.drivingTestDate = self.drivingTestDateTextField.text
         pupilEntry.drivingTestTime = self.drivingTestTimeTextField.text
         pupilEntry.drivingTestLocation = self.drivingTestLocationTextField.text
@@ -323,12 +351,15 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate {
         newPupilEntry.email = self.emailTextField.text
         newPupilEntry.phoneNumber = self.phoneTextField.text
         newPupilEntry.phone2 = self.phone2TextField.text
+        newPupilEntry.dateOfBirth = self.dateOfBirthTextField.text
         newPupilEntry.licenceNumber = self.licenceNumberTextField.text
+        newPupilEntry.licenceExpiry = self.licenceExpiryTextField.text
         newPupilEntry.eyesight = self.eyesightCheckedTextField.text
         newPupilEntry.glassesRequired = self.glassesTextField.text
         newPupilEntry.experienceLevel = self.experienceLevelTextField.text
         newPupilEntry.theoryTestPassed = self.theoryPassedTextField.text
         newPupilEntry.theoryTestDate = self.theoryDateTextField.text
+        newPupilEntry.theoryCert = self.theoryCertTextField.text
         newPupilEntry.drivingTestDate = self.drivingTestDateTextField.text
         newPupilEntry.drivingTestTime = self.drivingTestTimeTextField.text
         newPupilEntry.drivingTestLocation = self.drivingTestLocationTextField.text
@@ -339,6 +370,50 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate {
         } catch let error as NSError  {
             print("Could Not Save The New Entry \(error.localizedDescription)")
         }
+    }
+    
+    func createDateOfBirthDatePicker() {
+        let dateOfBirthToolbar = UIToolbar()
+        dateOfBirthToolbar.sizeToFit()
+        
+        let dateOfBirthDoneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(dateOfBirthPickerViewDoneButtonPressed))
+        dateOfBirthToolbar.setItems([dateOfBirthDoneButton], animated: true)
+        
+        dateOfBirthTextField.inputAccessoryView = dateOfBirthToolbar
+        dateOfBirthTextField.inputView = dateOfBirthDatePicker
+        dateOfBirthDatePicker.datePickerMode = .date
+    }
+    
+    @objc func dateOfBirthPickerViewDoneButtonPressed() {
+        let dateOfBirthFormatter = DateFormatter()
+        dateOfBirthFormatter.dateStyle = .full
+        dateOfBirthFormatter.timeStyle = .none
+    
+        let dateOfBirthDateString = dateOfBirthFormatter.string(from: dateOfBirthDatePicker.date)
+        dateOfBirthTextField.text = "\(dateOfBirthDateString)"
+        self.view.endEditing(true)
+    }
+    
+    func createLicenceExpiryDatePicker() {
+        let licenceExpiryToolbar = UIToolbar()
+        licenceExpiryToolbar.sizeToFit()
+        
+        let licenceExpiryDoneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(licenceExpiryPickerViewDoneButtonPressed))
+        licenceExpiryToolbar.setItems([licenceExpiryDoneButton], animated: true)
+        
+        licenceExpiryTextField.inputAccessoryView = licenceExpiryToolbar
+        licenceExpiryTextField.inputView = licenceExpiryDatePicker
+        licenceExpiryDatePicker.datePickerMode = .date
+    }
+    
+    @objc func licenceExpiryPickerViewDoneButtonPressed() {
+        let licenceExpiryFormatter = DateFormatter()
+        licenceExpiryFormatter.dateStyle = .full
+        licenceExpiryFormatter.timeStyle = .none
+    
+        let licenceExpiryDateString = licenceExpiryFormatter.string(from: licenceExpiryDatePicker.date)
+        licenceExpiryTextField.text = "\(licenceExpiryDateString)"
+        self.view.endEditing(true)
     }
     
     func createEyesightDatePicker() {

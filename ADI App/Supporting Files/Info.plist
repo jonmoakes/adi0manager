@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSFaceIDUsageDescription</key>
-	<string>In Order That Only You Can Access The Data Within The App</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -26,6 +24,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>The ADI App Needs To Access The Camera To Allow You To Take A Picture Of Your Receipt</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>In Order That Only You Can Access The Data Within The App</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>The ADI App Needs To Access The Photo Library To Allow You To Choose A Picture Of Your Receipt</string>
 	<key>UILaunchStoryboardName</key>

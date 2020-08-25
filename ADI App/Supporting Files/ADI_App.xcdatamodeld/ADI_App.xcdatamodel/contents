@@ -1,126 +1,129 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="DiaryEntry" representedClassName="DiaryEntry" syncable="YES" codeGenerationType="class">
-        <attribute name="bodyText" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bodyText" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
     </entity>
     <entity name="ExpensesEntries" representedClassName="ExpensesEntries" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="image" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
-        <attribute name="receiptAmount" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="receiptDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="image" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="receiptAmount" optional="YES" attributeType="String"/>
+        <attribute name="receiptDescription" optional="YES" attributeType="String"/>
     </entity>
     <entity name="IncomeEntries" representedClassName="IncomeEntries" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="incomeAmount" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="incomeAmount" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <entity name="LessonEntries" representedClassName="LessonEntries" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="lessonEndTime" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="lessonStartTime" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="lessonSummary" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="nextLessonDate" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="nextLessonPickUp" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="nextLessonPlan" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="nextLessonTime" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="paymentAmountTaken" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="paymentMethod" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="pupilName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="pupilPaid" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="testLocation" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="testResult" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="lessonEndTime" optional="YES" attributeType="String"/>
+        <attribute name="lessonStartTime" optional="YES" attributeType="String"/>
+        <attribute name="lessonSummary" optional="YES" attributeType="String"/>
+        <attribute name="nextLessonDate" optional="YES" attributeType="String"/>
+        <attribute name="nextLessonPickUp" optional="YES" attributeType="String"/>
+        <attribute name="nextLessonPlan" optional="YES" attributeType="String"/>
+        <attribute name="nextLessonTime" optional="YES" attributeType="String"/>
+        <attribute name="paymentAmountTaken" optional="YES" attributeType="String"/>
+        <attribute name="paymentMethod" optional="YES" attributeType="String"/>
+        <attribute name="pupilName" optional="YES" attributeType="String"/>
+        <attribute name="pupilPaid" optional="YES" attributeType="String"/>
+        <attribute name="testLocation" optional="YES" attributeType="String"/>
+        <attribute name="testResult" optional="YES" attributeType="String"/>
     </entity>
     <entity name="PupilEntries" representedClassName="PupilEntries" syncable="YES" codeGenerationType="class">
-        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="adequateClearance" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="adequateClearancePurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="blockLatestLessonDate" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="blockLessonLength" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="blockPaymentTaken" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="boxJunctions" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="boxJunctionsPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="cockpitDrill" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="countryLanes" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="countryLanesPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="crossroads" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="crossroadsPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="drivingTestDate" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="drivingTestLocation" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="drivingTestResultInfo" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="drivingTestTime" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="dualCarriageways" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="dualCarriagewaysPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="emergencyStop" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="emergencyStopPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="emerging" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="emergingPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="experienceLevel" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="experienceNotes" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="eyesight" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="forwardBayPark" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="forwardBayParkPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="glassesRequired" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="hoursPurchased" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="independentDriving" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="independentDrivingPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="licenceNumber" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="meetingTraffic" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="meetingTrafficPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="miniRoundabouts" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="miniRoundaboutsPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="motorways" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="motorwaysPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="movingOffAndStopping" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="movingOffAndStoppingPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="oneWayStreets" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="oneWayStreetsPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="parallelPark" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="parallelParkPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="pedestrianCrossings" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="pedestrianCrossingsPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="phone2" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="pickUpAddress" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="progressGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="pullUpOnTheRight" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="pullUpOnTheRightPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="remainingHours" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="reverseBayPark" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="reverseBayParkPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="roundabouts" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="roundaboutsPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="satNav" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="satNavPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="theoryTestDate" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="theoryTestPassed" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="trafficLights" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="trafficLightsPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="turningLeft" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="turningLeftPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="turningRight" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="turningRightPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="turnInTheRoad" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="turnInTheRoadPurpleGrade" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="adequateClearance" optional="YES" attributeType="String"/>
+        <attribute name="adequateClearancePurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="blockLatestLessonDate" optional="YES" attributeType="String"/>
+        <attribute name="blockLessonLength" optional="YES" attributeType="String"/>
+        <attribute name="blockPaymentTaken" optional="YES" attributeType="String"/>
+        <attribute name="boxJunctions" optional="YES" attributeType="String"/>
+        <attribute name="boxJunctionsPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="cockpitDrill" optional="YES" attributeType="String"/>
+        <attribute name="countryLanes" optional="YES" attributeType="String"/>
+        <attribute name="countryLanesPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="crossroads" optional="YES" attributeType="String"/>
+        <attribute name="crossroadsPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="dateOfBirth" optional="YES" attributeType="String"/>
+        <attribute name="drivingTestDate" optional="YES" attributeType="String"/>
+        <attribute name="drivingTestLocation" optional="YES" attributeType="String"/>
+        <attribute name="drivingTestResultInfo" optional="YES" attributeType="String"/>
+        <attribute name="drivingTestTime" optional="YES" attributeType="String"/>
+        <attribute name="dualCarriageways" optional="YES" attributeType="String"/>
+        <attribute name="dualCarriagewaysPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="emergencyStop" optional="YES" attributeType="String"/>
+        <attribute name="emergencyStopPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="emerging" optional="YES" attributeType="String"/>
+        <attribute name="emergingPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="experienceLevel" optional="YES" attributeType="String"/>
+        <attribute name="experienceNotes" optional="YES" attributeType="String"/>
+        <attribute name="eyesight" optional="YES" attributeType="String"/>
+        <attribute name="forwardBayPark" optional="YES" attributeType="String"/>
+        <attribute name="forwardBayParkPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="glassesRequired" optional="YES" attributeType="String"/>
+        <attribute name="hoursPurchased" optional="YES" attributeType="String"/>
+        <attribute name="independentDriving" optional="YES" attributeType="String"/>
+        <attribute name="independentDrivingPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="licenceExpiry" optional="YES" attributeType="String"/>
+        <attribute name="licenceNumber" optional="YES" attributeType="String"/>
+        <attribute name="meetingTraffic" optional="YES" attributeType="String"/>
+        <attribute name="meetingTrafficPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="miniRoundabouts" optional="YES" attributeType="String"/>
+        <attribute name="miniRoundaboutsPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="motorways" optional="YES" attributeType="String"/>
+        <attribute name="motorwaysPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="movingOffAndStopping" optional="YES" attributeType="String"/>
+        <attribute name="movingOffAndStoppingPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="oneWayStreets" optional="YES" attributeType="String"/>
+        <attribute name="oneWayStreetsPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="parallelPark" optional="YES" attributeType="String"/>
+        <attribute name="parallelParkPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="pedestrianCrossings" optional="YES" attributeType="String"/>
+        <attribute name="pedestrianCrossingsPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="phone2" optional="YES" attributeType="String"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String"/>
+        <attribute name="pickUpAddress" optional="YES" attributeType="String"/>
+        <attribute name="progressGrade" optional="YES" attributeType="String"/>
+        <attribute name="pullUpOnTheRight" optional="YES" attributeType="String"/>
+        <attribute name="pullUpOnTheRightPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="remainingHours" optional="YES" attributeType="String"/>
+        <attribute name="reverseBayPark" optional="YES" attributeType="String"/>
+        <attribute name="reverseBayParkPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="roundabouts" optional="YES" attributeType="String"/>
+        <attribute name="roundaboutsPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="satNav" optional="YES" attributeType="String"/>
+        <attribute name="satNavPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="theoryCert" optional="YES" attributeType="String"/>
+        <attribute name="theoryTestDate" optional="YES" attributeType="String"/>
+        <attribute name="theoryTestPassed" optional="YES" attributeType="String"/>
+        <attribute name="trafficLights" optional="YES" attributeType="String"/>
+        <attribute name="trafficLightsPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="turningLeft" optional="YES" attributeType="String"/>
+        <attribute name="turningLeftPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="turningRight" optional="YES" attributeType="String"/>
+        <attribute name="turningRightPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="turnInTheRoad" optional="YES" attributeType="String"/>
+        <attribute name="turnInTheRoadPurpleGrade" optional="YES" attributeType="String"/>
     </entity>
     <entity name="TotalExpenses" representedClassName="TotalExpenses" syncable="YES" codeGenerationType="class">
-        <attribute name="month" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="totalAmountForMonth" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="totalAmountForWeek" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="totalAmountForYear" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="weekEndingDate" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="year" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="month" optional="YES" attributeType="String"/>
+        <attribute name="totalAmountForMonth" optional="YES" attributeType="String"/>
+        <attribute name="totalAmountForWeek" optional="YES" attributeType="String"/>
+        <attribute name="totalAmountForYear" optional="YES" attributeType="String"/>
+        <attribute name="weekEndingDate" optional="YES" attributeType="String"/>
+        <attribute name="year" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="DiaryEntry" positionX="-63" positionY="-18" width="128" height="75"/>
         <element name="ExpensesEntries" positionX="-45" positionY="135" width="128" height="105"/>
         <element name="IncomeEntries" positionX="-45" positionY="135" width="128" height="105"/>
         <element name="LessonEntries" positionX="-36" positionY="126" width="128" height="255"/>
-        <element name="PupilEntries" positionX="-54" positionY="9" width="128" height="1140"/>
+        <element name="PupilEntries" positionX="-54" positionY="9" width="128" height="1183"/>
         <element name="TotalExpenses" positionX="-45" positionY="135" width="128" height="135"/>
     </elements>
 </model>
