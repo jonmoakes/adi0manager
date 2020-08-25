@@ -20,6 +20,15 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var saveButton: UIBarButtonItem!
     @IBOutlet var emailButton: UIBarButtonItem!
+    @IBOutlet var infoLabel: UILabel!
+    
+    @IBOutlet var latestLessonLabel: UILabel!
+    @IBOutlet var latestLessonDateTextField: UITextField!
+    @IBOutlet var latestLessonGradingLabel: UILabel!
+    @IBOutlet var latestLessonStarLabel: UILabel!
+    @IBOutlet var latestLessonSlider: UISlider!
+    @IBOutlet var latestLessonTextView: UITextView!
+    @IBOutlet var latestLessonEmailButton: UIButton!
     
     @IBOutlet var cockpitDrillLabel: UILabel!
     @IBOutlet var blueGradeLabel: UILabel!
@@ -171,6 +180,9 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
     @IBOutlet var rBaySlider: UISlider!
     @IBOutlet var rBayTextView: UITextView!
     
+    
+    let datePicker = UIDatePicker()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemOrange
@@ -182,10 +194,23 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         
         title = "\(word!)'s Progress"
         
+        createDatePicker()
+        
         topLabel.isHidden = true
         bottomLabel.isHidden = true
         
         saveButton.isEnabled = false
+        
+        latestLessonDateTextField.isHidden = true
+        latestLessonGradingLabel.isHidden = true
+        latestLessonStarLabel.isHidden = true
+        latestLessonStarLabel.applyRoundedCorners()
+        latestLessonSlider.isHidden = true
+        latestLessonTextView.isHidden = true
+        latestLessonTextView.delegate = self
+        latestLessonTextView.applyRoundedCorners()
+        latestLessonEmailButton.isHidden = true
+        latestLessonEmailButton.applyRoundedCorners()
     
         blueGradeLabel.isHidden = true
         cockpitSlider.isHidden = true
@@ -388,6 +413,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         rBayTextView.applyRoundedCorners()
         
         let thumbImageNormal = #imageLiteral(resourceName: "arrowSlider")  // type imageLiteral To view Images in catalogue.
+        latestLessonSlider.setThumbImage(thumbImageNormal, for: .normal)
         cockpitSlider.setThumbImage(thumbImageNormal, for: .normal)
         movingOffSlider.setThumbImage(thumbImageNormal, for: .normal)
         turningLeftSlider.setThumbImage(thumbImageNormal, for: .normal)
@@ -417,6 +443,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14) // stretching the left and right of image.
         let trackLeftImage = #imageLiteral(resourceName: "SliderTrackLeft")
         let trackLeftResizable = trackLeftImage.resizableImage(withCapInsets: insets)
+        latestLessonSlider.setMinimumTrackImage(trackLeftResizable, for: .normal)
         cockpitSlider.setMinimumTrackImage(trackLeftResizable, for: .normal)
         movingOffSlider.setMinimumTrackImage(trackLeftResizable, for: .normal)
         turningLeftSlider.setMinimumTrackImage(trackLeftResizable, for: .normal)
@@ -444,6 +471,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         rBaySlider.setMinimumTrackImage(trackLeftResizable, for: .normal)
         let trackRightImage = #imageLiteral(resourceName: "SliderTrackRight")
         let trackRightResizable = trackRightImage.resizableImage(withCapInsets: insets)
+        latestLessonSlider.setMaximumTrackImage(trackRightResizable, for: .normal)
         cockpitSlider.setMaximumTrackImage(trackRightResizable, for: .normal)
         movingOffSlider.setMaximumTrackImage(trackRightResizable, for: .normal)
         turningLeftSlider.setMaximumTrackImage(trackRightResizable, for: .normal)
@@ -470,6 +498,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         fBaySlider.setMaximumTrackImage(trackRightResizable, for: .normal)
         rBaySlider.setMaximumTrackImage(trackRightResizable, for: .normal)
         
+        latestLessonLabel.isUserInteractionEnabled = true
         cockpitDrillLabel.isUserInteractionEnabled = true
         movingOffRedLabel.isUserInteractionEnabled = true
         turningLeftRedLabel.isUserInteractionEnabled = true
@@ -496,6 +525,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         fBayRedLabel.isUserInteractionEnabled = true
         rBayRedLabel.isUserInteractionEnabled = true
         
+        let latestLessonTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.latestLessonTapGesture))
         let cockpitTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.cockpitTapGesture))
         let moveOffTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.movingOffTapGesture))
         let turningLeftTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.turningLeftTapGesture))
@@ -522,6 +552,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let fBayTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.fBayTapGesture))
         let rBayTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.rBayTapGesture))
         
+        latestLessonLabel.addGestureRecognizer(latestLessonTapGesture)
         cockpitDrillLabel.addGestureRecognizer(cockpitTapGesture)
         movingOffRedLabel.addGestureRecognizer(moveOffTapGesture)
         turningLeftRedLabel.addGestureRecognizer(turningLeftTapGesture)
@@ -547,6 +578,10 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         pParkRedLabel.addGestureRecognizer(pParkTapGesture)
         fBayRedLabel.addGestureRecognizer(fBayTapGesture)
         rBayRedLabel.addGestureRecognizer(rBayTapGesture)
+        
+        latestLessonTextView.text = progressEntry.latestLesson
+        latestLessonStarLabel.text = progressEntry.latestLessonGrade
+        latestLessonDateTextField.text = progressEntry.latestLessonDate
         
         cockpitDrillTextView.text = progressEntry.cockpitDrill
         currentGradeLabel.text = progressEntry.progressGrade
@@ -625,6 +660,9 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        if latestLessonGradingLabel.text ==  "⭐️⭐️⭐️⭐️⭐️"  {
+            latestLessonLabel.textColor = .systemGreen
+        }
         if currentGradeLabel.text ==  "⭐️⭐️⭐️⭐️⭐️"  {
             cockpitDrillLabel.textColor = .systemGreen
         }
@@ -700,7 +738,80 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         if rBayPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             rBayRedLabel.textColor = .systemGreen
         }
-        
+    }
+    
+    @objc func latestLessonTapGesture()  {
+        emailButton.isEnabled = false
+        if latestLessonTextView.isHidden == true {
+            latestLessonTextView.fadeIn()
+            latestLessonSlider.fadeIn()
+            latestLessonGradingLabel.fadeIn()
+            latestLessonStarLabel.fadeIn()
+            latestLessonDateTextField.fadeIn()
+            latestLessonEmailButton.fadeIn()
+            cockpitDrillLabel.fadeOut()
+            cockpitDrillTextView.fadeOut()
+            cockpitSlider.fadeOut()
+            currentGradeLabel.fadeOut()
+            blueGradeLabel.fadeOut()
+            movingOffRedLabel.fadeOut()
+            turningLeftRedLabel.fadeOut()
+            turningRightRedLabel.fadeOut()
+            emergingRedLabel.fadeOut()
+            crossroadsRedLabel.fadeOut()
+            boxJunctionsRedLAbel.fadeOut()
+            roundaboutsRedLabel.fadeOut()
+            miniRoundaboutsRedLabel.fadeOut()
+            meetingTrafficRedLabel.fadeOut()
+            adequateClearanceRedLabel.fadeOut()
+            trafficLightsRedLabel.fadeOut()
+            pedestrianCrossingsRedLabel.fadeOut()
+            oneWayStreetsRedLabel.fadeOut()
+            countryLanesRedLabel.fadeOut()
+            dualCRedLabel.fadeOut()
+            mwaysRedLabel.fadeOut()
+            indyRedLabel.fadeOut()
+            satNavRedLabel.fadeOut()
+            pullUpRightRedLabel.fadeOut()
+            emStopRedLabel.fadeOut()
+            tirRedLabel.fadeOut()
+            pParkRedLabel.fadeOut()
+            fBayRedLabel.fadeOut()
+            rBayRedLabel.fadeOut()
+            scrollView.setContentOffset(.zero, animated: true)
+        } else {
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
+            latestLessonStarLabel.fadeOut()
+            cockpitDrillLabel.fadeIn()
+            movingOffRedLabel.fadeIn()
+            turningLeftRedLabel.fadeIn()
+            turningRightRedLabel.fadeIn()
+            emergingRedLabel.fadeIn()
+            crossroadsRedLabel.fadeIn()
+            boxJunctionsRedLAbel.fadeIn()
+            roundaboutsRedLabel.fadeIn()
+            miniRoundaboutsRedLabel.fadeIn()
+            meetingTrafficRedLabel.fadeIn()
+            adequateClearanceRedLabel.fadeIn()
+            trafficLightsRedLabel.fadeIn()
+            pedestrianCrossingsRedLabel.fadeIn()
+            oneWayStreetsRedLabel.fadeIn()
+            countryLanesRedLabel.fadeIn()
+            dualCRedLabel.fadeIn()
+            mwaysRedLabel.fadeIn()
+            indyRedLabel.fadeIn()
+            satNavRedLabel.fadeIn()
+            pullUpRightRedLabel.fadeIn()
+            emStopRedLabel.fadeIn()
+            tirRedLabel.fadeIn()
+            pParkRedLabel.fadeIn()
+            fBayRedLabel.fadeIn()
+            rBayRedLabel.fadeIn()
+        }
     }
     
     @objc func cockpitTapGesture()  {
@@ -709,6 +820,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             cockpitSlider.fadeIn()
             currentGradeLabel.fadeIn()
             blueGradeLabel.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
             turningRightRedLabel.fadeOut()
@@ -739,6 +856,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             cockpitSlider.fadeOut()
             currentGradeLabel.fadeOut()
             blueGradeLabel.fadeOut()
+            latestLessonLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
             turningRightRedLabel.fadeIn()
@@ -772,6 +890,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             movingOffSlider.fadeIn()
             movingOffPurpleGrade.fadeIn()
             movingOffBlueLabel.fadeIn()
+            latestLessonLabel.fadeOut()
             cockpitDrillLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
             turningRightRedLabel.fadeOut()
@@ -802,6 +921,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             movingOffSlider.fadeOut()
             movingOffPurpleGrade.fadeOut()
             movingOffBlueLabel.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
             turningRightRedLabel.fadeIn()
@@ -835,6 +955,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             turningLeftSlider.fadeIn()
             turningLeftPurpleGrade.fadeIn()
             turningLeftBlueLabel.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningRightRedLabel.fadeOut()
@@ -865,6 +991,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             turningLeftSlider.fadeOut()
             turningLeftPurpleGrade.fadeOut()
             turningLeftTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningRightRedLabel.fadeIn()
@@ -898,6 +1025,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             turningRightSlider.fadeIn()
             turningRightPurpleGrade.fadeIn()
             turningRightBlueLabel.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -928,6 +1061,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             turningRightSlider.fadeOut()
             turningRightPurpleGrade.fadeOut()
             turningRightBlueLabel.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -962,6 +1096,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             emergingSlider.fadeIn()
             emergingPurplegrade.fadeIn()
             emergingTextView.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -992,6 +1132,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             emergingSlider.fadeOut()
             emergingPurplegrade.fadeOut()
             emergingTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -1025,6 +1166,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             crossroadsSlider.fadeIn()
             crossroadsPurpleGrade.fadeIn()
             crossroadsTextView.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -1055,6 +1202,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             crossroadsSlider.fadeOut()
             crossroadsPurpleGrade.fadeOut()
             crossroadsTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -1088,6 +1236,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             boxJunctionsSlider.fadeIn()
             boxJunctionsPurpleGrade.fadeIn()
             boxJunctionsTextView.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -1118,6 +1272,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             boxJunctionsSlider.fadeOut()
             boxJunctionsPurpleGrade.fadeOut()
             boxJunctionsTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -1151,6 +1306,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             roundaboutsSlider.fadeIn()
             roundaboutsPurpleGrade.fadeIn()
             roundaboutsTextView.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -1181,6 +1342,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             roundaboutsSlider.fadeOut()
             roundaboutsPurpleGrade.fadeOut()
             roundaboutsTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningRightRedLabel.fadeIn()
@@ -1214,6 +1376,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             miniRoundaboutsSlider.fadeIn()
             miniRoundaboutsPurpleGrade.fadeIn()
             miniRoundaboutsTextView.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -1244,6 +1412,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             miniRoundaboutsSlider.fadeOut()
             miniRoundaboutsPurpleGrade.fadeOut()
             miniRoundaboutsTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -1277,6 +1446,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             meetingTrafficSlider.fadeIn()
             meetingTrafficPurpleGrade.fadeIn()
             meetingTrafficTextView.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -1307,6 +1482,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             meetingTrafficSlider.fadeOut()
             meetingTrafficPurpleGrade.fadeOut()
             meetingTrafficTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -1340,6 +1516,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             adequateClearanceSlider.fadeIn()
             adequateClearancePurpleGrade.fadeIn()
             adequateClearanceTextView.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -1370,6 +1552,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             adequateClearanceSlider.fadeOut()
             adequateClearancePurpleGrade.fadeOut()
             adequateClearanceTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -1403,6 +1586,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             trafficLightsSlider.fadeIn()
             trafficLightsPurpleGrade.fadeIn()
             trafficLightsTextView.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -1433,6 +1622,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             trafficLightsSlider.fadeOut()
             trafficLightsPurpleGrade.fadeOut()
             trafficLightsTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -1466,6 +1656,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             pedestrianCrossingsSlider.fadeIn()
             pedestrianCrossingsPurpleGrade.fadeIn()
             pedestrianCrossingsTextView.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -1496,6 +1692,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             pedestrianCrossingsSlider.fadeOut()
             pedestrianCrossingsPurpleGrade.fadeOut()
             pedestrianCrossingsTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -1529,6 +1726,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             oneWayStreetsSlider.fadeIn()
             oneWayStreetsPurpleGrade.fadeIn()
             oneWayStreetsTextView.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -1559,6 +1762,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             oneWayStreetsSlider.fadeOut()
             oneWayStreetsPurpleGrade.fadeOut()
             oneWayStreetsTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -1592,6 +1796,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             countryLanesSlider.fadeIn()
             countryLanesPurpleGrade.fadeIn()
             countryLanesTextView.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -1622,6 +1832,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             countryLanesSlider.fadeOut()
             countryLanesPurpleGrade.fadeOut()
             countryLanesTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -1655,6 +1866,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             dualCSlider.fadeIn()
             dualCTextView.fadeIn()
             dualCPurpleGrade.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -1685,6 +1902,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             dualCSlider.fadeOut()
             dualCPurpleGrade.fadeOut()
             dualCTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -1718,6 +1936,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             mwaysPurpleGrade.fadeIn()
             mwaysSlider.fadeIn()
             mwaysTextView.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -1748,6 +1972,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             mwaysPurpleGrade.fadeOut()
             mwaysSlider.fadeOut()
             mwaysTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -1781,6 +2006,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             indyPurpleGrade.fadeIn()
             indySlider.fadeIn()
             indyTextView.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -1811,6 +2042,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             indyPurpleGrade.fadeOut()
             indySlider.fadeOut()
             indyTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -1844,6 +2076,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             satNavPurpleGrade.fadeIn()
             satNavSlider.fadeIn()
             satNavTextView.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -1874,6 +2112,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             satNavPurpleGrade.fadeOut()
             satNavSlider.fadeOut()
             satNavTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -1907,6 +2146,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             pullUpRightPurpleGrade.fadeIn()
             pullUpRightSlider.fadeIn()
             pullUpRightTextView.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -1937,6 +2182,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             pullUpRightPurpleGrade.fadeOut()
             pullUpRightSlider.fadeOut()
             pullUpRightTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -1970,6 +2216,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             emStopPurpleGrade.fadeIn()
             emStopSlider.fadeIn()
             emStopTextView.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -2000,6 +2252,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             emStopPurpleGrade.fadeOut()
             emStopSlider.fadeOut()
             emStopTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -2033,6 +2286,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             tirPurpleGrade.fadeIn()
             tirSlider.fadeIn()
             tirTextView.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -2063,6 +2322,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             tirPurpleGrade.fadeOut()
             tirSlider.fadeOut()
             tirTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -2096,6 +2356,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             pParkPurpleGrade.fadeIn()
             pParkSlider.fadeIn()
             pParkTextView.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -2126,6 +2392,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             pParkPurpleGrade.fadeOut()
             pParkSlider.fadeOut()
             pParkTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -2159,6 +2426,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             fBayPurpleGrade.fadeIn()
             fBaySlider.fadeIn()
             fBayTextView.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -2189,6 +2462,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             fBayPurpleGrade.fadeOut()
             fBaySlider.fadeOut()
             fBayTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -2222,6 +2496,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             rBayPurpleGrade.fadeIn()
             rBaySlider.fadeIn()
             rBayTextView.fadeIn()
+            latestLessonTextView.fadeOut()
+            latestLessonSlider.fadeOut()
+            latestLessonGradingLabel.fadeOut()
+            latestLessonLabel.fadeOut()
+            latestLessonDateTextField.fadeOut()
+            latestLessonEmailButton.fadeOut()
             cockpitDrillLabel.fadeOut()
             movingOffRedLabel.fadeOut()
             turningLeftRedLabel.fadeOut()
@@ -2252,6 +2532,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             rBayPurpleGrade.fadeOut()
             rBaySlider.fadeOut()
             rBayTextView.fadeOut()
+            latestLessonLabel.fadeIn()
             cockpitDrillLabel.fadeIn()
             movingOffRedLabel.fadeIn()
             turningLeftRedLabel.fadeIn()
@@ -2283,7 +2564,26 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
             emailButton.isEnabled = true
             saveButton.isEnabled = true
     }
-
+    
+    @IBAction func latesLessonSliderChanged(_ sender: Any) {
+        let latestLessonSliderValueAsInt = Int(latestLessonSlider.value)
+        latestLessonStarLabel.text = String(latestLessonSliderValueAsInt)
+        latestLessonLabel.textColor = .systemRed
+        
+        if latestLessonSliderValueAsInt <= 20 {
+            latestLessonStarLabel.text = "⭐️"
+        } else if latestLessonSliderValueAsInt > 20 && latestLessonSliderValueAsInt <= 40 {
+            latestLessonStarLabel.text = "⭐️⭐️"
+        } else if latestLessonSliderValueAsInt > 40 && latestLessonSliderValueAsInt <= 60 {
+            latestLessonStarLabel.text = "⭐️⭐️⭐️"
+        } else if latestLessonSliderValueAsInt > 60 && latestLessonSliderValueAsInt <= 80 {
+            latestLessonStarLabel.text = "⭐️⭐️⭐️⭐️"
+        } else if latestLessonSliderValueAsInt > 80 && latestLessonSliderValueAsInt <= 100 {
+            latestLessonStarLabel.text = "⭐️⭐️⭐️⭐️⭐️"
+            latestLessonLabel.textColor = .systemGreen
+        }
+    }
+    
     @IBAction func sliderChanged(_ sender: Any) {
         let sliderValueAsInt = Int(cockpitSlider.value)
         currentGradeLabel.text = String(sliderValueAsInt)
@@ -2784,11 +3084,77 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         }
     }
     
+    // Start of code to create the date picker and the done button in the toolbar
+        func createDatePicker()  {
+            // create toolbar
+            let dateToolbar = UIToolbar()
+            dateToolbar.sizeToFit()
+            
+            // create done button for toolbar
+            let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(datePickerViewDoneButtonPressed))
+            dateToolbar.setItems([doneButton], animated: true)
+            
+            latestLessonDateTextField.inputAccessoryView = dateToolbar
+            latestLessonDateTextField.inputView = datePicker
+            
+            // format picker for date only
+            datePicker.datePickerMode = .date
+        }
+        
+        @objc func  datePickerViewDoneButtonPressed()  {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy    MM-dd,     EEEE"
+            
+            let dateString = formatter.string(from: datePicker.date)
+            
+            latestLessonDateTextField.text = "\(dateString)"
+            self.view.endEditing(true)
+        }
+        // End of code that creates date picker and toolbar.
+    
     @IBAction func saveEntryButtonPressed(_ sender: Any) {
         self.updateEntry()
         Alert.SavedAlert(on: self)
         reset()
         saveButton.isEnabled = false
+    }
+    
+    @IBAction func latestLessonEmailButtonTapped(_ sender: Any) {
+        self.updateEntry()
+        Alert.SavedAlert(on: self)
+        reset()
+        let userEmail = progressEntry.email
+        
+        if MFMailComposeViewController.canSendMail()  {
+        
+            if  userEmail == ""  {
+                let alert = UIAlertController(title: "Alert", message: "Please Make Sure You Have Entered The Pupils Email In The 'Info' Section Of The Pupils Tab. Don't Forget To Save It Once You Have Entered It.", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+            
+            let firstNameOnly = progressEntry.name
+            let word = firstNameOnly?.components(separatedBy: " ").first
+            
+            if latestLessonTextView.text == "" {
+                latestLessonTextView.text = "No Notes Given"
+            }
+            
+            let toRecipients = [userEmail]
+            
+            let mc: MFMailComposeViewController = MFMailComposeViewController()
+            
+            mc.mailComposeDelegate = self
+            
+            mc.setToRecipients(toRecipients as? [String])
+            mc.setSubject("Your Driving Lesson Performance Report")
+            
+            mc.setMessageBody("Hi There \(word!)!\n\nHere Is Your Performance Report For Your Recent Driving Lesson. You Are Graded 1 Star To 5 Depending On Your Current Performance ( 5 Being The Equivalent Of Completely Independent Driving ).\n\nLesson Date:\n-----------------\n\(latestLessonDateTextField.text ?? "Not Date Given")\n\nPerformance Grade:\n\(latestLessonStarLabel.text ?? "No Rating Given")\n\nLesson Notes:\n\(latestLessonTextView.text ?? "No Notes Given")", isHTML: false)
+            
+            self.present(mc, animated: true, completion: nil)
+        } else {
+            Alert.showNoEmailAccountFoundError(on: self)
+        }
     }
     
     @IBAction func sendEmailButtonTapped(_ sender: Any) {
@@ -2918,6 +3284,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
     }
     
     func reset() {
+        latestLessonLabel.fadeIn()
         cockpitDrillLabel.fadeIn()
         movingOffRedLabel.fadeIn()
         turningLeftRedLabel.fadeIn()
@@ -2943,6 +3310,12 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         pullUpRightRedLabel.fadeIn()
         emStopRedLabel.fadeIn()
         indyRedLabel.fadeIn()
+        latestLessonSlider.isHidden = true
+        latestLessonGradingLabel.isHidden = true
+        latestLessonDateTextField.isHidden = true
+        latestLessonTextView.isHidden = true
+        latestLessonEmailButton.isHidden = true
+        latestLessonStarLabel.isHidden = true
         blueGradeLabel.isHidden = true
         cockpitSlider.isHidden = true
         currentGradeLabel.isHidden = true
@@ -3046,6 +3419,10 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
     }
     
     func updateEntry()  {
+        progressEntry.latestLesson = self.latestLessonTextView.text
+        progressEntry.latestLessonGrade = self.latestLessonStarLabel.text
+        progressEntry.latestLessonDate = self.latestLessonDateTextField.text
+        
         progressEntry.cockpitDrill = self.cockpitDrillTextView.text
         progressEntry.progressGrade = self.currentGradeLabel.text
         

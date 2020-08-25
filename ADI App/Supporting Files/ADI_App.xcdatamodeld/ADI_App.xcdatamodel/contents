@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="DiaryEntry" representedClassName="DiaryEntry" syncable="YES" codeGenerationType="class">
         <attribute name="bodyText" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="String"/>
@@ -68,6 +68,9 @@
         <attribute name="hoursPurchased" optional="YES" attributeType="String"/>
         <attribute name="independentDriving" optional="YES" attributeType="String"/>
         <attribute name="independentDrivingPurpleGrade" optional="YES" attributeType="String"/>
+        <attribute name="latestLesson" optional="YES" attributeType="String"/>
+        <attribute name="latestLessonDate" optional="YES" attributeType="String"/>
+        <attribute name="latestLessonGrade" optional="YES" attributeType="String"/>
         <attribute name="licenceExpiry" optional="YES" attributeType="String"/>
         <attribute name="licenceNumber" optional="YES" attributeType="String"/>
         <attribute name="meetingTraffic" optional="YES" attributeType="String"/>
@@ -123,7 +126,7 @@
         <element name="ExpensesEntries" positionX="-45" positionY="135" width="128" height="105"/>
         <element name="IncomeEntries" positionX="-45" positionY="135" width="128" height="105"/>
         <element name="LessonEntries" positionX="-36" positionY="126" width="128" height="255"/>
-        <element name="PupilEntries" positionX="-54" positionY="9" width="128" height="1183"/>
+        <element name="PupilEntries" positionX="-54" positionY="9" width="128" height="1228"/>
         <element name="TotalExpenses" positionX="-45" positionY="135" width="128" height="135"/>
     </elements>
 </model>
