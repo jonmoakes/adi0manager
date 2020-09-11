@@ -73,6 +73,7 @@
         <attribute name="latestLessonGrade" optional="YES" attributeType="String"/>
         <attribute name="licenceExpiry" optional="YES" attributeType="String"/>
         <attribute name="licenceNumber" optional="YES" attributeType="String"/>
+        <attribute name="medicalConditions" optional="YES" attributeType="String"/>
         <attribute name="meetingTraffic" optional="YES" attributeType="String"/>
         <attribute name="meetingTrafficPurpleGrade" optional="YES" attributeType="String"/>
         <attribute name="miniRoundabouts" optional="YES" attributeType="String"/>
@@ -126,7 +127,7 @@
         <element name="ExpensesEntries" positionX="-45" positionY="135" width="128" height="105"/>
         <element name="IncomeEntries" positionX="-45" positionY="135" width="128" height="105"/>
         <element name="LessonEntries" positionX="-36" positionY="126" width="128" height="255"/>
-        <element name="PupilEntries" positionX="-54" positionY="9" width="128" height="1228"/>
+        <element name="PupilEntries" positionX="-54" positionY="9" width="128" height="1243"/>
         <element name="TotalExpenses" positionX="-45" positionY="135" width="128" height="135"/>
     </elements>
 </model>

@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class AddPupilViewController: UIViewController, UITextFieldDelegate {
+class AddPupilViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     var managedObjectContext: NSManagedObjectContext!
     var pupilEntry: PupilEntries!
@@ -27,6 +27,7 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var licenceExpiryTextField: UITextField!
     @IBOutlet weak var eyesightCheckedTextField: UITextField!
     @IBOutlet weak var glassesTextField: UITextField!
+    @IBOutlet var medicalConditionsTextView: UITextView!
     @IBOutlet weak var experienceLevelTextField: UITextField!
     @IBOutlet weak var theoryPassedTextField: UITextField!
     @IBOutlet weak var theoryDateTextField: UITextField!
@@ -72,6 +73,7 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate {
         licenceNumberTextField.applyRoundedCorners()
         licenceExpiryTextField.applyRoundedCorners()
         eyesightCheckedTextField.applyRoundedCorners()
+        medicalConditionsTextView.applyRoundedCorners()
         glassesTextField.applyRoundedCorners()
         experienceLevelTextField.applyRoundedCorners()
         theoryPassedTextField.applyRoundedCorners()
@@ -110,6 +112,7 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate {
         licenceNumberTextField.delegate = self
         licenceExpiryTextField.delegate = self
         eyesightCheckedTextField.delegate = self
+        medicalConditionsTextView.delegate = self
         glassesTextField.delegate = self
         experienceLevelTextField.delegate = self
         theoryPassedTextField.delegate = self
@@ -138,6 +141,7 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate {
             licenceNumberTextField.text = pupilEntry.licenceNumber
             licenceExpiryTextField.text = pupilEntry.licenceExpiry
             eyesightCheckedTextField.text = pupilEntry.eyesight
+            medicalConditionsTextView.text = pupilEntry.medicalConditions
             glassesTextField.text = pupilEntry.glassesRequired
             experienceLevelTextField.text = pupilEntry.experienceLevel
             theoryPassedTextField.text = pupilEntry.theoryTestPassed
@@ -243,10 +247,6 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    
-    
-    
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == nameTextField  {
             addressTextField.becomeFirstResponder()
@@ -267,6 +267,8 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate {
         } else if textField == licenceExpiryTextField {
             eyesightCheckedTextField.becomeFirstResponder()
         } else if textField == eyesightCheckedTextField {
+            medicalConditionsTextView.becomeFirstResponder()
+        } else if textField == medicalConditionsTextView {
             glassesTextField.becomeFirstResponder()
         } else if textField == glassesTextField  {
             experienceLevelTextField.becomeFirstResponder()
@@ -324,6 +326,7 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate {
         pupilEntry.licenceNumber = self.licenceNumberTextField.text
         pupilEntry.licenceExpiry = self.licenceExpiryTextField.text
         pupilEntry.eyesight = self.eyesightCheckedTextField.text
+        pupilEntry.medicalConditions = self.medicalConditionsTextView.text
         pupilEntry.glassesRequired = self.glassesTextField.text
         pupilEntry.experienceLevel = self.experienceLevelTextField.text
         pupilEntry.theoryTestPassed = self.theoryPassedTextField.text
@@ -355,6 +358,7 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate {
         newPupilEntry.licenceNumber = self.licenceNumberTextField.text
         newPupilEntry.licenceExpiry = self.licenceExpiryTextField.text
         newPupilEntry.eyesight = self.eyesightCheckedTextField.text
+        newPupilEntry.medicalConditions = self.medicalConditionsTextView.text
         newPupilEntry.glassesRequired = self.glassesTextField.text
         newPupilEntry.experienceLevel = self.experienceLevelTextField.text
         newPupilEntry.theoryTestPassed = self.theoryPassedTextField.text
