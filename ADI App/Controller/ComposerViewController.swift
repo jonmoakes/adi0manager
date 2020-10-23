@@ -85,6 +85,11 @@ class ComposerViewController: UIViewController, UITextViewDelegate {
     
 // Start of code to create the date picker and the done button in the toolbar
     func createDatePicker()  {
+        let datePicker = UIDatePicker()
+        if #available(iOS 13.4, *) {
+            datePicker.preferredDatePickerStyle = .wheels
+        }
+      
         // create toolbar
         let dateToolbar = UIToolbar()
         dateToolbar.sizeToFit()

@@ -511,22 +511,30 @@ class AddLessonViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
 // Date And Time Pickers
     func createDatePicker()  {
+        let datePicker = UIDatePicker()
+        if #available(iOS 13.4, *) {
+            datePicker.preferredDatePickerStyle = .wheels
+        }
+      
+        // create toolbar
         let dateToolbar = UIToolbar()
         dateToolbar.sizeToFit()
         
+        // create done button for toolbar
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(datePickerViewDoneButtonPressed))
         dateToolbar.setItems([doneButton], animated: true)
         
         dateTextField.inputAccessoryView = dateToolbar
         dateTextField.inputView = datePicker
         
+        // format picker for date only
         datePicker.datePickerMode = .date
     }
     
     @objc func  datePickerViewDoneButtonPressed()  {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy    MM-dd,   EEEE"
-       
+        formatter.dateFormat = "yyyy    MM-dd,     EEEE"
+        
         let dateString = formatter.string(from: datePicker.date)
         
         dateTextField.text = "\(dateString)"
@@ -534,10 +542,14 @@ class AddLessonViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     
     func createTimePicker()  {
+        if #available(iOS 13.4, *) {
+            timePicker.preferredDatePickerStyle = .wheels
+        }
+        
         let timeToolbar = UIToolbar()
         timeToolbar.sizeToFit()
         
-        let timeDoneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action:               #selector(timePickerViewDoneButtonPressed))
+        let timeDoneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(timePickerViewDoneButtonPressed))
         timeToolbar.setItems([timeDoneButton], animated: true)
         
         lessonStartTimeTextField.inputAccessoryView = timeToolbar
@@ -560,6 +572,10 @@ class AddLessonViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     
     func createEndTimePicker()  {
+        if #available(iOS 13.4, *) {
+            endTimePicker.preferredDatePickerStyle = .wheels
+        }
+        
         let endTimeToolbar = UIToolbar()
         endTimeToolbar.sizeToFit()
         
@@ -585,6 +601,10 @@ class AddLessonViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     
     func createNextLessonDatePicker()  {
+        if #available(iOS 13.4, *) {
+            nextLessonDatePicker.preferredDatePickerStyle = .wheels
+        }
+        
         let nextLessonDateToolbar = UIToolbar()
         nextLessonDateToolbar.sizeToFit()
         
@@ -609,6 +629,10 @@ class AddLessonViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
 
     func createNextLessonTimePicker()  {
+        if #available(iOS 13.4, *) {
+            nextLessonTimePicker.preferredDatePickerStyle = .wheels
+        }
+        
         let nextLessonTimeToolbar = UIToolbar()
         nextLessonTimeToolbar.sizeToFit()
         

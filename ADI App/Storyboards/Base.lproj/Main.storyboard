@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LZI-zF-Qj3">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LZI-zF-Qj3">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,11 +34,11 @@
             <objects>
                 <viewController id="oaN-db-rti" customClass="HomeScreenViewController" customModule="The_ADI_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5rR-Zg-QVW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bc-bg-jXt">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                                 <items>
                                     <barButtonItem title="Item" image="diary@2" id="fdu-RV-THp">
                                         <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="-2"/>
@@ -71,20 +72,20 @@
                                         </connections>
                                     </barButtonItem>
                                 </items>
-                                <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                <color key="barTintColor" systemColor="systemBlueColor"/>
                             </toolbar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="ADI-4" translatesAutoresizingMaskIntoConstraints="NO" id="Ja1-0l-Sik">
-                                <rect key="frame" x="0.0" y="44" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="648"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.2.3" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcZ-yg-cW8">
-                                <rect key="frame" x="20" y="64" width="280" height="23"/>
+                                <rect key="frame" x="20" y="64" width="374" height="23"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQu-Kc-JVx">
-                                <rect key="frame" x="16" y="404" width="288" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQu-Kc-JVx">
+                                <rect key="frame" x="16" y="572" width="382" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3NW-Qz-jc7"/>
                                 </constraints>
@@ -97,6 +98,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="v0I-Yb-TFN"/>
                         <color key="backgroundColor" red="0.58823529411764708" green="0.51372549019607838" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VQu-Kc-JVx" firstAttribute="leading" secondItem="v0I-Yb-TFN" secondAttribute="leading" constant="16" id="27E-WJ-b75"/>
@@ -113,7 +115,6 @@
                             <constraint firstItem="YcZ-yg-cW8" firstAttribute="leading" secondItem="v0I-Yb-TFN" secondAttribute="leading" constant="20" id="wYX-eH-S8g"/>
                             <constraint firstItem="7bc-bg-jXt" firstAttribute="trailing" secondItem="v0I-Yb-TFN" secondAttribute="trailing" id="xho-eW-Ezf"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="v0I-Yb-TFN"/>
                     </view>
                     <navigationItem key="navigationItem" id="I4A-GZ-fgE">
                         <barButtonItem key="leftBarButtonItem" image="contact@2" id="kv5-T0-fcU">
@@ -213,7 +214,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="5dr-5l-MSR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HNZ-Zj-S1V">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -235,5 +236,8 @@
         <image name="lessons@2" width="46" height="46"/>
         <image name="link-symbol@2" width="48" height="48"/>
         <image name="pupils@2" width="46" height="46"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pHe-q5-Wxq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pHe-q5-Wxq">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,7 +31,7 @@
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWU-Gj-dcn">
                                 <rect key="frame" x="16" y="72" width="343" height="559"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">
 COMPOSING AN ENTRY:
 Tap The 'Compose' Button In The Top Right To Start An Entry.
@@ -61,12 +62,13 @@ You Can Also Search For Any Words At All That You Have Entered Into The Entries 
 
  Do Not Include 'th' Or 'st' When Searching For Dates ( As In 25th or 31st ), Just The Month And Then Date - Ie 05-25 For May 25th For Example.
 To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap On the Small Cross At The Right Hand Side Of The Search Bar To Dismiss The Keyboard And Return To The TableView.</string>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="DNM-wx-IFs"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="LWU-Gj-dcn" firstAttribute="leading" secondItem="DNM-wx-IFs" secondAttribute="leading" constant="16" id="5Yl-ng-eZW"/>
                             <constraint firstItem="LWU-Gj-dcn" firstAttribute="top" secondItem="uZE-la-Ej1" secondAttribute="bottom" constant="16" id="5p5-Gt-w0J"/>
@@ -76,7 +78,6 @@ To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap
                             <constraint firstItem="uZE-la-Ej1" firstAttribute="leading" secondItem="DNM-wx-IFs" secondAttribute="leading" id="h0l-P8-PEv"/>
                             <constraint firstItem="uZE-la-Ej1" firstAttribute="trailing" secondItem="DNM-wx-IFs" secondAttribute="trailing" id="pQY-es-YFy"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="DNM-wx-IFs"/>
                     </view>
                     <connections>
                         <outlet property="textView" destination="LWU-Gj-dcn" id="V5k-2t-JBe"/>
@@ -167,7 +168,8 @@ To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Pgi-Y9-2Mu">
                                 <rect key="frame" x="8" y="181" width="359" height="466"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textView>
@@ -183,22 +185,22 @@ To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="su8-U7-JG4">
                                         <rect key="frame" x="0.0" y="34" width="359" height="27"/>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" systemColor="systemBlueColor"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap To Enter Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="63A-IE-3ip">
                                         <rect key="frame" x="0.0" y="71" width="359" height="34"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Lmx-aC-9il"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="Lmx-aC-9il" firstAttribute="trailing" secondItem="Nef-me-0Ku" secondAttribute="trailing" constant="8" id="HBH-5o-WM1"/>
                             <constraint firstItem="JK9-TT-oQE" firstAttribute="top" secondItem="Nef-me-0Ku" secondAttribute="bottom" constant="10" id="N22-ZL-Nd0"/>
@@ -211,7 +213,6 @@ To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap
                             <constraint firstItem="Lmx-aC-9il" firstAttribute="trailing" secondItem="JK9-TT-oQE" secondAttribute="trailing" constant="8" id="nCI-eL-aha"/>
                             <constraint firstItem="Lmx-aC-9il" firstAttribute="bottom" secondItem="Pgi-Y9-2Mu" secondAttribute="bottom" constant="20" id="xaO-fA-niG"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Lmx-aC-9il"/>
                     </view>
                     <navigationItem key="navigationItem" id="rQY-w5-5ar">
                         <barButtonItem key="backBarButtonItem" title="Back" id="vSs-eJ-xd8"/>
@@ -252,5 +253,17 @@ To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap
         <image name="helpIcon" width="46" height="46"/>
         <image name="home@2" width="48" height="48"/>
         <image name="saveIcon" width="46" height="46"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

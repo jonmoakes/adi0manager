@@ -40,7 +40,7 @@ class EmailUsViewController: UIViewController, MFMailComposeViewControllerDelega
                 
                 self.present(alert, animated: true, completion: nil)
             }
-            let toRecipients = ["jonathan@eosappsandwebsites.co.uk"]
+            let toRecipients = ["jonathan@solaris-apps.co.uk"]
             let mc: MFMailComposeViewController = MFMailComposeViewController()
             mc.mailComposeDelegate = self
             mc.setToRecipients(toRecipients)
