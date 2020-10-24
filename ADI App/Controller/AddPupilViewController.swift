@@ -377,6 +377,11 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate, UITextViewD
     }
     
     func createDateOfBirthDatePicker() {
+        let dateOfBirthDatePicker = UIDatePicker()
+        if #available(iOS 13.4, *) {
+            dateOfBirthDatePicker.preferredDatePickerStyle = .wheels
+        }
+        
         let dateOfBirthToolbar = UIToolbar()
         dateOfBirthToolbar.sizeToFit()
         
@@ -399,6 +404,11 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate, UITextViewD
     }
     
     func createLicenceExpiryDatePicker() {
+        let licenceExpiryDatePicker = UIDatePicker()
+        if #available(iOS 13.4, *) {
+            licenceExpiryDatePicker.preferredDatePickerStyle = .wheels
+        }
+        
         let licenceExpiryToolbar = UIToolbar()
         licenceExpiryToolbar.sizeToFit()
         
@@ -421,6 +431,11 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate, UITextViewD
     }
     
     func createEyesightDatePicker() {
+        let eyesightPicker = UIDatePicker()
+        if #available(iOS 13.4, *) {
+            eyesightPicker.preferredDatePickerStyle = .wheels
+        }
+        
         let eyesightToolbar = UIToolbar()
         eyesightToolbar.sizeToFit()
     
@@ -443,6 +458,11 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate, UITextViewD
     }
     
     func createTheoryTestDatePicker()  {
+        let theoryTestDatePicker = UIDatePicker()
+        if #available(iOS 13.4, *) {
+            theoryTestDatePicker.preferredDatePickerStyle = .wheels
+        }
+        
         let theoryDateToolbar = UIToolbar()
         theoryDateToolbar.sizeToFit()
         
@@ -466,6 +486,11 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate, UITextViewD
     }
     
     func createDrivingTestDatePicker()  {
+        let drivingTestDatePicker = UIDatePicker()
+        if #available(iOS 13.4, *) {
+            drivingTestDatePicker.preferredDatePickerStyle = .wheels
+        }
+        
         let dTestdateToolbar = UIToolbar()
         dTestdateToolbar.sizeToFit()
         
@@ -488,6 +513,10 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate, UITextViewD
     }
 
     func createDrivingTestTimePicker()  {
+        let drivingTestTimePicker = UIDatePicker()
+        if #available(iOS 13.4, *) {
+            drivingTestTimePicker.preferredDatePickerStyle = .wheels
+        }
         let timeToolbar = UIToolbar()
         timeToolbar.sizeToFit()
         

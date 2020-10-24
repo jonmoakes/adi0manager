@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XpE-Ys-dMN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XpE-Ys-dMN">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,7 +31,7 @@
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxL-9K-dMw">
                                 <rect key="frame" x="16" y="72" width="343" height="559"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">ADDING AN ENTRY:
 On Loading This Page You Will See An Option Where You Can Select To Either Enter An Entry That Is For A Week, Month, Or Year, Depending On How You Like To Record Your Expenses.
 Depending On Which You Choose, Only The Required Text Fields Will Be Available.
@@ -60,12 +61,13 @@ Do NOT Include 'th' or 'st' In A Date Search ( Ie '25th' or '31st'). Simply Sear
 You Can Search For A Month, Or Year Too.
 
 To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap On the Small Cross At The Right Hand Side Of The Search Bar To Dismiss The Keyboard And Return To The TableView.</string>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="an2-05-Att"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="an2-05-Att" firstAttribute="bottom" secondItem="kxL-9K-dMw" secondAttribute="bottom" constant="16" id="1Bh-0l-cXw"/>
                             <constraint firstItem="Dxh-Tp-rhR" firstAttribute="top" secondItem="an2-05-Att" secondAttribute="top" id="Hmi-M4-JeL"/>
@@ -75,7 +77,6 @@ To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap
                             <constraint firstItem="an2-05-Att" firstAttribute="trailing" secondItem="kxL-9K-dMw" secondAttribute="trailing" constant="16" id="rul-15-DKh"/>
                             <constraint firstItem="Dxh-Tp-rhR" firstAttribute="trailing" secondItem="an2-05-Att" secondAttribute="trailing" id="s0c-kZ-xua"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="an2-05-Att"/>
                     </view>
                     <connections>
                         <outlet property="textView" destination="kxL-9K-dMw" id="QuQ-QG-Wxv"/>
@@ -176,31 +177,34 @@ To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total For Week Ending:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oek-fZ-NWV">
                                                 <rect key="frame" x="8" y="28" width="359" height="27"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" systemColor="systemBlueColor"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="1" height="1"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap To Enter The Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="37O-Rh-rbw">
                                                 <rect key="frame" x="8" y="63" width="359" height="34"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter The Total Amount For The Week" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mtK-fa-rib">
                                                 <rect key="frame" x="8" y="105" width="359" height="34"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total For Month Of:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DvR-f7-Dg1">
                                                 <rect key="frame" x="8" y="164" width="359" height="27"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" systemColor="systemBlueColor"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="1" height="1"/>
                                             </label>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wG-xW-nEc">
                                                 <rect key="frame" x="8" y="199" width="172" height="127"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="172" id="35c-9B-Oy3"/>
                                                     <constraint firstAttribute="height" constant="127" id="VrR-gZ-pDu"/>
@@ -208,24 +212,27 @@ To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap
                                             </pickerView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter The Total Amount For The Month" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8pB-0I-v3K">
                                                 <rect key="frame" x="8" y="344" width="359" height="34"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Expenses For The Year:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kP-3V-xIc">
                                                 <rect key="frame" x="8" y="403" width="359" height="27"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" systemColor="systemBlueColor"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <size key="shadowOffset" width="1" height="1"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter The Total Amount For The Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rn9-By-KBT">
                                                 <rect key="frame" x="8" y="581" width="359" height="34"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                             <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FCx-jT-Dee">
                                                 <rect key="frame" x="8" y="438" width="172" height="127"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="127" id="7dN-7h-mPC"/>
                                                     <constraint firstAttribute="width" constant="172" id="Mv1-kJ-HUr"/>
@@ -266,11 +273,12 @@ To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Save Entry First, Then Enter Email Here." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5KY-RB-Qrj">
                                                 <rect key="frame" x="8" y="623" width="359" height="34"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
                                             <constraint firstItem="oek-fZ-NWV" firstAttribute="top" secondItem="drx-yT-1Dn" secondAttribute="bottom" constant="8" id="20G-yC-t4Y"/>
                                             <constraint firstAttribute="trailing" secondItem="Rn9-By-KBT" secondAttribute="trailing" constant="8" id="2y4-GB-Dc0"/>
@@ -316,7 +324,7 @@ To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstItem="74C-c3-uov" firstAttribute="height" secondItem="yBT-sS-tyJ" secondAttribute="height" priority="250" id="0g4-C5-mAT"/>
                                     <constraint firstItem="74C-c3-uov" firstAttribute="top" secondItem="yBT-sS-tyJ" secondAttribute="top" id="3ZU-ar-Mhk"/>
@@ -327,6 +335,7 @@ To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Qj-1K-9n3"/>
                         <color key="backgroundColor" red="0.95686274510000002" green="0.74509803919999995" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="yBT-sS-tyJ" firstAttribute="trailing" secondItem="7Qj-1K-9n3" secondAttribute="trailing" id="2Jx-Fc-6dl"/>
@@ -334,7 +343,6 @@ To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap
                             <constraint firstItem="yBT-sS-tyJ" firstAttribute="bottom" secondItem="7Qj-1K-9n3" secondAttribute="bottom" id="RQM-2e-A1I"/>
                             <constraint firstItem="yBT-sS-tyJ" firstAttribute="leading" secondItem="7Qj-1K-9n3" secondAttribute="leading" id="bbC-uH-X9l"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="7Qj-1K-9n3"/>
                     </view>
                     <navigationItem key="navigationItem" id="bDD-fG-6Gn">
                         <barButtonItem key="backBarButtonItem" title="Back" id="01H-Cs-Gu6"/>
@@ -399,5 +407,17 @@ To Cancel A Search, Having Typed At Least One Character Into The Search Box, Tap
         <image name="Email Image" width="1920" height="1920"/>
         <image name="helpIcon" width="46" height="46"/>
         <image name="saveIcon" width="46" height="46"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

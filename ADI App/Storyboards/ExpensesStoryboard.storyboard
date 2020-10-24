@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x91-J5-XZM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x91-J5-XZM">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,7 +31,7 @@
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Alh-sW-OkZ">
                                 <rect key="frame" x="16" y="72" width="343" height="559"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">ADDING AN ENTRY:
 Tap On The Plus Button In The Top Right To Enter A New Entry.
 
@@ -73,12 +74,13 @@ EMAIL:
 Note That This App Is Configured To Use Apple's Email App Only, So Please Make Sure It Is Set Up To Send Email Before Attempting.
 
 You Can Of Course Send Your Entry To Any Email Address You Wish ( for Example A Gmail Address ) And Then View The Entry There. </string>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="4io-5F-IJF"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="4io-5F-IJF" firstAttribute="bottom" secondItem="Alh-sW-OkZ" secondAttribute="bottom" constant="16" id="AZt-ZB-LY1"/>
                             <constraint firstItem="4io-5F-IJF" firstAttribute="trailing" secondItem="Alh-sW-OkZ" secondAttribute="trailing" constant="16" id="Eua-cD-j8z"/>
@@ -88,7 +90,6 @@ You Can Of Course Send Your Entry To Any Email Address You Wish ( for Example A 
                             <constraint firstItem="Alh-sW-OkZ" firstAttribute="leading" secondItem="4io-5F-IJF" secondAttribute="leading" constant="16" id="o8q-FD-doS"/>
                             <constraint firstItem="gWH-hd-U0C" firstAttribute="trailing" secondItem="4io-5F-IJF" secondAttribute="trailing" id="yMG-BW-C2X"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="4io-5F-IJF"/>
                     </view>
                     <connections>
                         <outlet property="textVieew" destination="Alh-sW-OkZ" id="v9c-u8-KCL"/>
@@ -218,46 +219,49 @@ You Can Of Course Send Your Entry To Any Email Address You Wish ( for Example A 
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Date Of Receipt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kt5-YH-XgW">
                                                         <rect key="frame" x="0.0" y="0.0" width="359" height="27"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" systemColor="systemBlueColor"/>
                                                         <nil key="highlightedColor"/>
                                                         <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <size key="shadowOffset" width="1" height="1"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap To Enter Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aBw-ib-sHB">
                                                         <rect key="frame" x="0.0" y="35" width="359" height="34"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Description Of Receipt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lp6-lH-C5c">
                                                         <rect key="frame" x="0.0" y="77" width="359" height="27"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" systemColor="systemBlueColor"/>
                                                         <nil key="highlightedColor"/>
                                                         <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <size key="shadowOffset" width="1" height="1"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ie Fuel / Service Etc" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Znt-hu-mKI">
                                                         <rect key="frame" x="0.0" y="112" width="359" height="34"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Receipt Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="at9-rZ-e3w">
                                                         <rect key="frame" x="0.0" y="154" width="359" height="27"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" systemColor="systemBlueColor"/>
                                                         <nil key="highlightedColor"/>
                                                         <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <size key="shadowOffset" width="1" height="1"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="£" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XdI-05-wqt">
                                                         <rect key="frame" x="0.0" y="189" width="359" height="34"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Of Receipt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJQ-B2-vj5">
                                                         <rect key="frame" x="0.0" y="231" width="359" height="27"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" systemColor="systemBlueColor"/>
                                                         <nil key="highlightedColor"/>
                                                         <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <size key="shadowOffset" width="1" height="1"/>
@@ -276,7 +280,7 @@ You Can Of Course Send Your Entry To Any Email Address You Wish ( for Example A 
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Entry To Yourself?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0L-NZ-aO5">
                                                         <rect key="frame" x="0.0" y="0.0" width="359" height="27"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" systemColor="systemBlueColor"/>
                                                         <nil key="highlightedColor"/>
                                                         <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <size key="shadowOffset" width="1" height="1"/>
@@ -289,7 +293,7 @@ You Can Of Course Send Your Entry To Any Email Address You Wish ( for Example A 
                                                     </button>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Email Address" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iuD-Lp-IjH">
                                                         <rect key="frame" x="0.0" y="71" width="359" height="34"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                     </textField>
@@ -314,7 +318,7 @@ You Can Of Course Send Your Entry To Any Email Address You Wish ( for Example A 
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="neU-HC-pR4" secondAttribute="trailing" constant="8" id="5gx-tT-rbq"/>
                                             <constraint firstItem="neU-HC-pR4" firstAttribute="top" secondItem="o31-4D-aGq" secondAttribute="bottom" constant="8" id="CcS-ic-Yd5"/>
@@ -335,7 +339,7 @@ You Can Of Course Send Your Entry To Any Email Address You Wish ( for Example A 
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstItem="Ufo-pQ-QyR" firstAttribute="height" secondItem="CrH-JW-q04" secondAttribute="height" priority="250" id="Fy6-a8-X0x"/>
                                     <constraint firstAttribute="bottom" secondItem="Ufo-pQ-QyR" secondAttribute="bottom" id="HWf-z4-5J2"/>
@@ -346,6 +350,7 @@ You Can Of Course Send Your Entry To Any Email Address You Wish ( for Example A 
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="C3a-xF-EFc"/>
                         <color key="backgroundColor" red="0.074509803920000006" green="0.59607843140000005" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="CrH-JW-q04" firstAttribute="top" secondItem="C3a-xF-EFc" secondAttribute="top" id="BPe-eV-EVR"/>
@@ -353,7 +358,6 @@ You Can Of Course Send Your Entry To Any Email Address You Wish ( for Example A 
                             <constraint firstItem="C3a-xF-EFc" firstAttribute="bottom" secondItem="CrH-JW-q04" secondAttribute="bottom" id="W1T-ig-BTt"/>
                             <constraint firstItem="CrH-JW-q04" firstAttribute="leading" secondItem="C3a-xF-EFc" secondAttribute="leading" id="o37-9O-i57"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="C3a-xF-EFc"/>
                     </view>
                     <navigationItem key="navigationItem" id="b2Q-2B-Cd2">
                         <barButtonItem key="backBarButtonItem" title="Back" id="RFp-Lj-hsc"/>
@@ -429,5 +433,17 @@ You Can Of Course Send Your Entry To Any Email Address You Wish ( for Example A 
         <image name="income" width="46" height="46"/>
         <image name="saveIcon" width="46" height="46"/>
         <image name="totals" width="46" height="46"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

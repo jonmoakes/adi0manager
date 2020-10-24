@@ -448,6 +448,10 @@ class AddTotalExpensesViewController: UIViewController, UIPickerViewDataSource, 
 // End of Picker Code
     
     func createDatePicker()  {
+        
+        if #available(iOS 13.4, *) {
+            datePicker.preferredDatePickerStyle = .wheels
+        }
        
         let dateToolbar = UIToolbar()
         dateToolbar.sizeToFit()

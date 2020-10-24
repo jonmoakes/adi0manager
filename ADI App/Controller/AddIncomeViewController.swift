@@ -27,7 +27,6 @@ class AddIncomeViewController: UIViewController, UITextFieldDelegate, MFMailComp
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         createDatePicker()
         incomeReceivedTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         nameTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
@@ -158,6 +157,9 @@ class AddIncomeViewController: UIViewController, UITextFieldDelegate, MFMailComp
     
     // Start of code to create the date picker and the done button in the toolbar
     func createDatePicker()  {
+        if #available(iOS 13.4, *) {
+            datePicker.preferredDatePickerStyle = .wheels
+        }
         // create toolbar
         let dateToolbar = UIToolbar()
         dateToolbar.sizeToFit()

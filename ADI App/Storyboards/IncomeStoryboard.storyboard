@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pdz-6y-9Dp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pdz-6y-9Dp">
     <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,8 +31,8 @@
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nE4-AR-plO">
                                 <rect key="frame" x="16" y="72" width="288" height="372"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">COMPOSING AN ENTRY:
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">COMPOSING AN ENTRY:
 
 On This Income Page, You Can Add All Of Your Days Income Either In Individual Entries Per Lesson, Or One Bulk Entry For The Day.
 
@@ -67,13 +68,14 @@ When You First Start To Enter An Entry, The Email TextField, Email Button And Pu
 Having Saved, Tap On The Row In The Table With The Entry You Want To Send, Then Fill In The Newly Enabled Email Address Field, And Then Tap The Email Button.
 If You Wish To Enter In Individual Entries, You Could Fill In The Name TextField And Then Email The Entry To Yourself Straight Away. Combined With Filling In The Details In The Lessons Tab, You Will Have A Good Track Of Who Had Paid You What.
 
-Please Note, Email Is Set Up For Apple's Own Email App So Please Download And Set Up The Apple Mail App If You Would Like To Send Emails From This App.</mutableString>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+Please Note, Email Is Set Up For Apple's Own Email App So Please Download And Set Up The Apple Mail App If You Would Like To Send Emails From This App.</string>
+                                <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Yiy-4f-QD2"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="Yiy-4f-QD2" firstAttribute="bottom" secondItem="nE4-AR-plO" secondAttribute="bottom" constant="16" id="6bW-9G-QHg"/>
                             <constraint firstItem="Ef0-eb-qZd" firstAttribute="trailing" secondItem="Yiy-4f-QD2" secondAttribute="trailing" id="HE9-0m-9tk"/>
@@ -83,7 +85,6 @@ Please Note, Email Is Set Up For Apple's Own Email App So Please Download And Se
                             <constraint firstItem="Ef0-eb-qZd" firstAttribute="top" secondItem="Yiy-4f-QD2" secondAttribute="top" id="gTp-4p-XBy"/>
                             <constraint firstItem="Yiy-4f-QD2" firstAttribute="trailing" secondItem="nE4-AR-plO" secondAttribute="trailing" constant="16" id="yrJ-DO-fr0"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Yiy-4f-QD2"/>
                     </view>
                     <connections>
                         <outlet property="textView" destination="nE4-AR-plO" id="FPy-Cv-N10"/>
@@ -172,20 +173,20 @@ Please Note, Email Is Set Up For Apple's Own Email App So Please Download And Se
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email, Then Tap Envelope Button" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zbg-rn-y3n">
                                 <rect key="frame" x="16" y="64" width="288" height="34"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Pupils Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5zV-1l-Tof">
                                 <rect key="frame" x="16" y="153" width="288" height="34"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Of Income:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DxL-nv-d0P">
                                 <rect key="frame" x="16" y="207" width="288" height="27"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
@@ -193,31 +194,34 @@ Please Note, Email Is Set Up For Apple's Own Email App So Please Download And Se
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Income Received:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHQ-Di-ApS">
                                 <rect key="frame" x="16" y="296" width="288" height="27"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap To Enter Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P8V-Kc-G1Z">
                                 <rect key="frame" x="16" y="242" width="288" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="In Pounds" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Al-xJ-Oww">
                                 <rect key="frame" x="16" y="331" width="288" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKx-dp-A7Q">
                                 <rect key="frame" x="16" y="118" width="288" height="27"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Bls-gq-3HJ"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="OHQ-Di-ApS" firstAttribute="leading" secondItem="Bls-gq-3HJ" secondAttribute="leading" constant="16" id="9hc-lY-UFD"/>
                             <constraint firstItem="Bls-gq-3HJ" firstAttribute="trailing" secondItem="5zV-1l-Tof" secondAttribute="trailing" constant="16" id="AU4-He-z1R"/>
@@ -241,7 +245,6 @@ Please Note, Email Is Set Up For Apple's Own Email App So Please Download And Se
                             <constraint firstItem="3Al-xJ-Oww" firstAttribute="leading" secondItem="Bls-gq-3HJ" secondAttribute="leading" constant="16" id="xpC-9l-qTH"/>
                             <constraint firstItem="eKx-dp-A7Q" firstAttribute="leading" secondItem="Bls-gq-3HJ" secondAttribute="leading" constant="16" id="zKV-r8-cmP"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Bls-gq-3HJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="avV-LB-P3e">
                         <barButtonItem key="backBarButtonItem" title="Back" id="IdH-FK-SN8"/>
@@ -279,7 +282,7 @@ Please Note, Email Is Set Up For Apple's Own Email App So Please Download And Se
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pdz-6y-9Dp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aVp-uo-AuI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -296,5 +299,17 @@ Please Note, Email Is Set Up For Apple's Own Email App So Please Download And Se
         <image name="contact@2" width="48" height="48"/>
         <image name="helpIcon" width="46" height="46"/>
         <image name="saveIcon" width="46" height="46"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
