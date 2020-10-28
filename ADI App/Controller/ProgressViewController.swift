@@ -843,6 +843,10 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         }
     }
     
+    @IBAction func infoButtonTapped(_ sender: Any) {
+        Alert.pupilProgressInfoAlert(on: self)
+    }
+    
     @objc func latestLessonTapGesture()  {
         emailButton.isEnabled = false
         if latestLessonTextView.isHidden == true {

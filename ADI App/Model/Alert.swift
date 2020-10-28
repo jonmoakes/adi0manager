@@ -96,6 +96,10 @@ struct Alert {
         showBasicAlert(on: vc, with: "Information", message: "No Or Incorrect Phone Number Provided - Please Enter A Valid Phone Number ( No Spaces Between Numbers And 11 Digits ) - Don't Forget To Save The Entry First Before Using The Call Button.")
     }
     
+    static func pupilProgressInfoAlert(on vc: UIViewController) {
+        showBasicAlert(on: vc, with: "Information", message: "Tap On A Subject Name To Show Details. Tap On The Subject Name Again To Hide The Details.\n\nUse The Slider To Grade The Pupil's Progress In That Subject And Enter Any Other Information About Their Performance You Would Like In the Text Box.\n\nIf The Subject Has Not Been Introduced Or Has Been Graded Level 1, The Subject Label Will Be Coloured Red.\n\nGrades 2 - 4 Will Be Coloured Amber And Grade 5 Will Be Coloured Green.\n\nThs Way, You Can Easily See From The List Which Subjects Pupils Are Yet To Be Introduced To, Need More Work On Or Are Independent In.\n\nIf You Just Want To Grade An Overall Lesson Performance, Tap The 'Latest Lesson Performance' Label.\n\nYou can Email The Pupil The Information You enter By Tapping The 'Email Lesson Report' Button.\n\nIf You Want To Email The Whole Group Of Subjects, Then Tap The Envelope Button At The Top Of The Page.\n\nAfter Each Lesson You Can Come Back And Update Their Grade And Either Overwrite The Information In The Box Or Add To It For A Full Record Of A Pupils Progress In A Subject! You Have Unlimited Space In the Text Box.\n\nDon't Forget To Save By Tapping The Save Button Before You Leave The Screen! :)")
+    }
+    
     //Block Booking Alerts
     static func blockBookingFieldErrorAlert(on vc: UIViewController) {
         showBasicAlert(on: vc, with: "Error", message: "Please Make Sure At Least One Of The Fields Is Filled In In Order To Save An Entry. ")
