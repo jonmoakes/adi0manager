@@ -201,6 +201,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         
         saveButton.isEnabled = false
         
+        latestLessonLabel.applyRoundedCorners()
         latestLessonDateTextField.isHidden = true
         latestLessonGradingLabel.isHidden = true
         latestLessonStarLabel.isHidden = true
@@ -212,6 +213,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         latestLessonEmailButton.isHidden = true
         latestLessonEmailButton.applyRoundedCorners()
     
+        cockpitDrillLabel.applyRoundedCorners()
         blueGradeLabel.isHidden = true
         cockpitSlider.isHidden = true
         currentGradeLabel.isHidden = true
@@ -220,6 +222,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         cockpitDrillTextView.delegate = self
         cockpitDrillTextView.applyRoundedCorners()
         
+        movingOffRedLabel.applyRoundedCorners()
         movingOffBlueLabel.isHidden = true
         movingOffSlider.isHidden = true
         movingOffPurpleGrade.isHidden = true
@@ -228,6 +231,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         movingOffTextView.delegate = self
         movingOffTextView.applyRoundedCorners()
         
+        turningLeftRedLabel.applyRoundedCorners()
         turningLeftBlueLabel.isHidden = true
         turningLeftSlider.isHidden = true
         turningLeftPurpleGrade.isHidden = true
@@ -236,6 +240,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         turningLeftTextView.delegate = self
         turningLeftTextView.applyRoundedCorners()
         
+        turningRightRedLabel.applyRoundedCorners()
         turningRightBlueLabel.isHidden = true
         turningRightSlider.isHidden = true
         turningRightPurpleGrade.isHidden = true
@@ -244,6 +249,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         turningRightTextView.delegate = self
         turningRightTextView.applyRoundedCorners()
         
+        emergingRedLabel.applyRoundedCorners()
         emergingBlueLabel.isHidden = true
         emergingSlider.isHidden = true
         emergingPurplegrade.isHidden = true
@@ -252,6 +258,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         emergingTextView.delegate = self
         emergingTextView.applyRoundedCorners()
         
+        crossroadsRedLabel.applyRoundedCorners()
         crossroadsBlueLabel.isHidden = true
         crossroadsSlider.isHidden = true
         crossroadsPurpleGrade.isHidden = true
@@ -260,6 +267,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         crossroadsTextView.delegate = self
         crossroadsTextView.applyRoundedCorners()
         
+        boxJunctionsRedLAbel.applyRoundedCorners()
         boxJunctionsBlueLabel.isHidden = true
         boxJunctionsSlider.isHidden = true
         boxJunctionsPurpleGrade.isHidden = true
@@ -268,6 +276,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         boxJunctionsTextView.delegate = self
         boxJunctionsTextView.applyRoundedCorners()
         
+        roundaboutsRedLabel.applyRoundedCorners()
         roundaboutsBlueLabel.isHidden = true
         roundaboutsSlider.isHidden = true
         roundaboutsPurpleGrade.isHidden = true
@@ -276,6 +285,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         roundaboutsTextView.delegate = self
         roundaboutsTextView.applyRoundedCorners()
         
+        miniRoundaboutsRedLabel.applyRoundedCorners()
         miniRoundaboutsBlueLabel.isHidden = true
         miniRoundaboutsSlider.isHidden = true
         miniRoundaboutsPurpleGrade.isHidden = true
@@ -284,6 +294,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         miniRoundaboutsTextView.delegate = self
         miniRoundaboutsTextView.applyRoundedCorners()
         
+        meetingTrafficRedLabel.applyRoundedCorners()
         meetingTrafficBlueLabel.isHidden = true
         meetingTrafficSlider.isHidden = true
         meetingTrafficPurpleGrade.isHidden = true
@@ -292,6 +303,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         meetingTrafficTextView.delegate = self
         meetingTrafficTextView.applyRoundedCorners()
         
+        adequateClearanceRedLabel.applyRoundedCorners()
         adequateClearanceBlueLabel.isHidden = true
         adequateClearanceSlider.isHidden = true
         adequateClearancePurpleGrade.isHidden = true
@@ -300,6 +312,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         adequateClearanceTextView.delegate = self
         adequateClearanceTextView.applyRoundedCorners()
         
+        trafficLightsRedLabel.applyRoundedCorners()
         trafficLightsBlueLabel.isHidden = true
         trafficLightsSlider.isHidden = true
         trafficLightsPurpleGrade.isHidden = true
@@ -308,6 +321,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         trafficLightsTextView.delegate = self
         trafficLightsTextView.applyRoundedCorners()
         
+        pedestrianCrossingsRedLabel.applyRoundedCorners()
         pedestrianCrossingsBlueLabel.isHidden = true
         pedestrianCrossingsSlider.isHidden = true
         pedestrianCrossingsPurpleGrade.isHidden = true
@@ -316,6 +330,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         pedestrianCrossingsTextView.delegate = self
         pedestrianCrossingsTextView.applyRoundedCorners()
         
+        oneWayStreetsRedLabel.applyRoundedCorners()
         oneWayStreetsBlueLabel.isHidden = true
         oneWayStreetsSlider.isHidden = true
         oneWayStreetsPurpleGrade.isHidden = true
@@ -324,6 +339,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         oneWayStreetsTextView.delegate = self
         oneWayStreetsTextView.applyRoundedCorners()
         
+        countryLanesRedLabel.applyRoundedCorners()
         countryLanesBlueLabel.isHidden = true
         countryLanesSlider.isHidden = true
         countryLanesPurpleGrade.isHidden = true
@@ -332,6 +348,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         countryLanesTextView.delegate = self
         countryLanesTextView.applyRoundedCorners()
         
+        dualCRedLabel.applyRoundedCorners()
         dualCBlueLabel.isHidden = true
         dualCSlider.isHidden = true
         dualCPurpleGrade.isHidden = true
@@ -340,6 +357,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         dualCTextView.delegate = self
         dualCTextView.applyRoundedCorners()
         
+        mwaysRedLabel.applyRoundedCorners()
         mwaysBlueLabel.isHidden = true
         mwaysPurpleGrade.isHidden = true
         mwaysPurpleGrade.applyRoundedCorners()
@@ -348,6 +366,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         mwaysTextView.delegate = self
         mwaysTextView.applyRoundedCorners()
         
+        indyRedLabel.applyRoundedCorners()
         indyBlueLabel.isHidden = true
         indyPurpleGrade.isHidden = true
         indyPurpleGrade.applyRoundedCorners()
@@ -356,6 +375,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         indyTextView.delegate = self
         indyTextView.applyRoundedCorners()
         
+        satNavRedLabel.applyRoundedCorners()
         satNavBlueLabel.isHidden = true
         satNavPurpleGrade.isHidden = true
         satNavPurpleGrade.applyRoundedCorners()
@@ -364,6 +384,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         satNavTextView.delegate = self
         satNavTextView.applyRoundedCorners()
         
+        pullUpRightRedLabel.applyRoundedCorners()
         pullUpRightBlueLabel.isHidden = true
         pullUpRightPurpleGrade.isHidden = true
         pullUpRightPurpleGrade.applyRoundedCorners()
@@ -372,6 +393,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         pullUpRightTextView.delegate = self
         pullUpRightTextView.applyRoundedCorners()
         
+        emStopRedLabel.applyRoundedCorners()
         emStopBlueLabel.isHidden = true
         emStopPurpleGrade.isHidden = true
         emStopPurpleGrade.applyRoundedCorners()
@@ -380,6 +402,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         emStopTextView.delegate = self
         emStopTextView.applyRoundedCorners()
         
+        tirRedLabel.applyRoundedCorners()
         tirBlueLabel.isHidden = true
         tirPurpleGrade.isHidden = true
         tirPurpleGrade.applyRoundedCorners()
@@ -388,6 +411,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         tirTextView.delegate = self
         tirTextView.applyRoundedCorners()
         
+        pParkRedLabel.applyRoundedCorners()
         pParkBlueLabel.isHidden = true
         pParkPurpleGrade.isHidden = true
         pParkPurpleGrade.applyRoundedCorners()
@@ -396,6 +420,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         pParkTextView.delegate = self
         pParkTextView.applyRoundedCorners()
         
+        fBayRedLabel.applyRoundedCorners()
         fBayBlueLabel.isHidden = true
         fBayPurpleGrade.isHidden = true
         fBayPurpleGrade.applyRoundedCorners()
@@ -404,6 +429,7 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         fBayTextView.delegate = self
         fBayTextView.applyRoundedCorners()
         
+        rBayRedLabel.applyRoundedCorners()
         rBayBlueLabel.isHidden = true
         rBayPurpleGrade.isHidden = true
         rBayPurpleGrade.applyRoundedCorners()
@@ -660,83 +686,160 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if latestLessonGradingLabel.text ==  "⭐️⭐️⭐️⭐️⭐️"  {
+        if latestLessonStarLabel.text ==  "⭐️⭐️⭐️⭐️⭐️"  {
             latestLessonLabel.textColor = .systemGreen
+        }  else if latestLessonStarLabel.text == "⭐️⭐️⭐️⭐️" || latestLessonStarLabel.text == "⭐️⭐️⭐️" || latestLessonStarLabel.text == "⭐️⭐️" {
+            latestLessonLabel.textColor = .systemYellow
         }
+        
         if currentGradeLabel.text ==  "⭐️⭐️⭐️⭐️⭐️"  {
             cockpitDrillLabel.textColor = .systemGreen
+        } else if currentGradeLabel.text == "⭐️⭐️⭐️⭐️" || currentGradeLabel.text == "⭐️⭐️⭐️" || currentGradeLabel.text == "⭐️⭐️" {
+            cockpitDrillLabel.textColor = .systemYellow
         }
+        
         if movingOffPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             movingOffRedLabel.textColor = .systemGreen
+        } else if movingOffPurpleGrade.text == "⭐️⭐️⭐️⭐️" || movingOffPurpleGrade.text == "⭐️⭐️⭐️" || movingOffPurpleGrade.text == "⭐️⭐️" {
+            movingOffRedLabel.textColor = .systemYellow
         }
+        
         if turningLeftPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             turningLeftRedLabel.textColor = .systemGreen
+        } else if turningLeftPurpleGrade.text == "⭐️⭐️⭐️⭐️" || turningLeftPurpleGrade.text == "⭐️⭐️⭐️" || turningLeftPurpleGrade.text == "⭐️⭐️" {
+            turningLeftRedLabel.textColor = .systemYellow
         }
+        
         if turningRightPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             turningRightRedLabel.textColor = .systemGreen
+        } else if turningRightPurpleGrade.text == "⭐️⭐️⭐️⭐️" || turningRightPurpleGrade.text == "⭐️⭐️⭐️" || turningRightPurpleGrade.text == "⭐️⭐️" {
+            turningRightRedLabel.textColor = .systemYellow
         }
+        
         if emergingPurplegrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             emergingRedLabel.textColor = .systemGreen
+        } else if emergingPurplegrade.text == "⭐️⭐️⭐️⭐️" || emergingPurplegrade.text == "⭐️⭐️⭐️" || emergingPurplegrade.text == "⭐️⭐️" {
+            emergingRedLabel.textColor = .systemYellow
         }
+    
         if crossroadsPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             crossroadsRedLabel.textColor = .systemGreen
+        } else if crossroadsPurpleGrade.text == "⭐️⭐️⭐️⭐️" || crossroadsPurpleGrade.text == "⭐️⭐️⭐️" || crossroadsPurpleGrade.text == "⭐️⭐️" {
+            crossroadsRedLabel.textColor = .systemYellow
         }
+        
         if boxJunctionsPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             boxJunctionsRedLAbel.textColor = .systemGreen
+        } else if boxJunctionsPurpleGrade.text == "⭐️⭐️⭐️⭐️" || boxJunctionsPurpleGrade.text == "⭐️⭐️⭐️" || boxJunctionsPurpleGrade.text == "⭐️⭐️" {
+            boxJunctionsRedLAbel.textColor = .systemYellow
         }
+        
         if roundaboutsPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             roundaboutsRedLabel.textColor = .systemGreen
+        } else if roundaboutsPurpleGrade.text == "⭐️⭐️⭐️⭐️" || roundaboutsPurpleGrade.text == "⭐️⭐️⭐️" || roundaboutsPurpleGrade.text == "⭐️⭐️" {
+            roundaboutsRedLabel.textColor = .systemYellow
         }
+        
         if miniRoundaboutsPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             miniRoundaboutsRedLabel.textColor = .systemGreen
+        } else if miniRoundaboutsPurpleGrade.text == "⭐️⭐️⭐️⭐️" || miniRoundaboutsPurpleGrade.text == "⭐️⭐️⭐️" || miniRoundaboutsPurpleGrade.text == "⭐️⭐️" {
+            miniRoundaboutsRedLabel.textColor = .systemYellow
         }
+        
         if meetingTrafficPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             meetingTrafficRedLabel.textColor = .systemGreen
+        } else if meetingTrafficPurpleGrade.text == "⭐️⭐️⭐️⭐️" || meetingTrafficPurpleGrade.text == "⭐️⭐️⭐️" || meetingTrafficPurpleGrade.text == "⭐️⭐️" {
+            meetingTrafficRedLabel.textColor = .systemYellow
         }
+        
         if adequateClearancePurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             adequateClearanceRedLabel.textColor = .systemGreen
+        } else if adequateClearancePurpleGrade.text == "⭐️⭐️⭐️⭐️" || adequateClearancePurpleGrade.text == "⭐️⭐️⭐️" || adequateClearancePurpleGrade.text == "⭐️⭐️" {
+            adequateClearanceRedLabel.textColor = .systemYellow
         }
+        
         if trafficLightsPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             trafficLightsRedLabel.textColor = .systemGreen
+        } else if trafficLightsPurpleGrade.text == "⭐️⭐️⭐️⭐️" || trafficLightsPurpleGrade.text == "⭐️⭐️⭐️" || trafficLightsPurpleGrade.text == "⭐️⭐️" {
+            trafficLightsRedLabel.textColor = .systemYellow
         }
+    
         if pedestrianCrossingsPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             pedestrianCrossingsRedLabel.textColor = .systemGreen
+        } else if pedestrianCrossingsPurpleGrade.text == "⭐️⭐️⭐️⭐️" || pedestrianCrossingsPurpleGrade.text == "⭐️⭐️⭐️" || pedestrianCrossingsPurpleGrade.text == "⭐️⭐️" {
+            pedestrianCrossingsRedLabel.textColor = .systemYellow
         }
+    
         if oneWayStreetsPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             oneWayStreetsRedLabel.textColor = .systemGreen
+        } else if oneWayStreetsPurpleGrade.text == "⭐️⭐️⭐️⭐️" || oneWayStreetsPurpleGrade.text == "⭐️⭐️⭐️" || oneWayStreetsPurpleGrade.text == "⭐️⭐️" {
+            oneWayStreetsRedLabel.textColor = .systemYellow
         }
+        
         if countryLanesPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             countryLanesRedLabel.textColor = .systemGreen
+        } else if countryLanesPurpleGrade.text == "⭐️⭐️⭐️⭐️" || countryLanesPurpleGrade.text == "⭐️⭐️⭐️" || countryLanesPurpleGrade.text == "⭐️⭐️" {
+            countryLanesRedLabel.textColor = .systemYellow
         }
+    
         if dualCPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             dualCRedLabel.textColor = .systemGreen
+        } else if dualCPurpleGrade.text == "⭐️⭐️⭐️⭐️" || dualCPurpleGrade.text == "⭐️⭐️⭐️" || dualCPurpleGrade.text == "⭐️⭐️" {
+            dualCRedLabel.textColor = .systemYellow
         }
+        
         if mwaysPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             mwaysRedLabel.textColor = .systemGreen
+        }  else if mwaysPurpleGrade.text == "⭐️⭐️⭐️⭐️" || mwaysPurpleGrade.text == "⭐️⭐️⭐️" || mwaysPurpleGrade.text == "⭐️⭐️" {
+            mwaysRedLabel.textColor = .systemYellow
         }
+        
         if indyPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             indyRedLabel.textColor = .systemGreen
+        }  else if indyPurpleGrade.text == "⭐️⭐️⭐️⭐️" || indyPurpleGrade.text == "⭐️⭐️⭐️" || indyPurpleGrade.text == "⭐️⭐️" {
+            indyRedLabel.textColor = .systemYellow
         }
+        
         if satNavPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             satNavRedLabel.textColor = .systemGreen
+        } else if satNavPurpleGrade.text == "⭐️⭐️⭐️⭐️" || satNavPurpleGrade.text == "⭐️⭐️⭐️" || satNavPurpleGrade.text == "⭐️⭐️" {
+            satNavRedLabel.textColor = .systemYellow
         }
+        
         if pullUpRightPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             pullUpRightRedLabel.textColor = .systemGreen
+        } else if pullUpRightPurpleGrade.text == "⭐️⭐️⭐️⭐️" || pullUpRightPurpleGrade.text == "⭐️⭐️⭐️" || pullUpRightPurpleGrade.text == "⭐️⭐️" {
+            pullUpRightRedLabel.textColor = .systemYellow
         }
+        
         if emStopPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             emStopRedLabel.textColor = .systemGreen
+        } else if emStopPurpleGrade.text == "⭐️⭐️⭐️⭐️" || emStopPurpleGrade.text == "⭐️⭐️⭐️" || emStopPurpleGrade.text == "⭐️⭐️" {
+            emStopRedLabel.textColor = .systemYellow
         }
+        
         if tirPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             tirRedLabel.textColor = .systemGreen
+        } else if tirPurpleGrade.text == "⭐️⭐️⭐️⭐️" || tirPurpleGrade.text == "⭐️⭐️⭐️" || tirPurpleGrade.text == "⭐️⭐️" {
+            tirRedLabel.textColor = .systemYellow
         }
+        
         if pParkPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             pParkRedLabel.textColor = .systemGreen
+        } else if pParkPurpleGrade.text == "⭐️⭐️⭐️⭐️" || pParkPurpleGrade.text == "⭐️⭐️⭐️" || pParkPurpleGrade.text == "⭐️⭐️" {
+            pParkRedLabel.textColor = .systemYellow
         }
+        
         if fBayPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             fBayRedLabel.textColor = .systemGreen
+        } else if fBayPurpleGrade.text == "⭐️⭐️⭐️⭐️" || fBayPurpleGrade.text == "⭐️⭐️⭐️" || fBayPurpleGrade.text == "⭐️⭐️" {
+            fBayRedLabel.textColor = .systemYellow
         }
+        
         if rBayPurpleGrade.text == "⭐️⭐️⭐️⭐️⭐️" {
             rBayRedLabel.textColor = .systemGreen
+        } else if rBayPurpleGrade.text == "⭐️⭐️⭐️⭐️" || rBayPurpleGrade.text == "⭐️⭐️⭐️" || rBayPurpleGrade.text == "⭐️⭐️" {
+            rBayRedLabel.textColor = .systemYellow
         }
     }
     
@@ -2568,16 +2671,20 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
     @IBAction func latesLessonSliderChanged(_ sender: Any) {
         let latestLessonSliderValueAsInt = Int(latestLessonSlider.value)
         latestLessonStarLabel.text = String(latestLessonSliderValueAsInt)
-        latestLessonLabel.textColor = .systemRed
+        saveButton.isEnabled = true
         
         if latestLessonSliderValueAsInt <= 20 {
             latestLessonStarLabel.text = "⭐️"
+            latestLessonLabel.textColor = .systemRed
         } else if latestLessonSliderValueAsInt > 20 && latestLessonSliderValueAsInt <= 40 {
             latestLessonStarLabel.text = "⭐️⭐️"
+            latestLessonLabel.textColor = .systemYellow
         } else if latestLessonSliderValueAsInt > 40 && latestLessonSliderValueAsInt <= 60 {
             latestLessonStarLabel.text = "⭐️⭐️⭐️"
+            latestLessonLabel.textColor = .systemYellow
         } else if latestLessonSliderValueAsInt > 60 && latestLessonSliderValueAsInt <= 80 {
             latestLessonStarLabel.text = "⭐️⭐️⭐️⭐️"
+            latestLessonLabel.textColor = .systemYellow
         } else if latestLessonSliderValueAsInt > 80 && latestLessonSliderValueAsInt <= 100 {
             latestLessonStarLabel.text = "⭐️⭐️⭐️⭐️⭐️"
             latestLessonLabel.textColor = .systemGreen
@@ -2588,16 +2695,19 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let sliderValueAsInt = Int(cockpitSlider.value)
         currentGradeLabel.text = String(sliderValueAsInt)
         saveButton.isEnabled = true
-        cockpitDrillLabel.textColor = .systemBlue
         
         if sliderValueAsInt <= 20 {
             currentGradeLabel.text = "⭐️"
+            cockpitDrillLabel.textColor = .systemRed
         } else if sliderValueAsInt > 20 && sliderValueAsInt <= 40 {
             currentGradeLabel.text = "⭐️⭐️"
+            cockpitDrillLabel.textColor = .systemYellow
         } else if sliderValueAsInt > 40 && sliderValueAsInt <= 60 {
             currentGradeLabel.text = "⭐️⭐️⭐️"
+            cockpitDrillLabel.textColor = .systemYellow
         } else if sliderValueAsInt > 60 && sliderValueAsInt <= 80 {
             currentGradeLabel.text = "⭐️⭐️⭐️⭐️"
+            cockpitDrillLabel.textColor = .systemYellow
         } else if sliderValueAsInt > 80 && sliderValueAsInt <= 100 {
             currentGradeLabel.text = "⭐️⭐️⭐️⭐️⭐️"
             cockpitDrillLabel.textColor = .systemGreen
@@ -2608,16 +2718,19 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let movingOffSliderAsInt = Int(movingOffSlider.value)
         movingOffPurpleGrade.text = String(movingOffSliderAsInt)
         saveButton.isEnabled = true
-        movingOffRedLabel.textColor = .systemBlue
         
         if movingOffSliderAsInt <= 20 {
             movingOffPurpleGrade.text = "⭐️"
+            movingOffRedLabel.textColor = .systemRed
         } else if movingOffSliderAsInt > 20 && movingOffSliderAsInt <= 40 {
             movingOffPurpleGrade.text = "⭐️⭐️"
+            movingOffRedLabel.textColor = .systemYellow
         } else if movingOffSliderAsInt > 40 && movingOffSliderAsInt <= 60 {
             movingOffPurpleGrade.text = "⭐️⭐️⭐️"
+            movingOffRedLabel.textColor = .systemYellow
         } else if movingOffSliderAsInt > 60 && movingOffSliderAsInt <= 80 {
             movingOffPurpleGrade.text = "⭐️⭐️⭐️⭐️"
+            movingOffRedLabel.textColor = .systemYellow
         } else if movingOffSliderAsInt > 80 && movingOffSliderAsInt <= 100 {
             movingOffPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
             movingOffRedLabel.textColor = .systemGreen
@@ -2628,16 +2741,19 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         let turningLeftSliderAsInt = Int(turningLeftSlider.value)
         turningLeftPurpleGrade.text = String(turningLeftSliderAsInt)
         saveButton.isEnabled = true
-        turningLeftRedLabel.textColor = .systemBlue
         
         if turningLeftSliderAsInt <= 20 {
             turningLeftPurpleGrade.text = "⭐️"
+            turningLeftRedLabel.textColor = .systemRed
         } else if turningLeftSliderAsInt > 20 && turningLeftSliderAsInt <= 40 {
             turningLeftPurpleGrade.text = "⭐️⭐️"
+            turningLeftRedLabel.textColor = .systemYellow
         } else if turningLeftSliderAsInt > 40 && turningLeftSliderAsInt <= 60 {
             turningLeftPurpleGrade.text = "⭐️⭐️⭐️"
+            turningLeftRedLabel.textColor = .systemYellow
         } else if turningLeftSliderAsInt > 60 && turningLeftSliderAsInt <= 80 {
             turningLeftPurpleGrade.text = "⭐️⭐️⭐️⭐️"
+            turningLeftRedLabel.textColor = .systemYellow
         } else if turningLeftSliderAsInt > 80 && turningLeftSliderAsInt <= 100 {
             turningLeftPurpleGrade.text = "⭐️⭐️⭐️⭐️⭐️"
             turningLeftRedLabel.textColor = .systemGreen
