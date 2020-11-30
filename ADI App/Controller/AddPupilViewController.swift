@@ -377,7 +377,6 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate, UITextViewD
     }
     
     func createDateOfBirthDatePicker() {
-        let dateOfBirthDatePicker = UIDatePicker()
         if #available(iOS 13.4, *) {
             dateOfBirthDatePicker.preferredDatePickerStyle = .wheels
         }
@@ -390,14 +389,17 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate, UITextViewD
         
         dateOfBirthTextField.inputAccessoryView = dateOfBirthToolbar
         dateOfBirthTextField.inputView = dateOfBirthDatePicker
+        
         dateOfBirthDatePicker.datePickerMode = .date
+        
+
     }
     
     @objc func dateOfBirthPickerViewDoneButtonPressed() {
         let dateOfBirthFormatter = DateFormatter()
-        dateOfBirthFormatter.dateStyle = .full
+        dateOfBirthFormatter.dateStyle = .long
         dateOfBirthFormatter.timeStyle = .none
-    
+        
         let dateOfBirthDateString = dateOfBirthFormatter.string(from: dateOfBirthDatePicker.date)
         dateOfBirthTextField.text = "\(dateOfBirthDateString)"
         self.view.endEditing(true)

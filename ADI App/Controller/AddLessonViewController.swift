@@ -511,30 +511,26 @@ class AddLessonViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
 // Date And Time Pickers
     func createDatePicker()  {
-        let datePicker = UIDatePicker()
         if #available(iOS 13.4, *) {
             datePicker.preferredDatePickerStyle = .wheels
         }
-      
-        // create toolbar
+        
         let dateToolbar = UIToolbar()
         dateToolbar.sizeToFit()
         
-        // create done button for toolbar
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(datePickerViewDoneButtonPressed))
         dateToolbar.setItems([doneButton], animated: true)
         
         dateTextField.inputAccessoryView = dateToolbar
         dateTextField.inputView = datePicker
         
-        // format picker for date only
         datePicker.datePickerMode = .date
+        
     }
     
     @objc func  datePickerViewDoneButtonPressed()  {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy    MM-dd,     EEEE"
-        
+        formatter.dateFormat = "yyyy    MM-dd,   EEEE"
         let dateString = formatter.string(from: datePicker.date)
         
         dateTextField.text = "\(dateString)"
