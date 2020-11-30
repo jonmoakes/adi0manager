@@ -65,6 +65,7 @@ class PupilListTableViewController: UITableViewController {
         
         cell.textLabel?.text = entry.name
         cell.textLabel?.font = UIFont(name: "Futura-CondensedExtraBold", size: 20)
+        cell.textLabel?.textColor = UIColor.black
         return cell
     }
     

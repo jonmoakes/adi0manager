@@ -80,6 +80,7 @@ class ExpensesTableViewController: UITableViewController {
         let entry = self.expensesEntries[indexPath.row]
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.font = UIFont(name: "Futura-CondensedExtraBold", size: 20)
+        cell.textLabel?.textColor = UIColor.black
         
         if (entry.date?.contains("Monday"))!  {
             cell.backgroundColor = UIColor.init(displayP3Red: 0.922, green: 0.749, blue: 0.431, alpha: 0.9)

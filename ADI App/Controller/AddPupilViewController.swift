@@ -389,10 +389,7 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate, UITextViewD
         
         dateOfBirthTextField.inputAccessoryView = dateOfBirthToolbar
         dateOfBirthTextField.inputView = dateOfBirthDatePicker
-        
         dateOfBirthDatePicker.datePickerMode = .date
-        
-
     }
     
     @objc func dateOfBirthPickerViewDoneButtonPressed() {
@@ -406,7 +403,6 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate, UITextViewD
     }
     
     func createLicenceExpiryDatePicker() {
-        let licenceExpiryDatePicker = UIDatePicker()
         if #available(iOS 13.4, *) {
             licenceExpiryDatePicker.preferredDatePickerStyle = .wheels
         }
@@ -416,7 +412,6 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate, UITextViewD
         
         let licenceExpiryDoneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(licenceExpiryPickerViewDoneButtonPressed))
         licenceExpiryToolbar.setItems([licenceExpiryDoneButton], animated: true)
-        
         licenceExpiryTextField.inputAccessoryView = licenceExpiryToolbar
         licenceExpiryTextField.inputView = licenceExpiryDatePicker
         licenceExpiryDatePicker.datePickerMode = .date
@@ -424,26 +419,25 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate, UITextViewD
     
     @objc func licenceExpiryPickerViewDoneButtonPressed() {
         let licenceExpiryFormatter = DateFormatter()
-        licenceExpiryFormatter.dateStyle = .full
+        licenceExpiryFormatter.dateStyle = .long
         licenceExpiryFormatter.timeStyle = .none
-    
+        
         let licenceExpiryDateString = licenceExpiryFormatter.string(from: licenceExpiryDatePicker.date)
         licenceExpiryTextField.text = "\(licenceExpiryDateString)"
         self.view.endEditing(true)
     }
     
     func createEyesightDatePicker() {
-        let eyesightPicker = UIDatePicker()
         if #available(iOS 13.4, *) {
             eyesightPicker.preferredDatePickerStyle = .wheels
         }
         
         let eyesightToolbar = UIToolbar()
         eyesightToolbar.sizeToFit()
-    
+        
         let eyesightDoneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(eyesightPickerViewDoneButtonPressed))
         eyesightToolbar.setItems([eyesightDoneButton], animated: true)
-    
+        
         eyesightCheckedTextField.inputAccessoryView = eyesightToolbar
         eyesightCheckedTextField.inputView = eyesightPicker
         eyesightPicker.datePickerMode = .date
@@ -451,16 +445,15 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate, UITextViewD
     
     @objc func eyesightPickerViewDoneButtonPressed() {
         let eyesightFormatter = DateFormatter()
-        eyesightFormatter.dateStyle = .full
+        eyesightFormatter.dateStyle = .long
         eyesightFormatter.timeStyle = .none
-    
+        
         let eyesightDateString = eyesightFormatter.string(from: eyesightPicker.date)
         eyesightCheckedTextField.text = "\(eyesightDateString)"
         self.view.endEditing(true)
     }
     
     func createTheoryTestDatePicker()  {
-        let theoryTestDatePicker = UIDatePicker()
         if #available(iOS 13.4, *) {
             theoryTestDatePicker.preferredDatePickerStyle = .wheels
         }
@@ -478,17 +471,15 @@ class AddPupilViewController: UIViewController, UITextFieldDelegate, UITextViewD
     
     @objc func  theoryDatePickerViewDoneButtonPressed()  {
         let theoryFormatter = DateFormatter()
-        theoryFormatter.dateStyle = .full
+        theoryFormatter.dateStyle = .long
         theoryFormatter.timeStyle = .none
         
         let theoryDateString = theoryFormatter.string(from: theoryTestDatePicker.date)
-        
         theoryDateTextField.text = "\(theoryDateString)"
         self.view.endEditing(true)
     }
     
     func createDrivingTestDatePicker()  {
-        let drivingTestDatePicker = UIDatePicker()
         if #available(iOS 13.4, *) {
             drivingTestDatePicker.preferredDatePickerStyle = .wheels
         }

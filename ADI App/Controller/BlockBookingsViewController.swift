@@ -163,7 +163,6 @@ class BlockBookingsViewController: UIViewController, MFMailComposeViewController
     }
     
     func createDatePicker()  {
-        let datePicker = UIDatePicker()
         if #available(iOS 13.4, *) {
             datePicker.preferredDatePickerStyle = .wheels
         }
@@ -190,7 +189,6 @@ class BlockBookingsViewController: UIViewController, MFMailComposeViewController
     }
     
     func createLessonDatePicker()  {
-        let latestLessonDatePicker = UIDatePicker()
         if #available(iOS 13.4, *) {
             latestLessonDatePicker.preferredDatePickerStyle = .wheels
         }

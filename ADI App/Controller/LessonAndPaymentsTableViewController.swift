@@ -63,6 +63,7 @@ class LessonAndPaymentsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LessPayCell", for: indexPath)
+        cell.textLabel?.textColor = UIColor.black
         
         let entry = self.lessonEntries[indexPath.row]
         

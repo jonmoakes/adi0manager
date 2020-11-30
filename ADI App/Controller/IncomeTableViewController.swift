@@ -72,6 +72,7 @@ class IncomeTableViewController: UITableViewController {
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.font = UIFont(name: "Futura-CondensedExtraBold", size: 19)
         cell.textLabel?.text = "\(entry.date ?? "Date")\nTotal Received - £\(entry.incomeAmount ?? "0")"
+        cell.textLabel?.textColor = UIColor.black
     
         if (entry.date!.contains("01-"))  {
             let aString = entry.date

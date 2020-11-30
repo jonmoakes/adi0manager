@@ -3294,7 +3294,6 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
     
     // Start of code to create the date picker and the done button in the toolbar
         func createDatePicker()  {
-            let datePicker = UIDatePicker()
             if #available(iOS 13.4, *) {
                 datePicker.preferredDatePickerStyle = .wheels
             }
@@ -3315,7 +3314,8 @@ class ProgressViewController: UIViewController, MFMailComposeViewControllerDeleg
         
         @objc func  datePickerViewDoneButtonPressed()  {
             let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy    MM-dd,     EEEE"
+            formatter.dateStyle = .full
+            formatter.timeStyle = .none
             
             let dateString = formatter.string(from: datePicker.date)
             

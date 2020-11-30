@@ -71,6 +71,7 @@ class EntriesTableViewController: UITableViewController {
         let entry = diaryEntries[indexPath.row]
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.font = UIFont(name: "Futura-CondensedExtraBold", size: 19)
+        cell.textLabel?.textColor = UIColor.black
         if (entry.date!.contains("01-"))  {
             cell.backgroundColor = UIColor.init(displayP3Red: 1.000, green: 1.000, blue: 1.000, alpha: 0.9)
             let aString = entry.date

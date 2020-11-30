@@ -59,6 +59,7 @@ class TotalExpensesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TotalExpensesCell", for: indexPath)
+        cell.textLabel?.textColor = UIColor.black
         
         let date = Date()
         let calendar = Calendar.current
